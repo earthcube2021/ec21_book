@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITS_LIVE Explorer &#8212; EarthCube 2021 Call for Notebooks</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Introduction" href="notebooks/itslive-notebook-rendered.html" />
+    <link rel="prev" title="cf-xarray: Scale your analysis across datasets with less data wrangling and more metadata handling" href="../ec21_cherian_etal/DC_01_cf-xarray.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.webp" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">EarthCube 2021 Call for Notebooks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../docs/about.html">
+   Call for Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Notebooks
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_bourgault_etal/README.html">
+     xclim : Software ecosystem for climate services
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_bourgault_etal/PB_02_xclim_Software_ecosystem_for_climate_services.html">
+       xclim: Software ecosystem for climate services
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_cherian_etal/DC_01_cf-xarray.html">
+     cf-xarray: Scale your analysis across datasets with less data wrangling and more metadata handling
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="current reference internal" href="#">
+     ITS_LIVE Explorer
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="notebooks/itslive-notebook-rendered.html">
+       Introduction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="notebooks/itslive-notebook.html">
+       Introduction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="notebooks/LL_01_ITS_LIVE_global_glacier_velocity_exploration_and_analysis.html">
+       <strong>
+        ITS_LIVE
+       </strong>
+       Global Glacier Velocity Exploration and Analysis
+       <a class="anchor" id="chapter_1">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_martin_etal/README.html">
+     Frequency-domain analysis of large datasets
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_martin_etal/PM_01_Frequency-Domain_Analysis_of_Large_Datasets.html">
+       Frequency-Domain Analysis of Large Datasets
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_uchida_etal/notebooks/TU_05_Diagnosing-the-Eliassen-Palm-flux-from-a-quasi-geostrophic-double-gyre-ensemble.html">
+     Diagnosing the Eliassen-Palm flux from a quasi-geostrophic double gyre ensemble
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/ec21_lopez_etal/README.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/quantecon-mini-example"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/quantecon-mini-example/issues/new?title=Issue%20on%20page%20%2Fnotebooks/ec21_lopez_etal/README.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#its-live">
+     <span class="xref myst">
+      ITS_LIVE
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usage-with-binder">
+   Usage with Binder
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usage-with-docker">
+   Usage with Docker
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#on-mac-osx-or-linux">
+     On Mac OSX or Linux
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#on-windows">
+     On Windows
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usage-with-conda">
+   Usage with Conda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#credit">
+   Credit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license">
+   License
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="its-live-explorer">
+<h1>ITS_LIVE Explorer<a class="headerlink" href="#its-live-explorer" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/nasa-jpl/itslive-explorer/main?urlpath=lab/tree/notebooks"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="its-live">
+<h3><span class="xref myst">ITS_LIVE</span><a class="headerlink" href="#its-live" title="Permalink to this headline">¶</a></h3>
+<p><strong>Global land ice velocities.</strong>
+The Inter-mission Time Series of Land Ice Velocity and Elevation (ITS_LIVE) project facilitates ice sheet, ice shelf and glacier research by providing a globally comprehensive and temporally dense multi-sensor record of land ice velocity and elevation with low latency. Scene-pair velocities were generated from satellite optical and radar imagery.</p>
+<p>The notebooks on this project demonstrate how to search and access ITS_LIVE velocity pairs and provide a simple example on how to build a data cube.</p>
+<p>Project at NASA’s Github account: <a class="reference external" href="https://github.com/nasa-jpl/itslive-explorer">https://github.com/nasa-jpl/itslive-explorer</a></p>
+</div>
+</div>
+<div class="section" id="usage-with-binder">
+<h2>Usage with Binder<a class="headerlink" href="#usage-with-binder" title="Permalink to this headline">¶</a></h2>
+<p>The Binder button above allows you to explore and run the notebook in a shared cloud computing environment without the need to install dependencies on your local machine. Note that this option will not directly download data to your computer; instead the data will be downloaded to the cloud environment.</p>
+</div>
+<div class="section" id="usage-with-docker">
+<h2>Usage with Docker<a class="headerlink" href="#usage-with-docker" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="on-mac-osx-or-linux">
+<h3>On Mac OSX or Linux<a class="headerlink" href="#on-mac-osx-or-linux" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Install <a class="reference external" href="https://docs.docker.com/install/">Docker</a>. Use the left-hand navigation to select the appropriate install depending on operating system.</p></li>
+<li><p>Download the <a class="reference external" href="https://github.com/nasa-jpl/itslive-explorer/archive/master.zip">repository from Github</a>.</p></li>
+<li><p>Unzip the file, and open a terminal window in the <code class="docutils literal notranslate"><span class="pre">itslive-explorer</span></code> folder’s location.</p></li>
+<li><p>From the terminal window, launch the docker container using the following command, replacing [path/notebook_folder] with your path and notebook folder name:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --name itslive -p <span class="m">8888</span>:8888 -v <span class="o">[</span>path/notebook_folder<span class="o">]</span>:/home/jovyan/work nsidc/itslive-explorer
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --name itslive -p <span class="m">8888</span>:8888 -v /Users/name/Desktop/itslive-explorer:/home/jovyan/work nsidc/itslive-explorer
+</pre></div>
+</div>
+<p>Or, with docker-compose:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose up
+</pre></div>
+</div>
+<p>If you want to mount a directory with write permissions, you need to grant the container the same permissions as the one on the directory to be mounted and tell it that has “root” access (within the container). This is important if you want to persist your work or download data to a local directory and not just the docker container. Run the example command below for this option:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --name itslive -e <span class="nv">NB_UID</span><span class="o">=</span><span class="k">$(</span>id -u<span class="k">)</span> --user root -p <span class="m">8888</span>:8888 -v  /Users/name/Desktop/itslive-explorer:/home/jovyan/work nsidc/itslive-explorer
+</pre></div>
+</div>
+<p>The initialization will take some time and will require 2.6 GB of space. Once the startup is complete you will see a line of output similar to this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>To access the notebook, open this file in a browser:
+        file:///home/jovyan/.local/share/jupyter/runtime/nbserver-6-open.html
+    Or copy and paste one of these URLs:
+        http://4dc97ddd7a0d:8888/?token=f002a50e25b6f623aa775312737ba8a23ffccfd4458faa6f
+     or http://127.0.0.1:8888/?token=f002a50e25b6f623aa775312737ba8a23ffccfd4458faa6f
+</pre></div>
+</div>
+<p>If you started your container with the <code class="docutils literal notranslate"><span class="pre">-d</span></code>/<code class="docutils literal notranslate"><span class="pre">--detach</span></code> option, check <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">logs</span> <span class="pre">itslive</span></code> for this output.</p>
+<ol class="simple">
+<li><p>Open up a web browser and copy one of the URLs as instructed above.</p></li>
+<li><p>You will be brought to a Jupyter Notebook interface running through the Docker container. The left side of the interface displays your local directory structure. Navigate to the <strong><code class="docutils literal notranslate"><span class="pre">work</span></code></strong> folder of the <code class="docutils literal notranslate"><span class="pre">itslive-explorer</span></code> repository folder. You can now interact with the notebooks to explore and access data.</p></li>
+</ol>
+</div>
+<div class="section" id="on-windows">
+<h3>On Windows<a class="headerlink" href="#on-windows" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Install <a class="reference external" href="https://docs.docker.com/docker-for-windows/install/">Docker</a>.</p></li>
+<li><p>Download the <a class="reference external" href="https://github.com/nasa-jpl/itslive-explorer/archive/master.zip">repository from Github</a>.</p></li>
+<li><p>Unzip the file, and open a terminal window (use Command Prompt or PowerShell, not PowerShell ISE) in the <code class="docutils literal notranslate"><span class="pre">itslive-explorer</span></code> folder’s location.</p></li>
+<li><p>From the terminal window, launch the docker container using the following command, replacing [path\notebook_folder] with your path and notebook folder name:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --name itslive -p <span class="m">8888</span>:8888 -v <span class="o">[</span>path<span class="se">\n</span>otebook_folder<span class="o">]</span>:/home/jovyan/work nsidc/itslive-explorer
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --name itslive -p <span class="m">8888</span>:8888 -v C:<span class="se">\n</span>otebook_folder:/home/jovyan/work nsidc/itslive-explorer
+</pre></div>
+</div>
+<p>Or, with docker-compose:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose up
+</pre></div>
+</div>
+<p>If you want to mount a directory with write permissions you need to grant the container the same permissions as the one on the directory to be mounted and tell it that has “root” access (within the container)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --name itslive --user root -p <span class="m">8888</span>:8888 -v C:<span class="se">\n</span>otebook_folder:/home/jovyan/work nsidc/itslive-explorer
+</pre></div>
+</div>
+<p>The initialization will take some time and will require 2.6 GB of space. Once the startup is complete you will see a line of output similar to this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>To access the notebook, open this file in a browser:
+        file:///home/jovyan/.local/share/jupyter/runtime/nbserver-6-open.html
+    Or copy and paste one of these URLs:
+        http://(6a8bfa6a8518 or 127.0.0.1):8888/?token=2d72e03269b59636d9e31937fcb324f5bdfd0c645a6eba3f
+</pre></div>
+</div>
+<p>If you started your container with the <code class="docutils literal notranslate"><span class="pre">-d</span></code>/<code class="docutils literal notranslate"><span class="pre">--detach</span></code> option, check <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">logs</span> <span class="pre">itslive</span></code> for this output.</p>
+<ol class="simple">
+<li><p>Follow the instructions and copy one of the URLs into a web browser and hit return. The address should look something like this:</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8888/?token=2d72e03269b59636d9e31937fcb324f5bdfd0c645a6eba3f</span></code></p>
+<ol class="simple">
+<li><p>You will now see the itslive-explorer repository within the Jupyter Notebook interface. Navigate to <strong>/work</strong> to open the notebooks.</p></li>
+<li><p>You can now interact with the notebooks to explore and access data.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="usage-with-conda">
+<h2>Usage with Conda<a class="headerlink" href="#usage-with-conda" title="Permalink to this headline">¶</a></h2>
+<p>Install miniconda3 (Python 3.7) for your platform from <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
+<p>Download the <a class="reference external" href="https://github.com/nasa-jpl/itslive-explorer">itslive-explorer</a> repository from Github by clicking the green ‘Code’ button located at the top right of the repository page and clicking ‘Download Zip’.</p>
+<p>Unzip the file, and open a command line or terminal window in the itslive-explorer folder’s location.</p>
+<p>From a command line or terminal window, install the required environment with the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env create -f binder/environment.yml <span class="o">&amp;&amp;</span> conda activate itslive-explorer
+./binder/postBuild
+</pre></div>
+</div>
+<p>You should now see that the dependencies were installed and our environment is ready to be used.</p>
+<p>If you are a returning user, please make sure your repository is up to date and run the following to update your environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">update</span> <span class="o">-</span><span class="n">f</span> <span class="n">binder</span><span class="o">/</span><span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<p>Activate the environment with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">itslive</span><span class="o">-</span><span class="n">explorer</span>
+</pre></div>
+</div>
+<p>Launch the notebook locally with the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter lab
+</pre></div>
+</div>
+<p>This should open a browser window with the JupyterLab IDE, showing your current working directory on the left-hand navigation. Navigate to the notebooks folder of choice and click on their associated *.ipynb files to get started.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Sometimes Conda environments change (break) even with pinned down dependencies. If you run into an issue with dependencies for the itslive-explorer please open an issue and we’ll try to fix it as soon as possible.</p>
+</div></blockquote>
+</div>
+<div class="section" id="credit">
+<h2>Credit<a class="headerlink" href="#credit" title="Permalink to this headline">¶</a></h2>
+<p>This software is developed by the National Snow and Ice Data Center with funding from multiple sources.</p>
+</div>
+<div class="section" id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this headline">¶</a></h2>
+<p>This repository is licensed under the MIT license. <a class="reference external" href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a></p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/ec21_lopez_etal"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../ec21_cherian_etal/DC_01_cf-xarray.html" title="previous page">cf-xarray: Scale your analysis across datasets with less data wrangling and more metadata handling</a>
+    <a class='right-next' id="next-link" href="notebooks/itslive-notebook-rendered.html" title="next page">Introduction</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By EarthCube Office<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

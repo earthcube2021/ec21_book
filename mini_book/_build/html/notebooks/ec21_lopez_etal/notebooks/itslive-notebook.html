@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction &#8212; EarthCube 2021 Call for Notebooks</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="ITS_LIVE Global Glacier Velocity Exploration and Analysis" href="LL_01_ITS_LIVE_global_glacier_velocity_exploration_and_analysis.html" />
+    <link rel="prev" title="Introduction" href="itslive-notebook-rendered.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      <img src="../../../_static/logo.webp" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">EarthCube 2021 Call for Notebooks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../docs/about.html">
+   Call for Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../../index.html">
+   Notebooks
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../ec21_bourgault_etal/README.html">
+     xclim : Software ecosystem for climate services
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ec21_bourgault_etal/PB_02_xclim_Software_ecosystem_for_climate_services.html">
+       xclim: Software ecosystem for climate services
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ec21_cherian_etal/DC_01_cf-xarray.html">
+     cf-xarray: Scale your analysis across datasets with less data wrangling and more metadata handling
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="../README.html">
+     ITS_LIVE Explorer
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="itslive-notebook-rendered.html">
+       Introduction
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Introduction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="LL_01_ITS_LIVE_global_glacier_velocity_exploration_and_analysis.html">
+       <strong>
+        ITS_LIVE
+       </strong>
+       Global Glacier Velocity Exploration and Analysis
+       <a class="anchor" id="chapter_1">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../ec21_martin_etal/README.html">
+     Frequency-domain analysis of large datasets
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../ec21_martin_etal/PM_01_Frequency-Domain_Analysis_of_Large_Datasets.html">
+       Frequency-Domain Analysis of Large Datasets
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../ec21_uchida_etal/notebooks/TU_05_Diagnosing-the-Eliassen-Palm-flux-from-a-quasi-geostrophic-double-gyre-ensemble.html">
+     Diagnosing the Eliassen-Palm flux from a quasi-geostrophic double gyre ensemble
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/notebooks/ec21_lopez_etal/notebooks/itslive-notebook.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/quantecon-mini-example"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/quantecon-mini-example/issues/new?title=Issue%20on%20page%20%2Fnotebooks/ec21_lopez_etal/notebooks/itslive-notebook.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/quantecon-mini-example/master?urlpath=lab/tree/mini_book/notebooks/ec21_lopez_etal/notebooks/itslive-notebook.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/executablebooks/quantecon-mini-example/blob/master/mini_book/notebooks/ec21_lopez_etal/notebooks/itslive-notebook.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#global-ice-velocities">
+   Global Ice Velocities
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#velocity-granules">
+   Velocity granules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coverage">
+   Coverage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#search-api">
+   Search API
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#spatial-matching">
+     Spatial matching
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#search-parameters">
+     Search parameters
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#itslive-search-via-curl">
+     itslive-search via CURL
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#map-widget">
+   Map Widget
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#workflow">
+   Workflow
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtering">
+   Filtering
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#downloading-data">
+   Downloading data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataset-structure">
+   Dataset structure
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#todo-dataset-summary">
+     TODO:
+     <strong>
+      dataset summary
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-processing">
+   <strong>
+    Data Processing
+   </strong>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#building-a-data-cube">
+     Building a data cube
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div align="center"> 
+<img src='./img/header.png' height='160px'/>
+</div>
+<div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="global-ice-velocities">
+<h2><a class="reference external" href="https://its-live.jpl.nasa.gov/">Global Ice Velocities</a><a class="headerlink" href="#global-ice-velocities" title="Permalink to this headline">¶</a></h2>
+<p>The Inter-mission Time Series of Land Ice Velocity and Elevation (ITS_LIVE) project facilitates ice sheet, ice shelf and glacier research by providing a globally comprehensive and temporally dense multi-sensor record of land ice velocity and elevation with low latency.</p>
+</div>
+<div class="section" id="velocity-granules">
+<h2>Velocity granules<a class="headerlink" href="#velocity-granules" title="Permalink to this headline">¶</a></h2>
+<p>All image pairs are processed using the JPL autonomous Repeat Image Feature Tracking algorithms (auto-RIFT), first presented in (Gardner et al., 2018). Release v00.0 of the ITS_LIVE velocity mosaics use auto-RIFT Version 1. This ITS_LIVE data set uses surface displacements generated by image pairs  in repeat orbits, and image pairs generated by overlap areas of adjacent or near-adjacent orbits. Image pairs collected from the same satellite position (“same-path-row”) are searched if they have a time separation of fewer than 546 days. This approach was used for all satellites in the Landsat series (L4 to L8). To increase data density prior to the launch of Landsat 8, images acquired from differing satellite positions, generally in adjacent or near-adjacent orbit swaths (“cross-path-row”), are also processed if they have a time separation between 10 and 96 days and an acquisition date prior to 14 June 2013(beginning of regular Landsat 8 data). Feature tracking of cross-path-row image pairs produces velocity fields with a lower signal-to-noise ratio due to residual parallax from imperfect terrain correction. Same-path-row and cross-path-row preprocessed pairs of images are searched for matching features by finding local normalized cross-correlation (NCC) maxima at sub-pixel resolution by oversampling the correlation surface by a factor of 16 using a Gaussian kernel. A sparse grid pixel-integer NCC search (1/16 of the density of full search grid) is used to determine areas of coherent correlation between image pairs. For more information, see the Normalized Displacement Coherence (NDC) filter described in Gardner et al. (2018)</p>
+</div>
+<div class="section" id="coverage">
+<h2>Coverage<a class="headerlink" href="#coverage" title="Permalink to this headline">¶</a></h2>
+<p>Scene-pair velocities generated from satellite optical and radar imagery.</p>
+<ul class="simple">
+<li><p>Coverage: All land ice</p></li>
+<li><p>Date range: 1985-present</p></li>
+<li><p>Resolution: 240m</p></li>
+<li><p>Scene-pair separation: 6 to 546 days</p></li>
+</ul>
+</div>
+<div class="section" id="search-api">
+<h2>Search API<a class="headerlink" href="#search-api" title="Permalink to this headline">¶</a></h2>
+<p>The <em>itslive-search</em> API hosted at NSIDC allows us to find granules of interest. Because of its high temporal and spatial resolution, ITS_LIVE data amounts to 8+ million NetCDF files stored in AWS S3.</p>
+<blockquote>
+<div><p>Note: This API returns a list of the granule’s URLs on AWS S3 that match our search criteria not the actual data itself.</p>
+</div></blockquote>
+<p>The main parameters are the area and time of interest and others that are dataset-especific like the percentage of valid data on each image pair. To visualize how the spatial matching works take a look at the following figure.</p>
+<div class="section" id="spatial-matching">
+<h3>Spatial matching<a class="headerlink" href="#spatial-matching" title="Permalink to this headline">¶</a></h3>
+<div align="left"> 
+<img src='./img/itslive-selection.png' height='160px'/>
+</div>
+<p>ITS_LIVE data com from multiple scenes and satellites, which means a lot of overlap. In this case all the scenes that match with our spatial criteria will be returned.</p>
+<blockquote>
+<div><p><strong>For practical reasons, it’s better to search on a glacier scale rather than larger areas. This notebook will use Pine Island Glacier for demo purposes.</strong></p>
+</div></blockquote>
+</div>
+<div class="section" id="search-parameters">
+<h3>Search parameters<a class="headerlink" href="#search-parameters" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>polygon/bbox</strong>: LON-LAT pairs separated by a comma.</p></li>
+<li><p><strong>start</strong>: YYYY-mm-dd start date</p></li>
+<li><p><strong>end</strong>: YYYY-mm-dd end date</p></li>
+<li><p><strong>min_separation</strong>: minimum days of separation</p></li>
+<li><p><strong>max_separation</strong>: maximum days of separation</p></li>
+<li><p><strong>percent_valid_pixels</strong>: % of valid glacier coverage</p></li>
+<li><p><strong>serialization</strong>: json,html,text</p></li>
+</ul>
+</div>
+<div class="section" id="itslive-search-via-curl">
+<h3>itslive-search via CURL<a class="headerlink" href="#itslive-search-via-curl" title="Permalink to this headline">¶</a></h3>
+<p>We can directly query the itslive-search API using curl. i.e.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X GET <span class="s2">&quot;https://nsidc.org/apps/itslive-search/velocities/urls/?polygon=-68.0712890625%2C-69.77135571628376%2C-65.19287109375%2C-69.77135571628376%2C-65.19287109375%2C-68.19605229820671%2C-68.0712890625%2C-68.19605229820671%2C-68.0712890625%2C-69.77135571628376&amp;start=2000-01-01&amp;end=2020-01-01&amp;percent_valid_pixels=80&quot;</span> -H  <span class="s2">&quot;accept: application/json&quot;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>If you want to query our API directly using  your own software here is the OpenApi endpoint <a class="reference external" href="https://nsidc.org/apps/itslive-search/docs">https://nsidc.org/apps/itslive-search/docs</a></p></li>
+<li><p>For questions about this notebook and the dataset please contact users services at <a class="reference external" href="mailto:nsidc&#37;&#52;&#48;nsidc&#46;org">nsidc<span>&#64;</span>nsidc<span>&#46;</span>org</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">SearchWidget</span> <span class="kn">import</span> <span class="nb">map</span>
+<span class="c1"># horizontal=render in notebook. vertical = render in sidecar</span>
+<span class="n">m</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="map-widget">
+<h2>Map Widget<a class="headerlink" href="#map-widget" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="workflow">
+<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>If you use the widget to download the velocity granules, you can go all the way to Data Processing section.</p></li>
+<li><p>if you prefer to use code you can execute the following cells.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># you can also define your own parameters and skip the widget.</span>
+
+<span class="c1"># Pine Island Glacier</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;polygon&#39;</span><span class="p">:</span> <span class="s1">&#39;-101.1555,-74.7387,-99.1172,-75.0879,-99.8797,-75.46,-102.425,-74.925,-101.1555,-74.7387&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="s1">&#39;1984-01-01&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;end&#39;</span><span class="p">:</span> <span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;percent_valid_pixels&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s1">&#39;min_separation&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="s1">&#39;max_separation&#39;</span><span class="p">:</span> <span class="mi">120</span>
+<span class="p">}</span>
+
+<span class="n">granule_urls</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">Search</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total granules found: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">granule_urls</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="filtering">
+<h2>Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h2>
+<p>More than a thousand granules doesn’t seem much but it’s not trivial if you only want to get a glance of the behavior of a particular glacier over the years. For this reason we can limit the number of granules per year and download only those with a given month as a middate, this is useful if the glacier is affected by seasonal cycles.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># filter_urls requires a list of urls, the result is stored in the m.filtered_urls attribute</span>
+<span class="n">filtered_granules_by_year</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">filter_urls</span><span class="p">(</span><span class="n">granule_urls</span><span class="p">,</span>
+                                          <span class="n">max_files_per_year</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                                          <span class="n">months</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;November&#39;</span><span class="p">,</span> <span class="s1">&#39;December&#39;</span><span class="p">,</span> <span class="s1">&#39;January&#39;</span><span class="p">],</span>
+                                          <span class="n">by_year</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># We print the counts per year</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">filtered_granules_by_year</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">filtered_granules_by_year</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total granules after filtering: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">filtered_urls</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This one only caps the number of granules per year</span>
+<span class="n">filtered_granules_by_year</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">filter_urls</span><span class="p">(</span><span class="n">granule_urls</span><span class="p">,</span>
+                                  <span class="n">max_files_per_year</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                                  <span class="n">by_year</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># We print the counts per year</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">filtered_granules_by_year</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">filtered_granules_by_year</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Total granules after filtering: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">filtered_urls</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="downloading-data">
+<h2>Downloading data<a class="headerlink" href="#downloading-data" title="Permalink to this headline">¶</a></h2>
+<p>We have 2 options to download data, we can download filtered urls (by year or as a whole) or we can donload a whole set of URLs returned in our original search.</p>
+<p>Single year example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">download_velocity_granules</span><span class="p">(</span><span class="n">urls</span><span class="o">=</span><span class="n">filtered_granules_by_year</span><span class="p">[</span><span class="s1">&#39;2006&#39;</span><span class="p">],</span>
+                                     <span class="n">path_prefix</span><span class="o">=</span><span class="s1">&#39;data/pine-glacier-2006&#39;</span><span class="p">,</span>
+                                     <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">path_prefix</span></code> is the dorectory on which the netcdf files will be downloaded to and <code class="docutils literal notranslate"><span class="pre">params</span></code> is to keep track of which parameters were used to download a particular set of files.</p>
+<p>We can also download the whole series</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">files</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">download_velocity_granules</span><span class="p">(</span><span class="n">urls</span><span class="o">=</span><span class="n">m</span><span class="o">.</span><span class="n">filtered_urls</span><span class="p">,</span>
+                                     <span class="n">path_prefix</span><span class="o">=</span><span class="s1">&#39;data/pine-glacier-1996-2019&#39;</span><span class="p">,</span>
+                                     <span class="n">filtered_urls</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filtered_urls</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">filtered_urls</span> <span class="c1"># or filtered_granules_by_year</span>
+<span class="n">project_folder</span> <span class="o">=</span> <span class="s1">&#39;data/pine-1996-2019&#39;</span>
+
+<span class="c1"># if we are using our parameters (not the widget) we asign our own dict i.e. params=my_params</span>
+<span class="n">files</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">download_velocity_granules</span><span class="p">(</span><span class="n">urls</span><span class="o">=</span><span class="n">filtered_urls</span><span class="p">,</span>
+                                     <span class="n">path_prefix</span><span class="o">=</span><span class="n">project_folder</span><span class="p">,</span>
+                                     <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dataset-structure">
+<h2>Dataset structure<a class="headerlink" href="#dataset-structure" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="todo-dataset-summary">
+<h3>TODO: <strong>dataset summary</strong><a class="headerlink" href="#todo-dataset-summary" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">LE07_L1GT_001113_20121118_20161127_01_T2_X_LE07_L1GT_232113_20121104_20161127_01_T2_G0240V01_P059.nc</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+
+<span class="n">velocity_granule</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;data/LE07_L1GT_001113_20121118_20161127_01_T2_X_LE07_L1GT_232113_20121104_20161127_01_T2_G0240V01_P059.nc&#39;</span><span class="p">)</span>
+<span class="n">velocity_granule</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">velocity_granule</span><span class="o">.</span><span class="n">v</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-processing">
+<h2><strong>Data Processing</strong><a class="headerlink" href="#data-processing" title="Permalink to this headline">¶</a></h2>
+<p>The most common use case for the velocity granules is to generate a time series. In order to create one, we need to concatenate multiple granules from the region of interest for the time we want information from. ITS_LIVE provides a processing module that will load all the velocity granules on a given directory and use a user defined geojson geometry to clip the files so just the data inside the geometry will be used to create the cube.</p>
+<blockquote>
+<div><p><strong>IMPORTANT:</strong> <code class="docutils literal notranslate"><span class="pre">load_cube</span></code> is not a lazy function. It will allocate granaules on memory in order to create the cube. This means that if we try to load 100,000 granules the kernel will most likely run out of memory.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Note: If we don’t use the map widget we can also use a handy function to get the geojson polygon from a bounding box.</p></li>
+</ul>
+<p>The signature of the <code class="docutils literal notranslate"><span class="pre">load_cube</span></code> method is <code class="docutils literal notranslate"><span class="pre">load_cube(project_folder,</span> <span class="pre">clip_geom=geometry,</span> <span class="pre">include_all_projections=False)</span></code></p>
+<p>The parameters are:</p>
+<ul class="simple">
+<li><p><strong>project_folder</strong>: The file path pattern for NetCDF velocity files</p></li>
+<li><p><strong>clip_geom</strong>: gejson geometry dictionary, this geometry will be used to <a class="reference external" href="https://corteva.github.io/rioxarray/html/examples/clip_geom.html">clip the files</a></p></li>
+<li><p><strong>include_all_projections</strong>: True or False, if True the cube will include granules on different UTM zones than the most common one for the selected area.</p></li>
+</ul>
+<p><strong>Note: The following cells are intended to work after multiple velocity granules from different years and the same region are downloaded.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">VelocityProcessing</span> <span class="kn">import</span> <span class="n">VelocityProcessing</span> <span class="k">as</span> <span class="n">vp</span>
+
+<span class="c1"># If we have a list of coordinates or a bbox we can get the correspondant geojson by</span>
+
+<span class="c1"># geometry = vp.box_to_geojson([-49.79, 69.06, -48.55, 69.25])</span>
+<span class="c1"># geometry = vp.polygon_to_geojson([(-48.55, 69.06),(-48.55, 69.25),(-49.79, 69.25),(-49.79, 69.06),(-48.55, 69.06)])</span>
+
+<span class="c1"># The load_cube method needs a GeoJSON geometry to clip the region of interest.</span>
+
+<span class="n">geometry</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Polygon&#39;</span><span class="p">,</span>
+<span class="s1">&#39;coordinates&#39;</span><span class="p">:</span> <span class="p">[[[</span><span class="o">-</span><span class="mf">101.155511</span><span class="p">,</span> <span class="o">-</span><span class="mf">74.738709</span><span class="p">],</span>
+  <span class="p">[</span><span class="o">-</span><span class="mf">99.117207</span><span class="p">,</span> <span class="o">-</span><span class="mf">75.087959</span><span class="p">],</span>
+  <span class="p">[</span><span class="o">-</span><span class="mf">99.879774</span><span class="p">,</span> <span class="o">-</span><span class="mf">75.46007</span><span class="p">],</span>
+  <span class="p">[</span><span class="o">-</span><span class="mf">102.42516</span><span class="p">,</span> <span class="o">-</span><span class="mf">74.925034</span><span class="p">],</span>
+  <span class="p">[</span><span class="o">-</span><span class="mf">101.155511</span><span class="p">,</span> <span class="o">-</span><span class="mf">74.738709</span><span class="p">]]]}</span>
+
+<span class="c1"># if we are using the widget</span>
+<span class="c1"># geometry = m.get_current_selection()[&#39;geometry&#39;] </span>
+<span class="n">geometry</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="building-a-data-cube">
+<h3>Building a data cube<a class="headerlink" href="#building-a-data-cube" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="c1"># File pattern for our curent search folder.</span>
+<span class="n">project_folder</span> <span class="o">=</span> <span class="s1">&#39;data/pine-1996-2019/*.nc&#39;</span>
+
+<span class="n">cube</span> <span class="o">=</span> <span class="n">vp</span><span class="o">.</span><span class="n">load_cube</span><span class="p">(</span><span class="n">project_folder</span><span class="p">,</span>
+                    <span class="n">clip_geom</span><span class="o">=</span><span class="n">geometry</span><span class="p">,</span>
+                    <span class="n">include_all_projections</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">cube</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Histogram of velocities, useful to discard outliers.</span>
+<span class="n">cube</span><span class="o">.</span><span class="n">v</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We can now use xarray operations to calculate means/max etc and plot them over time.</span>
+<span class="n">cube_yearly</span> <span class="o">=</span> <span class="n">cube</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;time.year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">cube_yearly</span><span class="o">.</span><span class="n">v</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span>
+                          <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span>
+                          <span class="n">col</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span>
+                          <span class="n">col_wrap</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+                          <span class="n">cbar_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+                              <span class="n">orientation</span><span class="o">=</span> <span class="s1">&#39;horizontal&#39;</span><span class="p">,</span>
+                              <span class="n">shrink</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span>
+                              <span class="n">anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.8</span><span class="p">),</span>
+                              <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Velocity m/Year&#39;</span><span class="p">)</span>
+                         <span class="p">)</span>
+
+<span class="n">plot</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="mf">0.92</span><span class="p">)</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Pine Island Glacier Yearly Mean Velocity m/y&quot;</span><span class="p">,</span>
+                  <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="s2">&quot;bold&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/ec21_lopez_etal/notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="itslive-notebook-rendered.html" title="previous page">Introduction</a>
+    <a class='right-next' id="next-link" href="LL_01_ITS_LIVE_global_glacier_velocity_exploration_and_analysis.html" title="next page"><strong>ITS_LIVE</strong> Global Glacier Velocity Exploration and Analysis <a class="anchor" id="chapter_1"/></a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By EarthCube Office<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

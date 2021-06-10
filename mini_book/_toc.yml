@@ -1,0 +1,27 @@
+- file: docs/index
+  sections:
+    - file: docs/about
+    #- file: docs/getting_started
+    #- file: docs/python_by_example
+    #- file: docs/learn_more
+- file: notebooks/index
+  sections:
+    - file: notebooks/ec21_bourgault_etal/README.md
+      sections:
+        - file: notebooks/ec21_bourgault_etal/PB_02_xclim_Software_ecosystem_for_climate_services.ipynb
+
+    - file: notebooks/ec21_cherian_etal/DC_01_cf-xarray.ipynb
+
+    - file: notebooks/ec21_lopez_etal/README.md
+      sections:
+        - file: notebooks/ec21_lopez_etal/notebooks/itslive-notebook-rendered.ipynb
+        - file: notebooks/ec21_lopez_etal/notebooks/itslive-notebook.ipynb
+        - file: notebooks/ec21_lopez_etal/notebooks/LL_01_ITS_LIVE_global_glacier_velocity_exploration_and_analysis.ipynb
+
+    - file: notebooks/ec21_martin_etal/README.md
+      sections:
+        - file: notebooks/ec21_martin_etal/PM_01_Frequency-Domain_Analysis_of_Large_Datasets.ipynb
+
+    - file: notebooks/ec21_uchida_etal/notebooks/TU_05_Diagnosing-the-Eliassen-Palm-flux-from-a-quasi-geostrophic-double-gyre-ensemble.ipynb
+  
+   

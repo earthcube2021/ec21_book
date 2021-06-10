@@ -1,0 +1,41 @@
+title : EarthCube 2021 Call for Notebooks
+author: EarthCube Office
+logo: 'logo.webp'
+
+# Short description about the book
+description: >-
+  A brief introduction to Python programming for scientific applications.
+
+execute:
+  execute_notebooks           : off
+
+# HTML-specific settings
+html:
+  home_page_in_navbar         : false
+  use_issues_button: true
+  use_repository_button: true
+  
+# Interact link settings
+notebook_interface            : "notebook"
+
+# Launch button settings
+repository:
+  url                         : https://github.com/executablebooks/quantecon-mini-example
+  path_to_book                : "mini_book"
+
+# binder:
+#   binderhub_url               : "https://mybinder.org"
+#   text                        : "Launch binder"
+
+# LaTeX settings
+bibtex_bibfiles:
+   - _bibliography/references.bib
+latex:
+  latex_engine                : "xelatex"
+  latex_documents:
+    targetname: book.tex
+
+launch_buttons:
+  notebook_interface: "jupyterlab"  # or "classic"
+  binderhub_url: "https://mybinder.org"  # The URL for your BinderHub (e.g., https://mybinder.org)
+  colab_url: "https://colab.research.google.com"
