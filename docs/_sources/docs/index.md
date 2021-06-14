@@ -5,6 +5,3 @@ As scientific studies become more data intensive and software dependent, reprodu
  Submitted notebooks should highlight a tool (i.e. software, service, library, dataset, standard), explaining and demonstrating interactively how the tool may be used to address a significant problem in geoscience.  There will be two tracks. One track will be focused on submissions where the goal is describing scientific outputs. In this case, the novelty is based on the analysis being done and the scientific conclusions drawn. The other is on demonstrating new software and tools. Here the emphasis is on new software and showing how it can be used. 
 
  Submissions will be peer reviewed in terms of their impact on geoscience research and overall usability, by reviewers from the geoscience and cyberinfrastructure communities.  Authors of accepted notebooks will have the opportunity to present their notebook at the EarthCube Annual Meeting and their notebooks will be published in an EarthCube digital proceedings for others to discover, use, and cite.​
-
-
-

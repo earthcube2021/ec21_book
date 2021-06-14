@@ -52,10 +52,13 @@
       sections:
         - file: notebooks/ec21_martin_etal/PM_01_Frequency-Domain_Analysis_of_Large_Datasets.ipynb
 
+    - file:  notebooks/ec21_mason_etal/README.md
+      sections:
+        - file: notebooks/ec21_mason_etal/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning.ipynb
+
     - file:  notebooks/ec21_maussion_etal/README.md
       sections:
         - file: notebooks/ec21_maussion_etal/FM_01_OGGM-Edu_learn_and_teach_about_glaciers.ipynb
-
 
     - file:  notebooks/ec21_potnis_etal/README.md
       sections:
