@@ -1,0 +1,2061 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automated Machine Learning for Earth Science via AutoGluon &#8212; EarthCube 2021 Call for Notebooks</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Diagnosing the Eliassen-Palm flux from a quasi-geostrophic double gyre ensemble" href="../ec21_uchida_etal/notebooks/TU_05_Diagnosing-the-Eliassen-Palm-flux-from-a-quasi-geostrophic-double-gyre-ensemble.html" />
+    <link rel="prev" title="EC2021: Automated Machine Learning for Earth Science via AutoGluon" href="README.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.webp" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">EarthCube 2021 Call for Notebooks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../docs/about.html">
+   Call for Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Notebooks
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_anil_etal/README.html">
+     ec21_binder_anil
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_anil_etal/SA_01_Argo_Data_Exploration.html">
+       Interactive Jupyter notebook for hydrographic ocean data exploration, retrieval and visualization via the Argovis API
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_balwada_etal/README.html">
+     ec2021_balwada_etal
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_balwada_etal/DB_01_Glider_Viz_Panel.html">
+       Glider Viz Panel
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_beckley_etal/README.html">
+     Programmatic Access to OpenTopography’s Cloud Optimized Geotiff (COG) Global Datasets
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_beckley_etal/OT_01_BulkAccessCOGs.html">
+       Programmatic Access to OpenTopography’s Cloud Optimized GeoTIFF (COG) Global Datasets
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_bourgault_etal/README.html">
+     xclim : Software ecosystem for climate services
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_bourgault_etal/PB_02_xclim_Software_ecosystem_for_climate_services.html">
+       xclim: Software ecosystem for climate services
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_cherian_etal/DC_01_cf-xarray.html">
+     cf-xarray: Scale your analysis across datasets with less data wrangling and more metadata handling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_cych_etal/BC_01%20Bias%20Corrected%20Estimation%20of%20Paleointensity.html">
+     BC_01 Bias Corrected Estimation of Paleointensity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_dye_etal/README.html">
+     Toward autonomous detection of anomalous GNSS data via applied unsupervised artificial intelligence
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_garzon_etal/README.html">
+     Exploring Research Data Repositories with geoextent.
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_garzon_etal/showcase/SG_01_Exploring_Research_Data_Repositories_with_geoextent.html">
+       Exploring Research Data Repositories with geoextent
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_gray_etal/README.html">
+     Leveraging satellite data and pangeo to investigate the role of Gulf Stream frontal dynamics in ocean productivity
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_gray_etal/PG_01_gulf_stream_dynamics_role_in_productivity.html">
+       Leveraging satellite data and pangeo to investigate the role of Gulf Stream frontal dynamics in ocean productivity
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_hu_etal/README.html">
+     Machine Learning Guided Weather Analogs
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_hu_etal/WH_01_Spatio-Temporal_Deep_Analogs_2021.html">
+       WH_01_Spatio-Temporal_Deep_Analogs_2021
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_lopez_etal/README.html">
+     ITS_LIVE Explorer
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_lopez_etal/notebooks/itslive-notebook-rendered.html">
+       Introduction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_lopez_etal/notebooks/itslive-notebook.html">
+       Introduction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_lopez_etal/notebooks/LL_01_ITS_LIVE_global_glacier_velocity_exploration_and_analysis.html">
+       <strong>
+        ITS_LIVE
+       </strong>
+       Global Glacier Velocity Exploration and Analysis
+       <a class="anchor" id="chapter_1">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_martin_etal/README.html">
+     Frequency-domain analysis of large datasets
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_martin_etal/PM_01_Frequency-Domain_Analysis_of_Large_Datasets.html">
+       Frequency-Domain Analysis of Large Datasets
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_maussion_etal/README.html">
+     OGGM-edu EarthCube notebook
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_maussion_etal/FM_01_OGGM-Edu_learn_and_teach_about_glaciers.html">
+       OGGM-Edu - Jupyter notebooks to learn and teach about glaciers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_potnis_etal/README.html">
+     JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learn
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_potnis_etal/JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learning_using_CHORDS.html">
+       Real Time Alignment and Distribution of Weather Radar Data with Rain Gauge Data for Deep Learning using CHORDS
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_seijo_etal/README.html">
+     click Binder badge to launch notebook on Binder (no need to install environment):
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="README.html">
+     EC2021: Automated Machine Learning for Earth Science via AutoGluon
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Automated Machine Learning for Earth Science via AutoGluon
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_uchida_etal/notebooks/TU_05_Diagnosing-the-Eliassen-Palm-flux-from-a-quasi-geostrophic-double-gyre-ensemble.html">
+     Diagnosing the Eliassen-Palm flux from a quasi-geostrophic double gyre ensemble
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_zheng_etal/README.html">
+     EZ-FeatureTrack
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_zheng_etal/notebooks/WZ_01_mapping_ice_flow_velocity.html">
+       Mapping ice flow velocity using an easy and interactive feature tracking workflow
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/ec21_shi_etal/Xingjian_Shi_01_Automated_Machine_Learning_for_Earth_Science_via_AutoGluon.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/earthcube2021/ec21_book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/earthcube2021/ec21_book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/ec21_shi_etal/Xingjian_Shi_01_Automated_Machine_Learning_for_Earth_Science_via_AutoGluon.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/earthcube2021/ec21_book/master?urlpath=lab/tree/book/notebooks/ec21_shi_etal/Xingjian_Shi_01_Automated_Machine_Learning_for_Earth_Science_via_AutoGluon.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/earthcube2021/ec21_book/blob/master/book/notebooks/ec21_shi_etal/Xingjian_Shi_01_Automated_Machine_Learning_for_Earth_Science_via_AutoGluon.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of Contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#purpose">
+   Purpose
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#forest-cover-type-classification">
+   Forest Cover Type Classification
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#train-model-with-one-line">
+     Train Model with One Line
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluation-and-prediction">
+     Evaluation and Prediction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-the-predictor">
+     Load the Predictor
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#feature-importance">
+     Feature Importance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#achieve-better-performance">
+     Achieve Better Performance
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solar-radiation-prediction">
+   Solar Radiation Prediction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-information">
+   More Information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="automated-machine-learning-for-earth-science-via-autogluon">
+<h1>Automated Machine Learning for Earth Science via AutoGluon<a class="headerlink" href="#automated-machine-learning-for-earth-science-via-autogluon" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Author1 = {“name”: “Xingjian Shi”, “affiliation”: “Amazon Web Services”, “email”: “<a class="reference external" href="mailto:xjshi&#37;&#52;&#48;amazon&#46;com">xjshi<span>&#64;</span>amazon<span>&#46;</span>com</a>”, “orcid”: “”}</p></li>
+<li><p>Author2 = {“name”: “Wen-ming Ye”, “affiliation”: “Amazon Web Services”, “email”: “<a class="reference external" href="mailto:wye&#37;&#52;&#48;amazon&#46;com">wye<span>&#64;</span>amazon<span>&#46;</span>com</a>”, “orcid”: “”}</p></li>
+<li><p>Author3 = {“name”: “Nick Erickson”, “affiliation”: “Amazon Web Services”, “email”: “<a class="reference external" href="mailto:neerick&#37;&#52;&#48;amazon&#46;com">neerick<span>&#64;</span>amazon<span>&#46;</span>com</a>”, “orcid”: “”}</p></li>
+<li><p>Author4 = {“name”: “Jonas Mueller”, “affiliation”: “Amazon Web Services”, “email”: “<a class="reference external" href="mailto:jonasmue&#37;&#52;&#48;amazon&#46;com">jonasmue<span>&#64;</span>amazon<span>&#46;</span>com</a>”, “orcid”: “”}</p></li>
+<li><p>Author5 = {“name”: “Alexander Shirkov”, “affiliation”: “Amazon Web Services”, “email”: “<a class="reference external" href="mailto:ashyrkou&#37;&#52;&#48;amazon&#46;com">ashyrkou<span>&#64;</span>amazon<span>&#46;</span>com</a>”, “orcid”: “”}</p></li>
+<li><p>Author6 = {“name”: “Zhi Zhang”, “affiliation”: “Amazon Web Services”, “email”: “<a class="reference external" href="mailto:zhiz&#37;&#52;&#48;amazon&#46;com">zhiz<span>&#64;</span>amazon<span>&#46;</span>com</a>”, “orcid”: “”}</p></li>
+<li><p>Author7 = {“name”: “Mu Li”, “affiliation”: “Amazon Web Services”, “email”: “<a class="reference external" href="mailto:mli&#37;&#52;&#48;amazon&#46;com">mli<span>&#64;</span>amazon<span>&#46;</span>com</a>”, “orcid”: “”}</p></li>
+<li><p>Author8 = {“name”: “Alexander Smola”, “affiliation”: “Amazon Web Services”, “email”: “<a class="reference external" href="mailto:alex&#37;&#52;&#48;smola&#46;org">alex<span>&#64;</span>smola<span>&#46;</span>org</a>”, “orcid”: “”}</p></li>
+</ul>
+</div>
+<div class="section" id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#purpose">Purpose</a></p></li>
+<li><p><a class="reference external" href="#setup">Setup</a></p></li>
+<li><p><a class="reference external" href="#forest-cover-type-classification">Forest Cover Type Classification</a></p>
+<ul>
+<li><p><a class="reference external" href="#train-model-with-one-line">Train Model with One Line</a></p></li>
+<li><p><a class="reference external" href="#evaluation-and-prediction">Evaluation and Prediction</a></p></li>
+<li><p><a class="reference external" href="#load-the-predictor">Load the Predictor</a></p></li>
+<li><p><a class="reference external" href="#feature-importance">Feature Importance</a></p></li>
+<li><p><a class="reference external" href="#achieve-better-performance">Achieve Better Performance</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#solar-radiation-predictions">Solar Radiation Prediction</a></p></li>
+<li><p><a class="reference external" href="#more-information">More Information</a></p></li>
+</ul>
+</div>
+<div class="section" id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<p>In this notebook, we introduce <a class="reference external" href="https://github.com/awslabs/autogluon">AutoGluon</a> to the Earth science community. AutoGluon is an automated machine learning toolkit that enables users to solve machine learning problems with a single line of code. Many earth science problems involve tabular-like datasets. With AutoGluon, you can feed in the <strong>raw</strong> data table and specify the <code class="docutils literal notranslate"><span class="pre">label</span></code> column. AutoGluon will deliver a model that has reasonable performance in a short period of time. In addition, with AutoGluon, you can also analyze the importance of each feature column with a single line of code. In the following, we illustrate how to use AutoGluon to build machine learning models for two Earth Science problems.</p>
+</div>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>We have pre-installed <a class="reference external" href="https://github.com/awslabs/autogluon">AutoGluon</a> via pip. Here, we will fix the random seed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Uncomment below to install autogluon</span>
+<span class="c1"># !python3 -m pip install autogluon</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: You are using pip version 20.2.4; however, version 21.1.1 is available.</span>
+<span class=" -Color -Color-Yellow">You should consider upgrading via the &#39;/usr/bin/python3 -m pip install --upgrade pip&#39; command.</span>
+<span class=" -Color -Color-Yellow">WARNING: You are using pip version 20.2.4; however, version 21.1.1 is available.</span>
+<span class=" -Color -Color-Yellow">You should consider upgrading via the &#39;/usr/bin/python3 -m pip install --upgrade pip&#39; command.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="forest-cover-type-classification">
+<h2>Forest Cover Type Classification<a class="headerlink" href="#forest-cover-type-classification" title="Permalink to this headline">¶</a></h2>
+<p>In the first example, we will predict the forest cover type (the predominant kind of tree cover) from strictly cartographic variables. The dataset is downloaded from <a class="reference external" href="https://www.kaggle.com/c/forest-cover-type-prediction">Kaggle Forest Cover Type Prediction</a>. Study area of the dataset includes four wilderness areas located in the Roosevelt National Forest of northern Colorado. The actual forest cover type for a given 30 x 30 meter cell was determined from US Forest Service (USFS) Region 2 Resource Information System data. Independent variables were then derived from data obtained from the US Geological Survey and USFS. The data is in raw form and contains binary columns of data for qualitative independent variables such as wilderness areas and soil type. Let’s first download the dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>wget https://deep-earth.s3.amazonaws.com/datasets/earthcube2021_demo/forest-cover-type-prediction.zip -O forest-cover-type-prediction.zip
+<span class="o">!</span>unzip -o forest-cover-type-prediction.zip -d forest-cover-type-prediction
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2021-05-16 08:43:12--  https://deep-earth.s3.amazonaws.com/datasets/earthcube2021_demo/forest-cover-type-prediction.zip
+Resolving deep-earth.s3.amazonaws.com (deep-earth.s3.amazonaws.com)... 52.217.71.28
+Connecting to deep-earth.s3.amazonaws.com (deep-earth.s3.amazonaws.com)|52.217.71.28|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 26555059 (25M) [application/zip]
+Saving to: ‘forest-cover-type-prediction.zip’
+
+forest-cover-type-p 100%[===================&gt;]  25.32M  63.0MB/s    in 0.4s    
+
+2021-05-16 08:43:13 (63.0 MB/s) - ‘forest-cover-type-prediction.zip’ saved [26555059/26555059]
+
+Archive:  forest-cover-type-prediction.zip
+  inflating: forest-cover-type-prediction/sampleSubmission.csv  
+  inflating: forest-cover-type-prediction/sampleSubmission.csv.zip  
+  inflating: forest-cover-type-prediction/test.csv  
+  inflating: forest-cover-type-prediction/test.csv.zip  
+  inflating: forest-cover-type-prediction/test3.csv  
+  inflating: forest-cover-type-prediction/train.csv  
+  inflating: forest-cover-type-prediction/train.csv.zip  
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here, we load and visualize the dataset. We will split the dataset to 80% training and 20% development for the purpose of reporting the score on the development data. Also, for the purpose of demonstration, we will subsample the dataset to 5000 samples.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;forest-cover-type-prediction/train.csv.zip&#39;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Id&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">train_df</span><span class="p">,</span> <span class="n">dev_df</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>By visualizing the dataset, we can see that there are 54 feature columns and 1 label column called <code class="docutils literal notranslate"><span class="pre">&quot;Cover_Type&quot;</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Elevation</th>
+      <th>Aspect</th>
+      <th>Slope</th>
+      <th>Horizontal_Distance_To_Hydrology</th>
+      <th>Vertical_Distance_To_Hydrology</th>
+      <th>Horizontal_Distance_To_Roadways</th>
+      <th>Hillshade_9am</th>
+      <th>Hillshade_Noon</th>
+      <th>Hillshade_3pm</th>
+      <th>Horizontal_Distance_To_Fire_Points</th>
+      <th>...</th>
+      <th>Soil_Type32</th>
+      <th>Soil_Type33</th>
+      <th>Soil_Type34</th>
+      <th>Soil_Type35</th>
+      <th>Soil_Type36</th>
+      <th>Soil_Type37</th>
+      <th>Soil_Type38</th>
+      <th>Soil_Type39</th>
+      <th>Soil_Type40</th>
+      <th>Cover_Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>7449</th>
+      <td>2762</td>
+      <td>17</td>
+      <td>16</td>
+      <td>270</td>
+      <td>49</td>
+      <td>2639</td>
+      <td>206</td>
+      <td>206</td>
+      <td>134</td>
+      <td>268</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>13086</th>
+      <td>2283</td>
+      <td>109</td>
+      <td>11</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1138</td>
+      <td>240</td>
+      <td>227</td>
+      <td>116</td>
+      <td>1187</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>14221</th>
+      <td>3220</td>
+      <td>82</td>
+      <td>14</td>
+      <td>247</td>
+      <td>66</td>
+      <td>3328</td>
+      <td>239</td>
+      <td>214</td>
+      <td>103</td>
+      <td>819</td>
+      <td>...</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>768</th>
+      <td>3021</td>
+      <td>68</td>
+      <td>8</td>
+      <td>201</td>
+      <td>26</td>
+      <td>4134</td>
+      <td>228</td>
+      <td>225</td>
+      <td>130</td>
+      <td>2493</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>6132</th>
+      <td>2446</td>
+      <td>76</td>
+      <td>21</td>
+      <td>469</td>
+      <td>105</td>
+      <td>726</td>
+      <td>241</td>
+      <td>196</td>
+      <td>75</td>
+      <td>1401</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 55 columns</p>
+</div></div></div>
+</div>
+<div class="section" id="train-model-with-one-line">
+<h3>Train Model with One Line<a class="headerlink" href="#train-model-with-one-line" title="Permalink to this headline">¶</a></h3>
+<p>Next, we train a model in AutoGluon with a single line of code. We will just need to specify the label column before calling <code class="docutils literal notranslate"><span class="pre">.fit()</span></code>. Here, the label column is <code class="docutils literal notranslate"><span class="pre">Cover_Type</span></code>. AutoGluno will inference the problem type automatically. In our example, it can correctly figure out that it is a “multiclass” classification problem and output the model with the best accuracy. Internally, it will also figure out the feature type automatically.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">autogluon</span>
+<span class="kn">from</span> <span class="nn">autogluon.tabular</span> <span class="kn">import</span> <span class="n">TabularPredictor</span>
+<span class="n">predictor</span> <span class="o">=</span> <span class="n">TabularPredictor</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Cover_Type&#39;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;ag_ec2021_demo&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: path already exists! This predictor may overwrite an existing predictor! path=&quot;ag_ec2021_demo&quot;
+Beginning AutoGluon training ...
+AutoGluon will save models to &quot;ag_ec2021_demo/&quot;
+AutoGluon Version:  0.2.1b20210511
+Train Data Rows:    3750
+Train Data Columns: 54
+Preprocessing data ...
+AutoGluon infers your prediction problem is: &#39;multiclass&#39; (because dtype of label-column == int, but few unique label-values observed).
+	7 unique label values:  [5, 4, 1, 6, 3, 2, 7]
+	If &#39;multiclass&#39; is not the correct problem_type, please manually specify the problem_type argument in fit() (You may specify problem_type as one of: [&#39;binary&#39;, &#39;multiclass&#39;, &#39;regression&#39;])
+NumExpr defaulting to 8 threads.
+Train Data Class Count: 7
+Using Feature Generators to preprocess the data ...
+Fitting AutoMLPipelineFeatureGenerator...
+	Available Memory:                    31462.81 MB
+	Train Data (Original)  Memory Usage: 1.62 MB (0.0% of available memory)
+	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
+	Stage 1 Generators:
+		Fitting AsTypeFeatureGenerator...
+	Stage 2 Generators:
+		Fitting FillNaFeatureGenerator...
+	Stage 3 Generators:
+		Fitting IdentityFeatureGenerator...
+	Stage 4 Generators:
+		Fitting DropUniqueFeatureGenerator...
+	Useless Original Features (Count: 4): [&#39;Soil_Type7&#39;, &#39;Soil_Type8&#39;, &#39;Soil_Type15&#39;, &#39;Soil_Type25&#39;]
+		These features carry no predictive signal and should be manually investigated.
+		This is typically a feature which has the same value for all rows.
+		These features do not need to be present at inference time.
+	Types of features in original data (raw dtype, special dtypes):
+		(&#39;int&#39;, []) : 50 | [&#39;Elevation&#39;, &#39;Aspect&#39;, &#39;Slope&#39;, &#39;Horizontal_Distance_To_Hydrology&#39;, &#39;Vertical_Distance_To_Hydrology&#39;, ...]
+	Types of features in processed data (raw dtype, special dtypes):
+		(&#39;int&#39;, []) : 50 | [&#39;Elevation&#39;, &#39;Aspect&#39;, &#39;Slope&#39;, &#39;Horizontal_Distance_To_Hydrology&#39;, &#39;Vertical_Distance_To_Hydrology&#39;, ...]
+	0.1s = Fit runtime
+	50 features in original data used to generate 50 features in processed data.
+	Train Data (Processed) Memory Usage: 1.5 MB (0.0% of available memory)
+Data preprocessing and feature engineering runtime = 0.09s ...
+AutoGluon will gauge predictive performance using evaluation metric: &#39;accuracy&#39;
+	To change this, specify the eval_metric argument of fit()
+Automatically generating train/validation split with holdout_frac=0.13333333333333333, Train Rows: 3250, Val Rows: 500
+Fitting 13 L1 models ...
+Fitting model: KNeighborsUnif ...
+	0.72	 = Validation accuracy score
+	0.02s	 = Training runtime
+	0.11s	 = Validation runtime
+Fitting model: KNeighborsDist ...
+	0.744	 = Validation accuracy score
+	0.01s	 = Training runtime
+	0.1s	 = Validation runtime
+Fitting model: NeuralNetFastAI ...
+	0.796	 = Validation accuracy score
+	8.52s	 = Training runtime
+	0.03s	 = Validation runtime
+Fitting model: LightGBMXT ...
+	0.83	 = Validation accuracy score
+	1.93s	 = Training runtime
+	0.03s	 = Validation runtime
+Fitting model: LightGBM ...
+	0.832	 = Validation accuracy score
+	3.08s	 = Training runtime
+	0.04s	 = Validation runtime
+Fitting model: RandomForestGini ...
+	0.822	 = Validation accuracy score
+	0.85s	 = Training runtime
+	0.1s	 = Validation runtime
+Fitting model: RandomForestEntr ...
+	0.824	 = Validation accuracy score
+	1.02s	 = Training runtime
+	0.1s	 = Validation runtime
+Fitting model: CatBoost ...
+	0.812	 = Validation accuracy score
+	4.56s	 = Training runtime
+	0.0s	 = Validation runtime
+Fitting model: ExtraTreesGini ...
+	0.802	 = Validation accuracy score
+	0.71s	 = Training runtime
+	0.1s	 = Validation runtime
+Fitting model: ExtraTreesEntr ...
+	0.808	 = Validation accuracy score
+	0.81s	 = Training runtime
+	0.1s	 = Validation runtime
+Fitting model: XGBoost ...
+	0.816	 = Validation accuracy score
+	6.59s	 = Training runtime
+	0.01s	 = Validation runtime
+Fitting model: NeuralNetMXNet ...
+	0.8	 = Validation accuracy score
+	9.82s	 = Training runtime
+	0.12s	 = Validation runtime
+Fitting model: LightGBMLarge ...
+	0.834	 = Validation accuracy score
+	6.4s	 = Training runtime
+	0.03s	 = Validation runtime
+Fitting model: WeightedEnsemble_L2 ...
+	0.858	 = Validation accuracy score
+	0.35s	 = Training runtime
+	0.0s	 = Validation runtime
+AutoGluon training complete, total runtime = 49.1s ...
+TabularPredictor saved. To load, use: predictor = TabularPredictor.load(&quot;ag_ec2021_demo/&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can visualize the performance of each model with <code class="docutils literal notranslate"><span class="pre">predictor.leaderboard()</span></code>. Internally, AutoGluon trains a diverse set of different tabular models and computes a weighted ensemble to combine these models.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictor</span><span class="o">.</span><span class="n">leaderboard</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                  model  score_val  pred_time_val   fit_time  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
+0   WeightedEnsemble_L2      0.858       0.432053  28.982538                0.000448           0.346764            2       True         14
+1         LightGBMLarge      0.834       0.032289   6.397996                0.032289           6.397996            1       True         13
+2              LightGBM      0.832       0.040016   3.076502                0.040016           3.076502            1       True          5
+3            LightGBMXT      0.830       0.028169   1.926692                0.028169           1.926692            1       True          4
+4      RandomForestEntr      0.824       0.102347   1.017105                0.102347           1.017105            1       True          7
+5      RandomForestGini      0.822       0.102403   0.848964                0.102403           0.848964            1       True          6
+6               XGBoost      0.816       0.011192   6.591112                0.011192           6.591112            1       True         11
+7              CatBoost      0.812       0.004262   4.561907                0.004262           4.561907            1       True          8
+8        ExtraTreesEntr      0.808       0.102475   0.814237                0.102475           0.814237            1       True         10
+9        ExtraTreesGini      0.802       0.102421   0.714676                0.102421           0.714676            1       True          9
+10       NeuralNetMXNet      0.800       0.124815   9.818555                0.124815           9.818555            1       True         12
+11      NeuralNetFastAI      0.796       0.029656   8.515627                0.029656           8.515627            1       True          3
+12       KNeighborsDist      0.744       0.102354   0.012857                0.102354           0.012857            1       True          2
+13       KNeighborsUnif      0.720       0.105474   0.017922                0.105474           0.017922            1       True          1
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>model</th>
+      <th>score_val</th>
+      <th>pred_time_val</th>
+      <th>fit_time</th>
+      <th>pred_time_val_marginal</th>
+      <th>fit_time_marginal</th>
+      <th>stack_level</th>
+      <th>can_infer</th>
+      <th>fit_order</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>WeightedEnsemble_L2</td>
+      <td>0.858</td>
+      <td>0.432053</td>
+      <td>28.982538</td>
+      <td>0.000448</td>
+      <td>0.346764</td>
+      <td>2</td>
+      <td>True</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>LightGBMLarge</td>
+      <td>0.834</td>
+      <td>0.032289</td>
+      <td>6.397996</td>
+      <td>0.032289</td>
+      <td>6.397996</td>
+      <td>1</td>
+      <td>True</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>LightGBM</td>
+      <td>0.832</td>
+      <td>0.040016</td>
+      <td>3.076502</td>
+      <td>0.040016</td>
+      <td>3.076502</td>
+      <td>1</td>
+      <td>True</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>LightGBMXT</td>
+      <td>0.830</td>
+      <td>0.028169</td>
+      <td>1.926692</td>
+      <td>0.028169</td>
+      <td>1.926692</td>
+      <td>1</td>
+      <td>True</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>RandomForestEntr</td>
+      <td>0.824</td>
+      <td>0.102347</td>
+      <td>1.017105</td>
+      <td>0.102347</td>
+      <td>1.017105</td>
+      <td>1</td>
+      <td>True</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>RandomForestGini</td>
+      <td>0.822</td>
+      <td>0.102403</td>
+      <td>0.848964</td>
+      <td>0.102403</td>
+      <td>0.848964</td>
+      <td>1</td>
+      <td>True</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>XGBoost</td>
+      <td>0.816</td>
+      <td>0.011192</td>
+      <td>6.591112</td>
+      <td>0.011192</td>
+      <td>6.591112</td>
+      <td>1</td>
+      <td>True</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>CatBoost</td>
+      <td>0.812</td>
+      <td>0.004262</td>
+      <td>4.561907</td>
+      <td>0.004262</td>
+      <td>4.561907</td>
+      <td>1</td>
+      <td>True</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>ExtraTreesEntr</td>
+      <td>0.808</td>
+      <td>0.102475</td>
+      <td>0.814237</td>
+      <td>0.102475</td>
+      <td>0.814237</td>
+      <td>1</td>
+      <td>True</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>ExtraTreesGini</td>
+      <td>0.802</td>
+      <td>0.102421</td>
+      <td>0.714676</td>
+      <td>0.102421</td>
+      <td>0.714676</td>
+      <td>1</td>
+      <td>True</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>NeuralNetMXNet</td>
+      <td>0.800</td>
+      <td>0.124815</td>
+      <td>9.818555</td>
+      <td>0.124815</td>
+      <td>9.818555</td>
+      <td>1</td>
+      <td>True</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>NeuralNetFastAI</td>
+      <td>0.796</td>
+      <td>0.029656</td>
+      <td>8.515627</td>
+      <td>0.029656</td>
+      <td>8.515627</td>
+      <td>1</td>
+      <td>True</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>KNeighborsDist</td>
+      <td>0.744</td>
+      <td>0.102354</td>
+      <td>0.012857</td>
+      <td>0.102354</td>
+      <td>0.012857</td>
+      <td>1</td>
+      <td>True</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>KNeighborsUnif</td>
+      <td>0.720</td>
+      <td>0.105474</td>
+      <td>0.017922</td>
+      <td>0.105474</td>
+      <td>0.017922</td>
+      <td>1</td>
+      <td>True</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="evaluation-and-prediction">
+<h3>Evaluation and Prediction<a class="headerlink" href="#evaluation-and-prediction" title="Permalink to this headline">¶</a></h3>
+<p>We can also evaluate the model performance on the heldout predictor dataset by calling <code class="docutils literal notranslate"><span class="pre">.evaluate()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictor</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">dev_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Evaluation: accuracy on test data: 0.8168
+Evaluations on test data:
+{
+    &quot;accuracy&quot;: 0.8168,
+    &quot;balanced_accuracy&quot;: 0.8170602919410992,
+    &quot;mcc&quot;: 0.7866393746250545
+}
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;accuracy&#39;: 0.8168,
+ &#39;balanced_accuracy&#39;: 0.8170602919410992,
+ &#39;mcc&#39;: 0.7866393746250545}
+</pre></div>
+</div>
+</div>
+</div>
+<p>To get the prediction, you may just use  <code class="docutils literal notranslate"><span class="pre">predictor.predict()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictions</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">dev_df</span><span class="p">)</span>
+<span class="n">predictions</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6084     3
+927      5
+10919    3
+8867     2
+14455    7
+        ..
+6618     5
+9591     7
+14307    1
+1553     1
+3        2
+Name: Cover_Type, Length: 1250, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>For classification problems, we can also use <code class="docutils literal notranslate"><span class="pre">.predict_proba</span></code> to get the probability.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">probs</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">dev_df</span><span class="p">)</span>
+<span class="n">probs</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>6084</th>
+      <td>0.000229</td>
+      <td>0.000843</td>
+      <td>0.744518</td>
+      <td>0.208950</td>
+      <td>0.000476</td>
+      <td>0.044587</td>
+      <td>0.000397</td>
+    </tr>
+    <tr>
+      <th>927</th>
+      <td>0.043397</td>
+      <td>0.347411</td>
+      <td>0.000929</td>
+      <td>0.001604</td>
+      <td>0.597819</td>
+      <td>0.006463</td>
+      <td>0.002378</td>
+    </tr>
+    <tr>
+      <th>10919</th>
+      <td>0.006373</td>
+      <td>0.060102</td>
+      <td>0.767284</td>
+      <td>0.000076</td>
+      <td>0.126009</td>
+      <td>0.038330</td>
+      <td>0.001827</td>
+    </tr>
+    <tr>
+      <th>8867</th>
+      <td>0.170293</td>
+      <td>0.748936</td>
+      <td>0.002065</td>
+      <td>0.000083</td>
+      <td>0.072658</td>
+      <td>0.002915</td>
+      <td>0.003051</td>
+    </tr>
+    <tr>
+      <th>14455</th>
+      <td>0.004558</td>
+      <td>0.004203</td>
+      <td>0.000125</td>
+      <td>0.000081</td>
+      <td>0.000263</td>
+      <td>0.000071</td>
+      <td>0.990699</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="load-the-predictor">
+<h3>Load the Predictor<a class="headerlink" href="#load-the-predictor" title="Permalink to this headline">¶</a></h3>
+<p>Loading a AutoGluon model is straight-forward. We can directly call <code class="docutils literal notranslate"><span class="pre">.load()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictor_loaded</span> <span class="o">=</span> <span class="n">TabularPredictor</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;ag_ec2021_demo&#39;</span><span class="p">)</span>
+<span class="n">predictor_loaded</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">dev_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Evaluation: accuracy on test data: 0.8168
+Evaluations on test data:
+{
+    &quot;accuracy&quot;: 0.8168,
+    &quot;balanced_accuracy&quot;: 0.8170602919410992,
+    &quot;mcc&quot;: 0.7866393746250545
+}
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;accuracy&#39;: 0.8168,
+ &#39;balanced_accuracy&#39;: 0.8170602919410992,
+ &#39;mcc&#39;: 0.7866393746250545}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="feature-importance">
+<h3>Feature Importance<a class="headerlink" href="#feature-importance" title="Permalink to this headline">¶</a></h3>
+<p>AutoGluon offers a built-in method for calculating the relative importance of each feature based on <a class="reference external" href="https://scikit-learn.org/stable/modules/permutation_importance.html">permutation-shuffling</a>. In the following, we calculate the feature importance and print the top-10 important features. Here, <code class="docutils literal notranslate"><span class="pre">importance</span></code> means the importance score and the other values give you an understanding of the statistical significance of the calculated score.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">importance</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">feature_importance</span><span class="p">(</span><span class="n">dev_df</span><span class="p">,</span> <span class="n">subsample_size</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="n">importance</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Computing feature importance via permutation shuffling for 54 features using 500 rows with 3 shuffle sets...
+	104.88s	= Expected runtime (34.96s per shuffle set)
+	17.35s	= Actual runtime (Completed 3 of 3 shuffle sets)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>importance</th>
+      <th>stddev</th>
+      <th>p_value</th>
+      <th>n</th>
+      <th>p99_high</th>
+      <th>p99_low</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Elevation</th>
+      <td>0.475333</td>
+      <td>0.029143</td>
+      <td>0.000625</td>
+      <td>3</td>
+      <td>0.642328</td>
+      <td>0.308339</td>
+    </tr>
+    <tr>
+      <th>Horizontal_Distance_To_Roadways</th>
+      <td>0.085333</td>
+      <td>0.008327</td>
+      <td>0.001579</td>
+      <td>3</td>
+      <td>0.133046</td>
+      <td>0.037621</td>
+    </tr>
+    <tr>
+      <th>Horizontal_Distance_To_Fire_Points</th>
+      <td>0.066000</td>
+      <td>0.002000</td>
+      <td>0.000153</td>
+      <td>3</td>
+      <td>0.077460</td>
+      <td>0.054540</td>
+    </tr>
+    <tr>
+      <th>Horizontal_Distance_To_Hydrology</th>
+      <td>0.053333</td>
+      <td>0.013317</td>
+      <td>0.010078</td>
+      <td>3</td>
+      <td>0.129639</td>
+      <td>-0.022973</td>
+    </tr>
+    <tr>
+      <th>Hillshade_9am</th>
+      <td>0.023333</td>
+      <td>0.009238</td>
+      <td>0.024239</td>
+      <td>3</td>
+      <td>0.076266</td>
+      <td>-0.029599</td>
+    </tr>
+    <tr>
+      <th>Wilderness_Area4</th>
+      <td>0.018000</td>
+      <td>0.011136</td>
+      <td>0.053704</td>
+      <td>3</td>
+      <td>0.081808</td>
+      <td>-0.045808</td>
+    </tr>
+    <tr>
+      <th>Hillshade_Noon</th>
+      <td>0.016667</td>
+      <td>0.023861</td>
+      <td>0.174968</td>
+      <td>3</td>
+      <td>0.153391</td>
+      <td>-0.120058</td>
+    </tr>
+    <tr>
+      <th>Aspect</th>
+      <td>0.016000</td>
+      <td>0.014000</td>
+      <td>0.093162</td>
+      <td>3</td>
+      <td>0.096222</td>
+      <td>-0.064222</td>
+    </tr>
+    <tr>
+      <th>Vertical_Distance_To_Hydrology</th>
+      <td>0.014667</td>
+      <td>0.003055</td>
+      <td>0.007078</td>
+      <td>3</td>
+      <td>0.032172</td>
+      <td>-0.002839</td>
+    </tr>
+    <tr>
+      <th>Wilderness_Area1</th>
+      <td>0.012667</td>
+      <td>0.004163</td>
+      <td>0.017088</td>
+      <td>3</td>
+      <td>0.036523</td>
+      <td>-0.011190</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>From the results, we can see that <code class="docutils literal notranslate"><span class="pre">Elevation</span></code> is the most important feature. <code class="docutils literal notranslate"><span class="pre">Horizontal_Distance_To_Roadways</span></code> is the 2nd most important feature.</p>
+</div>
+<div class="section" id="achieve-better-performance">
+<h3>Achieve Better Performance<a class="headerlink" href="#achieve-better-performance" title="Permalink to this headline">¶</a></h3>
+<p>The default behavior of AutoGluon is to compute a weighted ensemble of a diverse set of models. Usually, you can achieve better performance via stack ensembling. To achieve better performance based on automated stack ensembling, you can specify <code class="docutils literal notranslate"><span class="pre">presets=&quot;best_quality&quot;</span></code> when calling <code class="docutils literal notranslate"><span class="pre">.fit()</span></code> in AutoGluon. For more details, you can also checkout our provided script. The detailed architecture is described in [1] and we also provide the following figure so you can know the general architecture.</p>
+<img src="https://deep-earth.s3.amazonaws.com/datasets/earthcube2021_demo/stacking.png" alt="screenshot" style="width: 500px;"/>
+<p>With <code class="docutils literal notranslate"><span class="pre">.fit(train_df,</span> <span class="pre">presets=&quot;best_quality&quot;)</span></code>, we are able to achieve 82/1692 in the competition. To reproduce our number, you may try the command mentioned in <a class="reference external" href="https://github.com/sxjscience/EC2021_autogluon_notebook">link</a>.</p>
+<img src="https://deep-earth.s3.amazonaws.com/datasets/earthcube2021_demo/forest_cover_type.png" alt="screenshot" style="width: 500px;"/></div>
+</div>
+<div class="section" id="solar-radiation-prediction">
+<h2>Solar Radiation Prediction<a class="headerlink" href="#solar-radiation-prediction" title="Permalink to this headline">¶</a></h2>
+<p>In the second example, we will train model to predict the solar radiation. The orignal dataset is available in <a class="reference external" href="https://www.kaggle.com/dronio/SolarEnergy">Kaggle Solar Radiation Prediction</a>. The dataset contains such columns as: “wind direction”, “wind speed”, “humidity” and “temperature”. The response parameter that is to be predicted is: “Solar_radiation”. It contains measurements for the past 4 months and you have to predict the level of solar radiation. Let’s download and load the dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>wget https://deep-earth.s3.amazonaws.com/datasets/earthcube2021_demo/SolarPrediction.csv.zip -O SolarPrediction.csv.zip
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--2021-05-16 08:44:25--  https://deep-earth.s3.amazonaws.com/datasets/earthcube2021_demo/SolarPrediction.csv.zip
+Resolving deep-earth.s3.amazonaws.com (deep-earth.s3.amazonaws.com)... 52.217.95.209
+Connecting to deep-earth.s3.amazonaws.com (deep-earth.s3.amazonaws.com)|52.217.95.209|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 523425 (511K) [application/zip]
+Saving to: ‘SolarPrediction.csv.zip’
+
+SolarPrediction.csv 100%[===================&gt;] 511.16K  --.-KB/s    in 0.007s  
+
+2021-05-16 08:44:25 (76.8 MB/s) - ‘SolarPrediction.csv.zip’ saved [523425/523425]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;SolarPrediction.csv.zip&#39;</span><span class="p">)</span>
+<span class="n">train_df</span><span class="p">,</span> <span class="n">dev_df</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>UNIXTime</th>
+      <th>Data</th>
+      <th>Time</th>
+      <th>Radiation</th>
+      <th>Temperature</th>
+      <th>Pressure</th>
+      <th>Humidity</th>
+      <th>WindDirection(Degrees)</th>
+      <th>Speed</th>
+      <th>TimeSunRise</th>
+      <th>TimeSunSet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2664</th>
+      <td>1474412104</td>
+      <td>9/20/2016 12:00:00 AM</td>
+      <td>12:55:04</td>
+      <td>1039.15</td>
+      <td>65</td>
+      <td>30.40</td>
+      <td>57</td>
+      <td>2.26</td>
+      <td>5.62</td>
+      <td>06:11:00</td>
+      <td>18:21:00</td>
+    </tr>
+    <tr>
+      <th>12230</th>
+      <td>1476543319</td>
+      <td>10/15/2016 12:00:00 AM</td>
+      <td>04:55:19</td>
+      <td>1.21</td>
+      <td>51</td>
+      <td>30.46</td>
+      <td>23</td>
+      <td>181.58</td>
+      <td>6.75</td>
+      <td>06:17:00</td>
+      <td>17:59:00</td>
+    </tr>
+    <tr>
+      <th>11706</th>
+      <td>1476704422</td>
+      <td>10/17/2016 12:00:00 AM</td>
+      <td>01:40:22</td>
+      <td>1.22</td>
+      <td>50</td>
+      <td>30.47</td>
+      <td>39</td>
+      <td>142.56</td>
+      <td>10.12</td>
+      <td>06:18:00</td>
+      <td>17:58:00</td>
+    </tr>
+    <tr>
+      <th>12924</th>
+      <td>1476330025</td>
+      <td>10/12/2016 12:00:00 AM</td>
+      <td>17:40:25</td>
+      <td>28.35</td>
+      <td>59</td>
+      <td>30.45</td>
+      <td>42</td>
+      <td>167.42</td>
+      <td>4.50</td>
+      <td>06:16:00</td>
+      <td>18:02:00</td>
+    </tr>
+    <tr>
+      <th>27507</th>
+      <td>1482367563</td>
+      <td>12/21/2016 12:00:00 AM</td>
+      <td>14:46:03</td>
+      <td>637.93</td>
+      <td>57</td>
+      <td>30.39</td>
+      <td>74</td>
+      <td>40.94</td>
+      <td>4.50</td>
+      <td>06:53:00</td>
+      <td>17:49:00</td>
+    </tr>
+    <tr>
+      <th>2516</th>
+      <td>1474457405</td>
+      <td>9/21/2016 12:00:00 AM</td>
+      <td>01:30:05</td>
+      <td>1.21</td>
+      <td>45</td>
+      <td>30.39</td>
+      <td>73</td>
+      <td>159.07</td>
+      <td>3.37</td>
+      <td>06:11:00</td>
+      <td>18:20:00</td>
+    </tr>
+    <tr>
+      <th>32227</th>
+      <td>1480723808</td>
+      <td>12/2/2016 12:00:00 AM</td>
+      <td>14:10:08</td>
+      <td>177.19</td>
+      <td>45</td>
+      <td>30.34</td>
+      <td>93</td>
+      <td>134.78</td>
+      <td>11.25</td>
+      <td>06:42:00</td>
+      <td>17:42:00</td>
+    </tr>
+    <tr>
+      <th>12705</th>
+      <td>1476396922</td>
+      <td>10/13/2016 12:00:00 AM</td>
+      <td>12:15:22</td>
+      <td>1008.08</td>
+      <td>65</td>
+      <td>30.46</td>
+      <td>46</td>
+      <td>71.24</td>
+      <td>5.62</td>
+      <td>06:17:00</td>
+      <td>18:01:00</td>
+    </tr>
+    <tr>
+      <th>14992</th>
+      <td>1475697322</td>
+      <td>10/5/2016 12:00:00 AM</td>
+      <td>09:55:22</td>
+      <td>292.44</td>
+      <td>55</td>
+      <td>30.47</td>
+      <td>101</td>
+      <td>18.70</td>
+      <td>7.87</td>
+      <td>06:14:00</td>
+      <td>18:08:00</td>
+    </tr>
+    <tr>
+      <th>23615</th>
+      <td>1478267417</td>
+      <td>11/4/2016 12:00:00 AM</td>
+      <td>03:50:17</td>
+      <td>1.18</td>
+      <td>44</td>
+      <td>30.42</td>
+      <td>38</td>
+      <td>176.34</td>
+      <td>7.87</td>
+      <td>06:25:00</td>
+      <td>17:47:00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Like in our previos example, we can directly train a predictor with a single <code class="docutils literal notranslate"><span class="pre">.fit()</span></code> call. The difference is that AutoGluon can automatically determine that it is a regression problem.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictor</span> <span class="o">=</span> <span class="n">TabularPredictor</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Radiation&#39;</span><span class="p">,</span> <span class="n">eval_metric</span><span class="o">=</span><span class="s1">&#39;r2&#39;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s1">&#39;ag_ec2021_demo2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning: path already exists! This predictor may overwrite an existing predictor! path=&quot;ag_ec2021_demo2&quot;
+Beginning AutoGluon training ...
+AutoGluon will save models to &quot;ag_ec2021_demo2/&quot;
+AutoGluon Version:  0.2.1b20210511
+Train Data Rows:    24514
+Train Data Columns: 10
+Preprocessing data ...
+AutoGluon infers your prediction problem is: &#39;regression&#39; (because dtype of label-column == float and many unique label-values observed).
+	Label info (max, min, mean, stddev): (1601.26, 1.11, 206.52072, 315.54334)
+	If &#39;regression&#39; is not the correct problem_type, please manually specify the problem_type argument in fit() (You may specify problem_type as one of: [&#39;binary&#39;, &#39;multiclass&#39;, &#39;regression&#39;])
+Using Feature Generators to preprocess the data ...
+Fitting AutoMLPipelineFeatureGenerator...
+	Available Memory:                    27858.63 MB
+	Train Data (Original)  Memory Usage: 7.88 MB (0.0% of available memory)
+	Inferring data type of each feature based on column values. Set feature_metadata_in to manually specify special dtypes of the features.
+	Stage 1 Generators:
+		Fitting AsTypeFeatureGenerator...
+	Stage 2 Generators:
+		Fitting FillNaFeatureGenerator...
+	Stage 3 Generators:
+		Fitting IdentityFeatureGenerator...
+		Fitting DatetimeFeatureGenerator...
+	Stage 4 Generators:
+		Fitting DropUniqueFeatureGenerator...
+	Types of features in original data (raw dtype, special dtypes):
+		(&#39;float&#39;, [])                      : 3 | [&#39;Pressure&#39;, &#39;WindDirection(Degrees)&#39;, &#39;Speed&#39;]
+		(&#39;int&#39;, [])                        : 3 | [&#39;UNIXTime&#39;, &#39;Temperature&#39;, &#39;Humidity&#39;]
+		(&#39;object&#39;, [&#39;datetime_as_object&#39;]) : 4 | [&#39;Data&#39;, &#39;Time&#39;, &#39;TimeSunRise&#39;, &#39;TimeSunSet&#39;]
+	Types of features in processed data (raw dtype, special dtypes):
+		(&#39;float&#39;, [])                : 3 | [&#39;Pressure&#39;, &#39;WindDirection(Degrees)&#39;, &#39;Speed&#39;]
+		(&#39;int&#39;, [])                  : 3 | [&#39;UNIXTime&#39;, &#39;Temperature&#39;, &#39;Humidity&#39;]
+		(&#39;int&#39;, [&#39;datetime_as_int&#39;]) : 4 | [&#39;Data&#39;, &#39;Time&#39;, &#39;TimeSunRise&#39;, &#39;TimeSunSet&#39;]
+	16.7s = Fit runtime
+	10 features in original data used to generate 10 features in processed data.
+	Train Data (Processed) Memory Usage: 1.96 MB (0.0% of available memory)
+Data preprocessing and feature engineering runtime = 16.74s ...
+AutoGluon will gauge predictive performance using evaluation metric: &#39;r2&#39;
+	To change this, specify the eval_metric argument of fit()
+Automatically generating train/validation split with holdout_frac=0.1, Train Rows: 22062, Val Rows: 2452
+Fitting 11 L1 models ...
+Fitting model: KNeighborsUnif ...
+	0.9501	 = Validation r2 score
+	0.03s	 = Training runtime
+	0.1s	 = Validation runtime
+Fitting model: KNeighborsDist ...
+	0.9531	 = Validation r2 score
+	0.03s	 = Training runtime
+	0.1s	 = Validation runtime
+Fitting model: LightGBMXT ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1000]	train_set&#39;s l2: 5825	train_set&#39;s r2: 0.941343	valid_set&#39;s l2: 6881.24	valid_set&#39;s r2: 0.932405
+[2000]	train_set&#39;s l2: 4818.35	train_set&#39;s r2: 0.951483	valid_set&#39;s l2: 6360.95	valid_set&#39;s r2: 0.937497
+[3000]	train_set&#39;s l2: 4202.38	train_set&#39;s r2: 0.957684	valid_set&#39;s l2: 6212.24	valid_set&#39;s r2: 0.938993
+[4000]	train_set&#39;s l2: 3751.34	train_set&#39;s r2: 0.962227	valid_set&#39;s l2: 6130.43	valid_set&#39;s r2: 0.939774
+[5000]	train_set&#39;s l2: 3396.38	train_set&#39;s r2: 0.965805	valid_set&#39;s l2: 6110.98	valid_set&#39;s r2: 0.939962
+[6000]	train_set&#39;s l2: 3117.1	train_set&#39;s r2: 0.968616	valid_set&#39;s l2: 6078.9	valid_set&#39;s r2: 0.940272
+[7000]	train_set&#39;s l2: 2876.17	train_set&#39;s r2: 0.971039	valid_set&#39;s l2: 6073.82	valid_set&#39;s r2: 0.940339
+[8000]	train_set&#39;s l2: 2666.91	train_set&#39;s r2: 0.973145	valid_set&#39;s l2: 6064.97	valid_set&#39;s r2: 0.940439
+[9000]	train_set&#39;s l2: 2479.79	train_set&#39;s r2: 0.97503	valid_set&#39;s l2: 6082.82	valid_set&#39;s r2: 0.940253
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	0.9405	 = Validation r2 score
+	22.47s	 = Training runtime
+	0.3s	 = Validation runtime
+Fitting model: LightGBM ...
+	0.9438	 = Validation r2 score
+	2.37s	 = Training runtime
+	0.02s	 = Validation runtime
+Fitting model: RandomForestMSE ...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1000]	train_set&#39;s l2: 2247.86	train_set&#39;s r2: 0.977368	valid_set&#39;s l2: 5751.29	valid_set&#39;s r2: 0.943489
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	0.9436	 = Validation r2 score
+	6.91s	 = Training runtime
+	0.1s	 = Validation runtime
+Fitting model: CatBoost ...
+	0.942	 = Validation r2 score
+	4.38s	 = Training runtime
+	0.0s	 = Validation runtime
+Fitting model: ExtraTreesMSE ...
+	0.9445	 = Validation r2 score
+	2.1s	 = Training runtime
+	0.1s	 = Validation runtime
+Fitting model: NeuralNetFastAI ...
+No improvement since epoch 0: early stopping
+	-0.3674	 = Validation r2 score
+	12.72s	 = Training runtime
+	0.04s	 = Validation runtime
+Fitting model: XGBoost ...
+	0.9447	 = Validation r2 score
+	5.8s	 = Training runtime
+	0.01s	 = Validation runtime
+Fitting model: NeuralNetMXNet ...
+	0.9348	 = Validation r2 score
+	77.28s	 = Training runtime
+	0.12s	 = Validation runtime
+Fitting model: LightGBMLarge ...
+	0.9445	 = Validation r2 score
+	12.47s	 = Training runtime
+	0.01s	 = Validation runtime
+Fitting model: WeightedEnsemble_L2 ...
+	0.9547	 = Validation r2 score
+	0.36s	 = Training runtime
+	0.0s	 = Validation runtime
+AutoGluon training complete, total runtime = 171.49s ...
+TabularPredictor saved. To load, use: predictor = TabularPredictor.load(&quot;ag_ec2021_demo2/&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can evaluate on the development set by calling <code class="docutils literal notranslate"><span class="pre">.evaluate()</span></code>. Here, we have specified the model to use <a class="reference external" href="https://en.wikipedia.org/wiki/Coefficient_of_determination">R2 score</a> so it will report the R2.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">predictor</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">dev_df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Evaluation: r2 on test data: 0.9543093262635433
+Evaluations on test data:
+{
+    &quot;r2&quot;: 0.9543093262635433,
+    &quot;root_mean_squared_error&quot;: -67.7654685984138,
+    &quot;mean_squared_error&quot;: -4592.158734362603,
+    &quot;mean_absolute_error&quot;: -24.437721801314463,
+    &quot;pearsonr&quot;: 0.9768914212616937,
+    &quot;median_absolute_error&quot;: -1.0411042070388794
+}
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;r2&#39;: 0.9543093262635433,
+ &#39;root_mean_squared_error&#39;: -67.7654685984138,
+ &#39;mean_squared_error&#39;: -4592.158734362603,
+ &#39;mean_absolute_error&#39;: -24.437721801314463,
+ &#39;pearsonr&#39;: 0.9768914212616937,
+ &#39;median_absolute_error&#39;: -1.0411042070388794}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Similarly, we can also measure the feature importance.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">importance</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">feature_importance</span><span class="p">(</span><span class="n">dev_df</span><span class="p">)</span>
+<span class="n">importance</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Computing feature importance via permutation shuffling for 10 features using 1000 rows with 3 shuffle sets...
+	10.78s	= Expected runtime (3.59s per shuffle set)
+	4.0s	= Actual runtime (Completed 3 of 3 shuffle sets)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>importance</th>
+      <th>stddev</th>
+      <th>p_value</th>
+      <th>n</th>
+      <th>p99_high</th>
+      <th>p99_low</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>UNIXTime</th>
+      <td>1.063341</td>
+      <td>0.042203</td>
+      <td>0.000262</td>
+      <td>3</td>
+      <td>1.305167</td>
+      <td>0.821515</td>
+    </tr>
+    <tr>
+      <th>Time</th>
+      <td>0.080480</td>
+      <td>0.004762</td>
+      <td>0.000583</td>
+      <td>3</td>
+      <td>0.107768</td>
+      <td>0.053192</td>
+    </tr>
+    <tr>
+      <th>Temperature</th>
+      <td>0.029517</td>
+      <td>0.001956</td>
+      <td>0.000730</td>
+      <td>3</td>
+      <td>0.040723</td>
+      <td>0.018311</td>
+    </tr>
+    <tr>
+      <th>Data</th>
+      <td>0.005320</td>
+      <td>0.001238</td>
+      <td>0.008781</td>
+      <td>3</td>
+      <td>0.012411</td>
+      <td>-0.001771</td>
+    </tr>
+    <tr>
+      <th>Humidity</th>
+      <td>0.004958</td>
+      <td>0.000768</td>
+      <td>0.003948</td>
+      <td>3</td>
+      <td>0.009356</td>
+      <td>0.000560</td>
+    </tr>
+    <tr>
+      <th>TimeSunRise</th>
+      <td>0.003704</td>
+      <td>0.001029</td>
+      <td>0.012388</td>
+      <td>3</td>
+      <td>0.009599</td>
+      <td>-0.002192</td>
+    </tr>
+    <tr>
+      <th>TimeSunSet</th>
+      <td>0.003685</td>
+      <td>0.001873</td>
+      <td>0.038180</td>
+      <td>3</td>
+      <td>0.014417</td>
+      <td>-0.007047</td>
+    </tr>
+    <tr>
+      <th>Pressure</th>
+      <td>0.000460</td>
+      <td>0.000689</td>
+      <td>0.183299</td>
+      <td>3</td>
+      <td>0.004408</td>
+      <td>-0.003487</td>
+    </tr>
+    <tr>
+      <th>WindDirection(Degrees)</th>
+      <td>0.000051</td>
+      <td>0.001093</td>
+      <td>0.471685</td>
+      <td>3</td>
+      <td>0.006313</td>
+      <td>-0.006211</td>
+    </tr>
+    <tr>
+      <th>Speed</th>
+      <td>0.000006</td>
+      <td>0.000357</td>
+      <td>0.489087</td>
+      <td>3</td>
+      <td>0.002052</td>
+      <td>-0.002039</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="more-information">
+<h2>More Information<a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h2>
+<p>You may check our website for more information and tutorials: <a class="reference external" href="https://auto.gluon.ai/">https://auto.gluon.ai/</a>. We also support automatically train models with text, image, and multimodal tabular data.</p>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Erickson, Nick and Mueller, Jonas and Shirkov, Alexander and Zhang, Hang and Larroy, Pedro and Li, Mu and Smola, Alexander, AutoGluon-Tabular: Robust and Accurate AutoML for Structured Data, 2020, <a class="reference external" href="https://arxiv.org/pdf/2003.06505.pdf">https://arxiv.org/pdf/2003.06505.pdf</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/ec21_shi_etal"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="README.html" title="previous page">EC2021: Automated Machine Learning for Earth Science via AutoGluon</a>
+    <a class='right-next' id="next-link" href="../ec21_uchida_etal/notebooks/TU_05_Diagnosing-the-Eliassen-Palm-flux-from-a-quasi-geostrophic-double-gyre-ensemble.html" title="next page">Diagnosing the Eliassen-Palm flux from a quasi-geostrophic double gyre ensemble</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By EarthCube Office<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

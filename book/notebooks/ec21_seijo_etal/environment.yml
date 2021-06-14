@@ -1,0 +1,11 @@
+name: py_test
+
+dependencies:
+  - python=3.8
+  - cartopy
+  - pandas
+  - pip
+  - scipy
+  - pip:
+    - svgpath2mpl
+    - tqdm

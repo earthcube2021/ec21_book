@@ -1,0 +1,12 @@
+name: earthcube
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - pandas
+  - cartopy
+  - netCDF4
+  - xarray
+  - pip:
+    - matplotlib==3.2.2
+    - git+https://github.com/Weiming-Hu/PyAnEn.git
