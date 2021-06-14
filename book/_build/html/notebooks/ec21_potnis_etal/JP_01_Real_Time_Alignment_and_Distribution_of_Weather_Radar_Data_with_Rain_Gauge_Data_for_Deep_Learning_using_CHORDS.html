@@ -1,0 +1,1204 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Time Alignment and Distribution of Weather Radar Data with Rain Gauge Data for Deep Learning using CHORDS &#8212; EarthCube 2021 Call for Notebooks</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="click Binder badge to launch notebook on Binder (no need to install environment):" href="../ec21_seijo_etal/README.html" />
+    <link rel="prev" title="JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learn" href="README.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.webp" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">EarthCube 2021 Call for Notebooks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../docs/about.html">
+   Call for Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Notebooks
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_anil_etal/README.html">
+     ec21_binder_anil
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_anil_etal/SA_01_Argo_Data_Exploration.html">
+       Interactive Jupyter notebook for hydrographic ocean data exploration, retrieval and visualization via the Argovis API
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_balwada_etal/README.html">
+     ec2021_balwada_etal
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_balwada_etal/DB_01_Glider_Viz_Panel.html">
+       Glider Viz Panel
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_beckley_etal/README.html">
+     Programmatic Access to OpenTopography’s Cloud Optimized Geotiff (COG) Global Datasets
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_beckley_etal/OT_01_BulkAccessCOGs.html">
+       Programmatic Access to OpenTopography’s Cloud Optimized GeoTIFF (COG) Global Datasets
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_bourgault_etal/README.html">
+     xclim : Software ecosystem for climate services
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_bourgault_etal/PB_02_xclim_Software_ecosystem_for_climate_services.html">
+       xclim: Software ecosystem for climate services
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_cherian_etal/DC_01_cf-xarray.html">
+     cf-xarray: Scale your analysis across datasets with less data wrangling and more metadata handling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_cych_etal/BC_01%20Bias%20Corrected%20Estimation%20of%20Paleointensity.html">
+     BC_01 Bias Corrected Estimation of Paleointensity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_dye_etal/README.html">
+     Toward autonomous detection of anomalous GNSS data via applied unsupervised artificial intelligence
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_garzon_etal/README.html">
+     Exploring Research Data Repositories with geoextent.
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_garzon_etal/showcase/SG_01_Exploring_Research_Data_Repositories_with_geoextent.html">
+       Exploring Research Data Repositories with geoextent
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_gray_etal/README.html">
+     Leveraging satellite data and pangeo to investigate the role of Gulf Stream frontal dynamics in ocean productivity
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_gray_etal/PG_01_gulf_stream_dynamics_role_in_productivity.html">
+       Leveraging satellite data and pangeo to investigate the role of Gulf Stream frontal dynamics in ocean productivity
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_hu_etal/README.html">
+     Machine Learning Guided Weather Analogs
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_hu_etal/WH_01_Spatio-Temporal_Deep_Analogs_2021.html">
+       WH_01_Spatio-Temporal_Deep_Analogs_2021
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_lopez_etal/README.html">
+     ITS_LIVE Explorer
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_lopez_etal/notebooks/itslive-notebook-rendered.html">
+       Introduction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_lopez_etal/notebooks/itslive-notebook.html">
+       Introduction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_lopez_etal/notebooks/LL_01_ITS_LIVE_global_glacier_velocity_exploration_and_analysis.html">
+       <strong>
+        ITS_LIVE
+       </strong>
+       Global Glacier Velocity Exploration and Analysis
+       <a class="anchor" id="chapter_1">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_martin_etal/README.html">
+     Frequency-domain analysis of large datasets
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_martin_etal/PM_01_Frequency-Domain_Analysis_of_Large_Datasets.html">
+       Frequency-Domain Analysis of Large Datasets
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_maussion_etal/README.html">
+     OGGM-edu EarthCube notebook
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_maussion_etal/FM_01_OGGM-Edu_learn_and_teach_about_glaciers.html">
+       OGGM-Edu - Jupyter notebooks to learn and teach about glaciers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="README.html">
+     JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learn
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Real Time Alignment and Distribution of Weather Radar Data with Rain Gauge Data for Deep Learning using CHORDS
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_seijo_etal/README.html">
+     click Binder badge to launch notebook on Binder (no need to install environment):
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_shi_etal/README.html">
+     EC2021: Automated Machine Learning for Earth Science via AutoGluon
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_shi_etal/Xingjian_Shi_01_Automated_Machine_Learning_for_Earth_Science_via_AutoGluon.html">
+       Automated Machine Learning for Earth Science via AutoGluon
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_uchida_etal/notebooks/TU_05_Diagnosing-the-Eliassen-Palm-flux-from-a-quasi-geostrophic-double-gyre-ensemble.html">
+     Diagnosing the Eliassen-Palm flux from a quasi-geostrophic double gyre ensemble
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_zheng_etal/README.html">
+     EZ-FeatureTrack
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_zheng_etal/notebooks/WZ_01_mapping_ice_flow_velocity.html">
+       Mapping ice flow velocity using an easy and interactive feature tracking workflow
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/ec21_potnis_etal/JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learning_using_CHORDS.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/earthcube2021/ec21_book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/earthcube2021/ec21_book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/ec21_potnis_etal/JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learning_using_CHORDS.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/earthcube2021/ec21_book/master?urlpath=lab/tree/book/notebooks/ec21_potnis_etal/JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learning_using_CHORDS.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/earthcube2021/ec21_book/blob/master/book/notebooks/ec21_potnis_etal/JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learning_using_CHORDS.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authors">
+   Authors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#purpose">
+   Purpose
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#technical-contributions">
+   Technical Contributions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methodology">
+   Methodology
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importing-required-libraries">
+     Importing required libraries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importing-required-functions">
+     Importing required functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions-for-data-preprocessing-example-download-grid-calculate-closest-grid-point-with-respect-to-gauges-align-reflectivity-and-gauge-observations">
+     Functions for Data Preprocessing example (Download, Grid, calculate closest grid point with respect to gauges, align reflectivity and gauge observations)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implementation-of-data-preprocessing-using-the-functions-defined-above">
+     Implementation of data preprocessing using the functions defined above.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#downloading-data-from-the-chords-portal">
+     Downloading data from the CHORDS portal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualizing-the-downloaded-data">
+     Visualizing the downloaded data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quantative-precipitation-estimation-using-deep-learning">
+     Quantative Precipitation Estimation using Deep Learning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#results">
+   Results
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#keywords">
+   Keywords
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citation">
+   Citation
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="real-time-alignment-and-distribution-of-weather-radar-data-with-rain-gauge-data-for-deep-learning-using-chords">
+<h1>Real Time Alignment and Distribution of Weather Radar Data with Rain Gauge Data for Deep Learning using CHORDS<a class="headerlink" href="#real-time-alignment-and-distribution-of-weather-radar-data-with-rain-gauge-data-for-deep-learning-using-chords" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Author1 = {“name”: “Jay Potnis”, “affiliation”: “Colorado State University”, “email”: “<a class="reference external" href="mailto:jay&#46;potnis&#37;&#52;&#48;colostate&#46;edu">jay<span>&#46;</span>potnis<span>&#64;</span>colostate<span>&#46;</span>edu</a>”}</p></li>
+<li><p>Author2 = {“name”: “V.Chandrasekar”, “affiliation”: “Colorado State University”, “email”: “<a class="reference external" href="mailto:chandrasekaran&#46;venkatachalam&#37;&#52;&#48;colostate&#46;edu">chandrasekaran<span>&#46;</span>venkatachalam<span>&#64;</span>colostate<span>&#46;</span>edu</a>”}</p></li>
+<li><p>Author3 = {“name”: “Ryan Gooch”, “affiliation”: “Colorado State University”, “email”: “<a class="reference external" href="mailto:s&#46;ryan&#46;gooch&#37;&#52;&#48;gmail&#46;com">s<span>&#46;</span>ryan<span>&#46;</span>gooch<span>&#64;</span>gmail<span>&#46;</span>com</a>”}</p></li>
+</ul>
+<p>1373, Campus Delivery Colorado State University, Fort Collins CO 80523</p>
+</div>
+<div class="section" id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Quantitative Precipitation Estimation (QPE) based on weather radar observations plays a significant role in the understanding of weather events, especially in real-time, where fast evolving phenomena like convective storm cells can be dangerous. We wish to demonstrate QPE using deep learning as an alternative approach to empirical relationship equations between rainfall rate and reflectivity which were developed in the past. QPE using radar reflectivity is one of the possible applications of deep learning in the weather radar field. Preprocessing this data and saving it in real-time on cloud would let the users skip the time consuming preprocessing step and assist them to directly get to the deep learning phase. This notebook is a step towards using Deep Learning for making QPE work on-the-fly along with real time Radar measurements.</p></li>
+<li><p>To train and test deep learning models with radar data, we must align rain gauge data in space and time. This data preprocessing requires time and resource consuming processes that involve downloading, extracting, gridding, aligning the radar data with respect to every gauge in the region. If this preprocessed dataset was readily available in real-time, deep learning can be easily performed on it by anyone without going through the heavy computations required in the process. EarthCube’s CHORDS tool is a real-time data service that can be used to store preprocessed data on cloud so that it can be accessed whenever and wherever required.</p></li>
+<li><p>In this work, we demonstrate the steps involved in preprocessing such as accessing WSR-88D radar and NASA-TRMM rain gauge data, Cartesian gridding of radar data, aligning the radar data with gauge data in real-time. This aligned data is stored on cloud using CHORDS, so that it can be readily available to users who wish to use it for deep learning. The notebook will also demonstrate the procedure for storing and retrieving the dataset from CHORDS server and an example of the deep learning process on the downloaded dataset.</p></li>
+</ul>
+</div>
+<div class="section" id="technical-contributions">
+<h2>Technical Contributions<a class="headerlink" href="#technical-contributions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Implementation of data preprocessing involves downloading, gridding and aligning WSR-88D and NASA-TRMM rain gauge data required for Quantatitive Precipitation Estimation (QPE) using Deep Learning.</p></li>
+<li><p>Demonstration of a mechanism to store as well as retrive the processed data onto a CHORDS Portal based server. This mechanism can be used to process and store data in real time on the fly.</p></li>
+<li><p>Practical example of downloading data from the CHORDS Portal and training a Deep Learning model for QPE using Deep Learning.</p></li>
+</ul>
+</div>
+<div class="section" id="methodology">
+<h2>Methodology<a class="headerlink" href="#methodology" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>To train and test deep learning models with radar data, we must first align rain gauge data in space and time. This data preprocessing requires time and resource consuming processes that involve downloading, extracting, gridding, aligning the radar data with respect to every gauge in the region. It is beneficial and easier to perform this step in real time as soon as data is obtained from radars.</p></li>
+<li><p>After the data is constructed in the required format, EarthCube’s CHORDS tool can be used to store the data on the cloud so that it can be accessesed whenever and wherever required. CHORDS is a real-time data service for storing data on cloud.</p></li>
+<li><p>After sufficient data is stored, we will use some historical data already stored on our cloud to train and test our Deep Learning model for QPE.</p></li>
+</ol>
+<div class="section" id="importing-required-libraries">
+<h3>Importing required libraries<a class="headerlink" href="#importing-required-libraries" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>requests: The requests library is used to save data on the CHORDS Portal by making a sequence of http GET requests to the server.</p></li>
+<li><p>pandas, numpy: Used for data processing and organization.</p></li>
+<li><p>pyart: Radar library used for reading, displaying and analyzing radar data</p></li>
+<li><p>os, six, shutil: Used for file handling and file folder operations</p></li>
+<li><p>datetime: Used to represent time into standard format</p></li>
+<li><p>matplotlib: Plotting data</p></li>
+<li><p>geopy: For accurate distance calculation between coordinates</p></li>
+<li><p>pickle: Storing variables</p></li>
+<li><p>requests: This package is used for storing and retreiving data from the CHORDS Portal</p></li>
+<li><p>warnings: This package is used to silence the displaying of unnecessary warnings while executing</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pyart</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">six</span>
+<span class="kn">import</span> <span class="nn">nexradaws</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">geopy.distance</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">import</span> <span class="nn">numpy.ma</span> <span class="k">as</span> <span class="nn">ma</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>## You are using the Python ARM Radar Toolkit (Py-ART), an open source
+## library for working with weather radar data. Py-ART is partly
+## supported by the U.S. Department of Energy as part of the Atmospheric
+## Radiation Measurement (ARM) Climate Research Facility, an Office of
+## Science user facility.
+##
+## If you use this software to prepare a publication, please cite:
+##
+##     JJ Helmus and SM Collis, JORS 2016, doi: 10.5334/jors.119
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="importing-required-functions">
+<h3>Importing required functions<a class="headerlink" href="#importing-required-functions" title="Permalink to this headline">¶</a></h3>
+<p>In this section we will import some custom made functions that are required for File Operations, Downloading and some basic processing required in this task. Reading these functions is not required for understanding this notebook. These functions can be accessed for reading in the following directory.</p>
+<p>Main Directory &gt; Tools &gt; <a class="reference external" href="http://functions.py">functions.py</a></p>
+<p>The description of every imported function is given below.</p>
+<ul class="simple">
+<li><p>recreate_folder: Recreate folders to ensure that we do not have old files in our folders</p></li>
+<li><p>replace_if_nan: Function to replace the nan values in reflectivity to -9999</p></li>
+<li><p>download_radar_data: This function downloads WSR-88D radar data</p></li>
+<li><p>grid_data: This function grids the WSR-88D data using pyart</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Tools.functions</span> <span class="kn">import</span> <span class="n">recreate_folder</span>
+<span class="kn">from</span> <span class="nn">Tools.functions</span> <span class="kn">import</span> <span class="n">replace_if_nan</span>
+<span class="kn">from</span> <span class="nn">Tools.functions</span> <span class="kn">import</span> <span class="n">download_radar_data</span>
+<span class="kn">from</span> <span class="nn">Tools.functions</span> <span class="kn">import</span> <span class="n">grid_data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="functions-for-data-preprocessing-example-download-grid-calculate-closest-grid-point-with-respect-to-gauges-align-reflectivity-and-gauge-observations">
+<h3>Functions for Data Preprocessing example (Download, Grid, calculate closest grid point with respect to gauges, align reflectivity and gauge observations)<a class="headerlink" href="#functions-for-data-preprocessing-example-download-grid-calculate-closest-grid-point-with-respect-to-gauges-align-reflectivity-and-gauge-observations" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>In this section, we have provided the individual functions that are used for Downloading, Gridding and then aligning the radar reflectivity with gauge observations. Downloading and Gridding the data requires a lot of time and storage space. But if a limited storage space is available, just like in our demonstration case, aligning and saving only the required information is very beneficial. After aligning is done we can delete the downloaded data as we do not require it again.</p></li>
+<li><p>The grid point matrix calculation is one of the critical steps required in aligning the radar and gauge data. The generate_grid_point_matrix function calculates the nearest radar observation gridpoint to every gauge in our dataset. This is a time and compute expensive step but as the positions of gauges relative to the radar always remain constant, we need to evaluate this matrix only once. We can reuse this matrix again for further alignment once it is calculated. Therefore, after creating the matrix, we will store in a .pkl file so that we can access it directly for future tasks.</p></li>
+<li><p>Later, the aligned data is stored on the CHORDS portal so that it can be used for our machine learning task later. The data is stored on the portal by making multiple GET requests to the server. If these steps are executed in real time, we could even use the data for real time prediction of the Rain Cases.</p></li>
+<li><p>Here is the link for our <a class="reference external" href="http://ec2-18-220-56-38.us-east-2.compute.amazonaws.com/">CHORDS portal</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This function creates a grid point matrix, where each gauge is assigned a gridpoint which is closest to gauge location</span>
+<span class="k">def</span> <span class="nf">generate_grid_point_matrix</span><span class="p">(</span><span class="n">gridded_data_folder</span><span class="p">,</span> <span class="n">radar_filename</span><span class="p">,</span> <span class="n">gauge_files</span><span class="p">,</span> <span class="n">grid</span><span class="p">):</span>
+    <span class="n">grid_x</span><span class="p">,</span> <span class="n">grid_y</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">grid</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">grid_point_matrix</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;gauge_id&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                       <span class="s2">&quot;row_index&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                       <span class="s2">&quot;column_index&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                       <span class="s2">&quot;latitude&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                       <span class="s2">&quot;longitude&quot;</span><span class="p">:</span> <span class="p">[]}</span>
+
+    <span class="k">for</span> <span class="n">gauge_file</span> <span class="ow">in</span> <span class="n">gauge_files</span><span class="p">:</span>
+        <span class="n">gauge_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">gauge_csv_files</span> <span class="o">+</span> <span class="n">gauge_file</span><span class="p">)</span>
+        <span class="n">gauge_data</span> <span class="o">=</span> <span class="n">gauge_data</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">latitude</span> <span class="o">=</span> <span class="n">gauge_data</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">longitude</span> <span class="o">=</span> <span class="n">gauge_data</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+    
+        <span class="c1">#Find the distance of the gauge to every gridpoint location</span>
+        <span class="n">grid_latitude_matrix</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">get_point_longitude_latitude</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">2</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">grid_longitude_matrix</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">get_point_longitude_latitude</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">distance_matrix</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">get_point_longitude_latitude</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">distance_matrix</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="mi">9999</span>
+        <span class="k">for</span> <span class="n">coord1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">grid_x</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">coord2</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">grid_y</span><span class="p">):</span>
+                <span class="n">distance_matrix</span><span class="p">[</span><span class="n">coord1</span><span class="p">,</span> <span class="n">coord2</span><span class="p">]</span> <span class="o">=</span> <span class="n">geopy</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">distance</span><span class="p">((</span><span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">),</span>
+                                                             <span class="p">(</span><span class="n">grid_latitude_matrix</span><span class="p">[</span><span class="n">coord1</span><span class="p">,</span> <span class="n">coord2</span><span class="p">],</span>
+                                                             <span class="n">grid_longitude_matrix</span><span class="p">[</span><span class="n">coord1</span><span class="p">,</span> <span class="n">coord2</span><span class="p">]))</span><span class="o">.</span><span class="n">km</span>
+
+        <span class="c1">#Find the closest gridpoint to the rain gauge</span>
+        <span class="n">gauge_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">gauge_file</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+        <span class="n">min_distance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">amin</span><span class="p">(</span><span class="n">distance_matrix</span><span class="p">)</span>
+        <span class="n">closest_grid_point</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">distance_matrix</span><span class="o">==</span><span class="n">min_distance</span><span class="p">)</span>
+        <span class="n">row_index</span><span class="p">,</span> <span class="n">column_index</span> <span class="o">=</span> <span class="n">closest_grid_point</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">closest_grid_point</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">closest_lat_long</span> <span class="o">=</span> <span class="p">[</span><span class="n">grid_latitude_matrix</span><span class="p">[</span><span class="n">closest_grid_point</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">closest_grid_point</span><span class="p">[</span><span class="mi">1</span><span class="p">]],</span> <span class="n">grid_longitude_matrix</span><span class="p">[</span><span class="n">closest_grid_point</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">closest_grid_point</span><span class="p">[</span><span class="mi">1</span><span class="p">]]]</span>
+        <span class="n">grid_point_matrix</span><span class="p">[</span><span class="s1">&#39;gauge_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">gauge_id</span><span class="p">)</span>
+        <span class="n">grid_point_matrix</span><span class="p">[</span><span class="s1">&#39;row_index&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row_index</span><span class="p">)</span>
+        <span class="n">grid_point_matrix</span><span class="p">[</span><span class="s1">&#39;column_index&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">column_index</span><span class="p">)</span>
+        <span class="n">grid_point_matrix</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">closest_lat_long</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">grid_point_matrix</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">closest_lat_long</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+    <span class="c1">#Save the locations of grid points in a variable file</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;grid_point_matrix.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">grid_point_matrix</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Grid point matrix created and saved in pkl file&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">grid_point_matrix</span>
+
+
+<span class="c1"># This functions finally aligns the radar and gauge data by using the grid_point_matrix calculated by us</span>
+<span class="k">def</span> <span class="nf">align_and_push_to_CHORDS</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">grid_point_matrix</span><span class="p">,</span> <span class="n">gauge_files</span><span class="p">,</span> <span class="n">radar_filename</span><span class="p">):</span>
+    <span class="n">gauge_time_stamps</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">gauge_data</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">gauge_file</span> <span class="ow">in</span> <span class="n">gauge_files</span><span class="p">:</span>
+        <span class="n">gauge_data</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">gauge_file</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">gauge_csv_files</span> <span class="o">+</span> <span class="n">gauge_file</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">gauge_time_stamps</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">gauge_file</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">gauge_data</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">gauge_file</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+            <span class="n">gts</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">ct</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">gauge_data</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">gauge_file</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+                <span class="n">gts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">gauge_data</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">gauge_file</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="n">count</span><span class="p">,</span> <span class="n">ct</span><span class="p">]))</span>
+            <span class="n">gauge_time_stamps</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">gauge_file</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">gts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">gts</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">gts</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">gts</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">gts</span><span class="p">[</span><span class="mi">4</span><span class="p">]))</span>
+        <span class="n">gauge_time_stamps</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">gauge_file</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">gauge_time_stamps</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">gauge_file</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">max_buffer</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">min_buffer</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">()</span>
+
+    <span class="n">grid</span><span class="o">.</span><span class="n">fields</span><span class="p">[</span><span class="s1">&#39;reflectivity&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">mask</span> <span class="o">=</span> <span class="n">ma</span><span class="o">.</span><span class="n">nomask</span>
+    <span class="n">grid_x</span><span class="p">,</span> <span class="n">grid_y</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">grid</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">grid_site</span> <span class="o">=</span> <span class="n">radar_filename</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">grid_year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">radar_filename</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
+    <span class="n">grid_month</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">radar_filename</span><span class="p">[</span><span class="mi">8</span><span class="p">:</span><span class="mi">10</span><span class="p">])</span>
+    <span class="n">grid_day</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">radar_filename</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">12</span><span class="p">])</span>
+    <span class="n">grid_hour</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">radar_filename</span><span class="p">[</span><span class="mi">13</span><span class="p">:</span><span class="mi">15</span><span class="p">])</span>
+    <span class="n">grid_min</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">radar_filename</span><span class="p">[</span><span class="mi">15</span><span class="p">:</span><span class="mi">17</span><span class="p">])</span>
+    <span class="n">grid_sec</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">radar_filename</span><span class="p">[</span><span class="mi">17</span><span class="p">:</span><span class="mi">19</span><span class="p">])</span>
+    <span class="n">grid_timestamp</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="n">grid_year</span><span class="p">,</span> <span class="n">grid_month</span><span class="p">,</span> <span class="n">grid_day</span><span class="p">,</span> <span class="n">grid_hour</span><span class="p">,</span> <span class="n">grid_min</span><span class="p">,</span> <span class="n">grid_sec</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">gauge_file</span> <span class="ow">in</span> <span class="n">gauge_files</span><span class="p">:</span>
+        <span class="n">gauge_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">gauge_file</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+        <span class="n">avg_rr</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">rain_rates</span> <span class="o">=</span> <span class="n">gauge_data</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">gauge_id</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">][</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">gauge_time_stamps</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">gauge_id</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">grid_timestamp</span> <span class="o">&lt;=</span> <span class="n">max_buffer</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">gauge_time_stamps</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">gauge_id</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">-</span><span class="n">grid_timestamp</span> <span class="o">&gt;=</span> <span class="n">min_buffer</span><span class="p">))[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">rain_rates</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">rain_rates</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">rain_rates</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+            <span class="n">avg_rr</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">rain_class</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">avg_rr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">rain_rates</span><span class="p">)</span><span class="o">/</span><span class="n">rain_rates</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">rain_class</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">grid_index</span> <span class="o">=</span> <span class="n">grid_point_matrix</span><span class="p">[</span><span class="s1">&#39;gauge_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">gauge_id</span><span class="p">)</span>
+        <span class="n">row_index</span><span class="p">,</span> <span class="n">column_index</span> <span class="o">=</span> <span class="n">grid_point_matrix</span><span class="p">[</span><span class="s1">&#39;row_index&#39;</span><span class="p">][</span><span class="n">grid_index</span><span class="p">],</span> <span class="n">grid_point_matrix</span><span class="p">[</span><span class="s1">&#39;column_index&#39;</span><span class="p">][</span><span class="n">grid_index</span><span class="p">]</span>
+        <span class="n">alt_1</span> <span class="o">=</span> <span class="n">replace_if_nan</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">fields</span><span class="p">[</span><span class="s1">&#39;reflectivity&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">row_index</span><span class="p">,</span> <span class="n">column_index</span><span class="p">])</span>
+        <span class="n">alt_2</span> <span class="o">=</span> <span class="n">replace_if_nan</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">fields</span><span class="p">[</span><span class="s1">&#39;reflectivity&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="n">row_index</span><span class="p">,</span> <span class="n">column_index</span><span class="p">])</span>
+        <span class="n">alt_3</span> <span class="o">=</span> <span class="n">replace_if_nan</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">fields</span><span class="p">[</span><span class="s1">&#39;reflectivity&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="n">row_index</span><span class="p">,</span> <span class="n">column_index</span><span class="p">])</span>
+        <span class="n">alt_4</span> <span class="o">=</span> <span class="n">replace_if_nan</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">fields</span><span class="p">[</span><span class="s1">&#39;reflectivity&#39;</span><span class="p">][</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">3</span><span class="p">][</span><span class="n">row_index</span><span class="p">,</span> <span class="n">column_index</span><span class="p">])</span>
+        <span class="n">reflectivity_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="n">alt_1</span><span class="p">,</span> <span class="n">alt_2</span><span class="p">,</span> <span class="n">alt_3</span><span class="p">,</span> <span class="n">alt_4</span><span class="p">])</span>
+        <span class="n">reflectivity_array</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">reflectivity_array</span> <span class="o">==</span> <span class="o">-</span><span class="mi">9999</span><span class="p">)]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">25</span>
+        <span class="n">push_to_CHORDS_portal</span><span class="p">(</span><span class="n">gauge_id</span><span class="p">,</span> <span class="n">reflectivity_array</span><span class="p">,</span> <span class="n">avg_rr</span><span class="p">,</span> <span class="n">rain_class</span><span class="p">,</span> <span class="n">grid_year</span><span class="p">,</span> <span class="n">grid_month</span><span class="p">,</span> <span class="n">grid_day</span><span class="p">,</span> <span class="n">grid_hour</span><span class="p">,</span> <span class="n">grid_min</span><span class="p">,</span> <span class="n">grid_sec</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Gauge and Radar data &#39;</span><span class="p">)</span>
+
+<span class="c1"># Finally this function stores the aligned data on the CHORDS Server</span>
+<span class="k">def</span> <span class="nf">push_to_CHORDS_portal</span><span class="p">(</span><span class="n">gauge_id</span><span class="p">,</span> <span class="n">reflectivity_array</span><span class="p">,</span> <span class="n">avg_rr</span><span class="p">,</span> <span class="n">rain_class</span><span class="p">,</span> <span class="n">grid_year</span><span class="p">,</span> <span class="n">grid_month</span><span class="p">,</span> <span class="n">grid_day</span><span class="p">,</span> <span class="n">grid_hour</span><span class="p">,</span> <span class="n">grid_min</span><span class="p">,</span> <span class="n">grid_sec</span><span class="p">):</span>
+    <span class="c1">#save gauge information and corresponding radar reflectivity</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+    <span class="n">gauge_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;http://ec2-18-220-56-38.us-east-2.compute.amazonaws.com/measurements/url_create?sensor_id=</span><span class="si">{</span><span class="n">gauge_id</span><span class="si">}</span><span class="s1">&amp;rr=</span><span class="si">{</span><span class="n">avg_rr</span><span class="si">}</span><span class="s1">&amp;rc=</span><span class="si">{</span><span class="n">rain_class</span><span class="si">}</span><span class="s1">&amp;ref_1p5=</span><span class="si">{</span><span class="n">reflectivity_array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&amp;ref_2p5=</span><span class="si">{</span><span class="n">reflectivity_array</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">&amp;ref_3p5=</span><span class="si">{</span><span class="n">reflectivity_array</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s1">&amp;ref_4p5=</span><span class="si">{</span><span class="n">reflectivity_array</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s1">&amp;at=</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">grid_year</span><span class="p">)</span><span class="si">:</span><span class="s1">04</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">grid_month</span><span class="p">)</span><span class="si">:</span><span class="s1">02</span><span class="si">}</span><span class="s1">-</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">grid_day</span><span class="p">)</span><span class="si">:</span><span class="s1">02</span><span class="si">}</span><span class="s1">T</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">grid_hour</span><span class="p">)</span><span class="si">:</span><span class="s1">02</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">grid_min</span><span class="p">)</span><span class="si">:</span><span class="s1">02</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">grid_sec</span><span class="p">)</span><span class="si">:</span><span class="s1">02</span><span class="si">}</span><span class="s1">&amp;email=measurer@me&amp;api_key=EWETsZ9SfzGPsbXT7LTJ&amp;test&#39;</span>
+    <span class="n">gauge_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">gauge_url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="implementation-of-data-preprocessing-using-the-functions-defined-above">
+<h3>Implementation of data preprocessing using the functions defined above.<a class="headerlink" href="#implementation-of-data-preprocessing-using-the-functions-defined-above" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have our preprocessing functions defined, we will execute these functions to create a small dataset. This section gives a small demonstration of the process that we will be following by processing 2-3 radar files with 19 gauges. This same procedure can be easily used for real time operations by just changing the dates and timestamps. As aligning also depends on the rain gauge data, remember to also download the rain gauge data before changing the timestamps in the given code. We have included the gauge dataset for the year 2017 along with this notebook, so feel free to explore any date for the year 2017.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This section of code runs the functions that Download, Grid, Align and Save the aligned data on CHORDS Portal</span>
+
+<span class="c1"># Set folder paths and recreate all the folders</span>
+<span class="n">download_folder</span> <span class="o">=</span> <span class="s1">&#39;./downloaded_data/&#39;</span>
+<span class="n">unzipped_data_folder</span> <span class="o">=</span> <span class="s1">&#39;./unzipped_data/&#39;</span>
+<span class="n">gridded_data_folder</span> <span class="o">=</span> <span class="s1">&#39;./gridded_data/&#39;</span>
+<span class="n">gauge_csv_files</span> <span class="o">=</span> <span class="s1">&#39;./gauge_data/&#39;</span>
+
+<span class="n">gauge_files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">gauge_csv_files</span><span class="p">))</span>
+
+<span class="n">recreate_folder</span><span class="p">(</span><span class="n">download_folder</span><span class="p">)</span>
+<span class="n">recreate_folder</span><span class="p">(</span><span class="n">unzipped_data_folder</span><span class="p">)</span>
+<span class="n">recreate_folder</span><span class="p">(</span><span class="n">gridded_data_folder</span><span class="p">)</span>
+
+<span class="c1"># Set the dates for which we want to create a dataset</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">nexradaws</span><span class="o">.</span><span class="n">NexradAwsInterface</span><span class="p">()</span>
+<span class="n">radar_name</span> <span class="o">=</span> <span class="s1">&#39;KMLB&#39;</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#year, month, day, hour, minute</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span> <span class="c1">#year, month, day, hour, minute</span>
+<span class="n">scans</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">get_avail_scans_in_range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">radar_name</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">scan_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">scans</span><span class="p">)):</span>
+    <span class="c1"># Download WSD-88D data</span>
+    <span class="n">radar_filename</span> <span class="o">=</span> <span class="n">download_radar_data</span><span class="p">(</span><span class="n">download_folder</span><span class="p">,</span> <span class="n">unzipped_data_folder</span><span class="p">,</span> <span class="n">scans</span><span class="p">[</span><span class="n">scan_index</span><span class="p">])</span>
+    <span class="k">if</span> <span class="s1">&#39;_MDM&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">radar_filename</span><span class="p">:</span>
+        <span class="c1"># Grid the downloaded data</span>
+        <span class="n">grid</span> <span class="o">=</span> <span class="n">grid_data</span><span class="p">(</span><span class="n">unzipped_data_folder</span><span class="p">,</span> <span class="n">gridded_data_folder</span><span class="p">,</span> <span class="n">radar_filename</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">scan_index</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1"># Calculate the grid point matrix using the first downloaded data file</span>
+        <span class="n">grid_point_matrix</span> <span class="o">=</span> <span class="n">generate_grid_point_matrix</span><span class="p">(</span><span class="n">gridded_data_folder</span><span class="p">,</span> <span class="n">radar_filename</span><span class="p">,</span> <span class="n">gauge_files</span><span class="p">,</span> <span class="n">grid</span><span class="p">)</span>
+    <span class="c1"># Save data on the CHORDS portal</span>
+    <span class="n">align_and_push_to_CHORDS</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">grid_point_matrix</span><span class="p">,</span> <span class="n">gauge_files</span><span class="p">,</span> <span class="n">radar_filename</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded KMLB20170723_010431_V06
+1 out of 1 files downloaded...0 errors
+Gridding Successful on KMLB20170723_010431_V06
+Grid point matrix created and saved in pkl file
+Gauge and Radar data 
+Downloaded KMLB20170723_010925_V06
+1 out of 1 files downloaded...0 errors
+Gridding Successful on KMLB20170723_010925_V06
+Gauge and Radar data 
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>As we can see that downloading, reading, gridding and aligning data takes a lot of time. It would be beneficial if this whole process was done in real-time so that the observations would be available to users for estimation of the class of rainfall in real time.</p></li>
+<li><p>We have already performed this whole process for some data and saved it on our CHORDS portal. We will now download this previously pre-processed data for the demonstration of our Deep learning approach.</p></li>
+</ul>
+</div>
+<div class="section" id="downloading-data-from-the-chords-portal">
+<h3>Downloading data from the CHORDS portal<a class="headerlink" href="#downloading-data-from-the-chords-portal" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have seen the preprocessing procedure involved,let us start with the Deep learning part of the project. To speed up the process, we will demonstrate the Deep Learning procedure on July and August 2017 data which we have already saved on our CHORDS Portal. This section of the project downloads the data from the Portal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">download_data</span><span class="p">(</span><span class="n">sensor_id</span><span class="p">):</span>
+    <span class="n">download_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;http://ec2-18-220-56-38.us-east-2.compute.amazonaws.com/api/v1/data/</span><span class="si">{</span><span class="n">sensor_id</span><span class="si">}</span><span class="s1">.csv?start=2015-08-01T00:30&amp;end=2021-05-15T01:30&#39;</span>
+    <span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">download_url</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+    <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;sensor.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">remove_header_and_save</span><span class="p">():</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;sensor.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;sensor.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">lines</span><span class="p">[</span><span class="mi">18</span><span class="p">:])</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;sensor.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">values</span>
+    <span class="k">return</span> <span class="n">val</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">45</span><span class="p">):</span>
+    <span class="n">download_data</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="n">remove_header_and_save</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">_</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">dataset</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">dataset</span><span class="p">,</span> <span class="n">values</span><span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">dataset</span> <span class="o">=</span> <span class="n">values</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualizing-the-downloaded-data">
+<h3>Visualizing the downloaded data<a class="headerlink" href="#visualizing-the-downloaded-data" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>In this section we will visualize the downloaded data. This step hepls us to verify the integrity of the data.</p></li>
+<li><p>The below graph plots the Vertical profile of the radar (X-axis) and Rain rate of gauges (Y-axis).</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">dataset</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">]),</span> <span class="nb">list</span><span class="p">(</span><span class="n">dataset</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]),</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;1.5km&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">dataset</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">]),</span> <span class="nb">list</span><span class="p">(</span><span class="n">dataset</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]),</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;2.5km&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">dataset</span><span class="p">[:,</span> <span class="mi">5</span><span class="p">]),</span> <span class="nb">list</span><span class="p">(</span><span class="n">dataset</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]),</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;3.5km&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">dataset</span><span class="p">[:,</span> <span class="mi">6</span><span class="p">]),</span> <span class="nb">list</span><span class="p">(</span><span class="n">dataset</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]),</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;4.5km&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Reflectivity (dB)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Rain Rate (mm/hr)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Reflectivity vs Rain Rate&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Reflectivity vs Rain Rate&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learning_using_CHORDS_18_1.png" src="../../_images/JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learning_using_CHORDS_18_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="quantative-precipitation-estimation-using-deep-learning">
+<h3>Quantative Precipitation Estimation using Deep Learning<a class="headerlink" href="#quantative-precipitation-estimation-using-deep-learning" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>This is the final section of our notebook. In this section we have represented how a Deep Learning model is used for Classification of Precipitation based on our downloaded dataset.</p></li>
+<li><p>As the number of observations for No-Rain Classes are greater that the observations of Rain Classes, we need to use class weights in the loss function to make the model work better. The samples of No-Rain classes would always be less than the Rain Class samples because Rain is an uncommon phenomenon as compared to No-rain. Because this is one of the major factors affecting the effectiveness of Deep Learning on data, this is one of the critical steps that need to be performed to make the model work well.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First we need to import all the packages required to train and test our model </span>
+<span class="c1"># Tensorflow and Keras are used for implementing Deep Learning functions.</span>
+<span class="c1"># sklean is used for splitting and scaling data.</span>
+
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span><span class="p">;</span>
+<span class="kn">from</span> <span class="nn">tensorflow</span> <span class="kn">import</span> <span class="n">keras</span><span class="p">;</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span><span class="p">;</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Split the available data into training, validation and testing sets</span>
+<span class="n">train_data</span><span class="p">,</span> <span class="n">test_data</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">train_data</span><span class="p">,</span> <span class="n">val_data</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">train_data</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Split each set into features and labels</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">T_train</span> <span class="o">=</span> <span class="n">train_data</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">:],</span> <span class="n">train_data</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
+<span class="n">X_val</span><span class="p">,</span> <span class="n">T_val</span> <span class="o">=</span> <span class="n">val_data</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">:],</span> <span class="n">val_data</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
+<span class="n">X_test</span><span class="p">,</span> <span class="n">T_test</span> <span class="o">=</span> <span class="n">test_data</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">:],</span> <span class="n">test_data</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float64&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Shapes of training, validation and testing sets: </span><span class="se">\n</span><span class="si">{</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">T_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">X_val</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">T_val</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">T_test</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Shapes of training, validation and testing sets: 
+((3091, 4), (3091, 1), (773, 4), (773, 1), (967, 4), (967, 1))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculate the ratio of Rain vs No_Rain cases</span>
+<span class="n">no_rain</span><span class="p">,</span> <span class="n">rain</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">,</span> <span class="s1">&#39;rr&#39;</span><span class="p">,</span> <span class="s1">&#39;rc&#39;</span><span class="p">,</span> <span class="s1">&#39;r_1&#39;</span><span class="p">,</span> <span class="s1">&#39;r_2&#39;</span><span class="p">,</span> <span class="s1">&#39;r_3&#39;</span><span class="p">,</span> <span class="s1">&#39;r_4&#39;</span><span class="p">])[</span><span class="s1">&#39;rc&#39;</span><span class="p">])</span>
+<span class="n">total_samples</span> <span class="o">=</span> <span class="n">no_rain</span> <span class="o">+</span> <span class="n">rain</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Examples:</span><span class="se">\n</span><span class="s1"> Total: </span><span class="si">{}</span><span class="se">\n</span><span class="s1"> Positive: </span><span class="si">{}</span><span class="s1"> (</span><span class="si">{:.2f}% o</span><span class="s1">f total)</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">total_samples</span><span class="p">,</span> <span class="n">rain</span><span class="p">,</span> <span class="mi">100</span><span class="o">*</span><span class="n">rain</span><span class="o">/</span><span class="n">total_samples</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Examples:
+ Total: 4831
+ Positive: 437 (9.05% of total)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Need to scale Radar Reflectivity</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="n">X_val</span><span class="p">,</span> <span class="n">X_test</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_val</span><span class="p">),</span> <span class="n">sc</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_val</span><span class="p">,</span> <span class="n">X_test</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">X_val</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculating the class weights to solve class imbalance problem.</span>
+<span class="c1">#  These values will be used in the Binary Crossentropy Loss function during training.</span>
+
+<span class="n">no_rain_weight</span><span class="p">,</span> <span class="n">rain_weight</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">no_rain</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">total_samples</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">rain</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">total_samples</span><span class="p">)</span><span class="o">/</span><span class="mf">2.0</span>
+
+<span class="n">class_weight</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="n">no_rain_weight</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="n">rain_weight</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Weight for No_rain Class: </span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">no_rain_weight</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Weight for class 1: </span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">rain_weight</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Weight for No_rain Class: 0.55
+Weight for class 1: 5.53
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Function for defining our DNN model</span>
+<span class="k">def</span> <span class="nf">make_model</span><span class="p">():</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+        <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">input_dim</span><span class="o">=</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+        <span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;sigmoid&#39;</span><span class="p">)</span>
+    <span class="p">])</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="n">optimizer</span><span class="o">=</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(),</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">BinaryCrossentropy</span><span class="p">(),</span>
+    <span class="n">metrics</span><span class="o">=</span><span class="n">keras</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">BinaryAccuracy</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;accuracy&#39;</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">model</span>
+
+<span class="c1"># Make the model and train it on training data and validate on validation data</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">make_model</span><span class="p">()</span>
+<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">T_train</span><span class="p">,</span> <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">64</span><span class="p">,</span> <span class="n">epochs</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">validation_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">X_val</span><span class="p">,</span> <span class="n">T_val</span><span class="p">),</span> <span class="n">class_weight</span><span class="o">=</span><span class="n">class_weight</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/10
+49/49 [==============================] - 2s 21ms/step - loss: 0.6321 - accuracy: 0.4244 - val_loss: 0.5838 - val_accuracy: 0.7555
+Epoch 2/10
+49/49 [==============================] - 0s 5ms/step - loss: 0.4470 - accuracy: 0.7672 - val_loss: 0.4945 - val_accuracy: 0.7995
+Epoch 3/10
+49/49 [==============================] - 0s 7ms/step - loss: 0.3631 - accuracy: 0.7780 - val_loss: 0.4292 - val_accuracy: 0.8098
+Epoch 4/10
+49/49 [==============================] - 0s 6ms/step - loss: 0.3425 - accuracy: 0.7810 - val_loss: 0.3795 - val_accuracy: 0.8215
+Epoch 5/10
+49/49 [==============================] - 0s 7ms/step - loss: 0.2915 - accuracy: 0.8117 - val_loss: 0.3460 - val_accuracy: 0.8344
+Epoch 6/10
+49/49 [==============================] - 0s 6ms/step - loss: 0.2820 - accuracy: 0.8306 - val_loss: 0.3155 - val_accuracy: 0.8525
+Epoch 7/10
+49/49 [==============================] - 0s 8ms/step - loss: 0.2541 - accuracy: 0.8516 - val_loss: 0.2965 - val_accuracy: 0.8616
+Epoch 8/10
+49/49 [==============================] - 0s 6ms/step - loss: 0.2658 - accuracy: 0.8608 - val_loss: 0.2797 - val_accuracy: 0.8732
+Epoch 9/10
+49/49 [==============================] - 0s 6ms/step - loss: 0.2437 - accuracy: 0.8742 - val_loss: 0.2663 - val_accuracy: 0.8836
+Epoch 10/10
+49/49 [==============================] - 0s 5ms/step - loss: 0.2462 - accuracy: 0.8799 - val_loss: 0.2566 - val_accuracy: 0.8926
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="results">
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<p>Let’s take a look at the output of the Deep Learning model and evaluate it by examining the loss curve and Confusion matrix.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let us take a look at the loss change during training</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;loss&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Epochs&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Loss&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Training Loss Curve&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Training Loss Curve&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learning_using_CHORDS_27_1.png" src="../../_images/JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learning_using_CHORDS_27_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The functions in this section are used to print the confusion matrix</span>
+
+<span class="k">def</span> <span class="nf">percent_correct</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">Y</span><span class="o">==</span><span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    
+
+<span class="k">def</span> <span class="nf">confusion_matrix</span><span class="p">(</span><span class="n">Y_classes</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+    <span class="n">class_names</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">true_class</span> <span class="ow">in</span> <span class="n">class_names</span><span class="p">:</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">Y_class</span> <span class="ow">in</span> <span class="n">class_names</span><span class="p">:</span>
+            <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">Y_classes</span><span class="p">[</span><span class="n">T</span> <span class="o">==</span> <span class="n">true_class</span><span class="p">]</span> <span class="o">==</span> <span class="n">Y_class</span><span class="p">))</span>
+        <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="n">conf_matrix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">class_names</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">class_names</span><span class="p">)</span>
+    <span class="n">conf_matrix</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">background_gradient</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.1f}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Percent Correct is </span><span class="si">{</span><span class="n">percent_correct</span><span class="p">(</span><span class="n">Y_classes</span><span class="p">,</span> <span class="n">T</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">conf_matrix</span>
+
+
+<span class="c1"># Function to binarize the values predicted by our model</span>
+<span class="k">def</span> <span class="nf">binarize</span><span class="p">(</span><span class="n">predictions</span><span class="p">,</span> <span class="n">threshold</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">predictions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">predictions</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">threshold</span><span class="p">):</span>
+            <span class="n">predictions</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">predictions</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">predictions</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Predict the class values of our test set</span>
+<span class="n">model_output</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">binarized_classes</span> <span class="o">=</span> <span class="n">binarize</span><span class="p">(</span><span class="n">model_output</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Print the confusion matrix of the training set</span>
+<span class="n">conf_matrix</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">binarized_classes</span><span class="p">,</span> <span class="n">T_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">conf_matrix</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Percent Correct is 89.24508790072389
+           0.0        1.0
+0.0  88.926554  11.073446
+1.0   7.317073  92.682927
+</pre></div>
+</div>
+</div>
+</div>
+<p>The confusion matrix represents the effectiveness of the model in classifying the data. Here is the format of the confusion matrix.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Predicted No-Rain</p></th>
+<th class="head"><p>Predicted Rain</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Actual No-Rain events</strong></p></td>
+<td><p>True Negatives</p></td>
+<td><p>False Positives</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Actual Rain events</strong></p></td>
+<td><p>False Negatives</p></td>
+<td><p>True Positives</p></td>
+</tr>
+</tbody>
+</table>
+<p>As the purpose is always to successfully detect the rain cases, two most important quantities for analyzing the model is the percent of True Positives and False Negatives. The value of True Positives should be as high as possible (maximum 100%) and the value of False Negatives should be as low as possible (minimun 0%).</p>
+</div>
+<div class="section" id="keywords">
+<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<p>keywords=[“Quantative Precipitation Estimation (QPE)”, “Deep Learning”, “Rain Classification”, “Radar data aligning”, “Cloud Hosted Real Time Data (CHORDS)”]</p>
+</div>
+<div class="section" id="citation">
+<h2>Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Michael</span> <span class="pre">D.</span> <span class="pre">Daniels,</span> <span class="pre">Branko</span> <span class="pre">Kerkez,</span> <span class="pre">V.</span> <span class="pre">Chandrasekar,</span> <span class="pre">Sara</span> <span class="pre">Graves,</span> <span class="pre">D.</span> <span class="pre">Sarah</span> <span class="pre">Stamps,</span> <span class="pre">Charles</span> <span class="pre">Martin,</span> <span class="pre">Aaron</span> <span class="pre">Botnick,</span> <span class="pre">Michael</span> <span class="pre">Dye,</span> <span class="pre">Ryan</span> <span class="pre">Gooch,</span> <span class="pre">Josh</span> <span class="pre">Jones,</span> <span class="pre">Ken</span> <span class="pre">Keiser,</span> <span class="pre">Matthew</span> <span class="pre">Bartos,</span> <span class="pre">Thaovy</span> <span class="pre">Nguyen,</span> <span class="pre">Robyn</span> <span class="pre">Collins,</span> <span class="pre">Sophia</span> <span class="pre">Chen,</span> <span class="pre">Terrie</span> <span class="pre">Yang,</span> <span class="pre">Abbi</span> <span class="pre">Devins-Suresh</span> <span class="pre">(2016).</span> <span class="pre">Cloud-Hosted</span> <span class="pre">Real-time</span> <span class="pre">Data</span> <span class="pre">Services</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">Geosciences</span> <span class="pre">(CHORDS)</span> <span class="pre">software</span> <span class="pre">(Version</span> <span class="pre">1.0.1).</span> <span class="pre">UCAR/NCAR</span> <span class="pre">-</span> <span class="pre">EarthCube.</span> <span class="pre">https://doi.org/10.5065/d6v1236q</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">H.</span> <span class="pre">Liu,</span> <span class="pre">V.</span> <span class="pre">Chandrasekar</span> <span class="pre">and</span> <span class="pre">E.</span> <span class="pre">Gorgucci,</span> <span class="pre">&quot;Detection</span> <span class="pre">of</span> <span class="pre">rain/no</span> <span class="pre">rain</span> <span class="pre">condition</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">ground</span> <span class="pre">based</span> <span class="pre">on</span> <span class="pre">radar</span> <span class="pre">observations,&quot;</span> <span class="pre">in</span> <span class="pre">IEEE</span> <span class="pre">Transactions</span> <span class="pre">on</span> <span class="pre">Geoscience</span> <span class="pre">and</span> <span class="pre">Remote</span> <span class="pre">Sensing,</span> <span class="pre">vol.</span> <span class="pre">39,</span> <span class="pre">no.</span> <span class="pre">3,</span> <span class="pre">pp.</span> <span class="pre">696-699,</span> <span class="pre">March</span> <span class="pre">2001,</span> <span class="pre">doi:</span> <span class="pre">10.1109/36.911127.</span></code></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/ec21_potnis_etal"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="README.html" title="previous page">JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learn</a>
+    <a class='right-next' id="next-link" href="../ec21_seijo_etal/README.html" title="next page">click Binder badge to launch notebook on Binder (no need to install environment):</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By EarthCube Office<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
