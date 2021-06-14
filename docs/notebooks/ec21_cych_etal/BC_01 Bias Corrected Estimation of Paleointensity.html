@@ -1,0 +1,2118 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BC_01 Bias Corrected Estimation of Paleointensity &#8212; EarthCube 2021 Call for Notebooks</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Toward autonomous detection of anomalous GNSS data via applied unsupervised artificial intelligence" href="../ec21_dye_etal/README.html" />
+    <link rel="prev" title="cf-xarray: Scale your analysis across datasets with less data wrangling and more metadata handling" href="../ec21_cherian_etal/DC_01_cf-xarray.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.webp" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">EarthCube 2021 Call for Notebooks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../docs/about.html">
+   Call for Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Notebooks
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_anil_etal/README.html">
+     ec21_binder_anil
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_anil_etal/SA_01_Argo_Data_Exploration.html">
+       Interactive Jupyter notebook for hydrographic ocean data exploration, retrieval and visualization via the Argovis API
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_balwada_etal/README.html">
+     ec2021_balwada_etal
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_balwada_etal/DB_01_Glider_Viz_Panel.html">
+       Glider Viz Panel
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_beckley_etal/README.html">
+     Programmatic Access to OpenTopography’s Cloud Optimized Geotiff (COG) Global Datasets
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_beckley_etal/OT_01_BulkAccessCOGs.html">
+       Programmatic Access to OpenTopography’s Cloud Optimized GeoTIFF (COG) Global Datasets
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_bourgault_etal/README.html">
+     xclim : Software ecosystem for climate services
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_bourgault_etal/PB_02_xclim_Software_ecosystem_for_climate_services.html">
+       xclim: Software ecosystem for climate services
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_cherian_etal/DC_01_cf-xarray.html">
+     cf-xarray: Scale your analysis across datasets with less data wrangling and more metadata handling
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     BC_01 Bias Corrected Estimation of Paleointensity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_dye_etal/README.html">
+     Toward autonomous detection of anomalous GNSS data via applied unsupervised artificial intelligence
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_garzon_etal/README.html">
+     Exploring Research Data Repositories with geoextent.
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_garzon_etal/showcase/SG_01_Exploring_Research_Data_Repositories_with_geoextent.html">
+       Exploring Research Data Repositories with geoextent
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_gray_etal/README.html">
+     Leveraging satellite data and pangeo to investigate the role of Gulf Stream frontal dynamics in ocean productivity
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_gray_etal/PG_01_gulf_stream_dynamics_role_in_productivity.html">
+       Leveraging satellite data and pangeo to investigate the role of Gulf Stream frontal dynamics in ocean productivity
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_hu_etal/README.html">
+     Machine Learning Guided Weather Analogs
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_hu_etal/WH_01_Spatio-Temporal_Deep_Analogs_2021.html">
+       WH_01_Spatio-Temporal_Deep_Analogs_2021
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_lopez_etal/README.html">
+     ITS_LIVE Explorer
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_lopez_etal/notebooks/itslive-notebook-rendered.html">
+       Introduction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_lopez_etal/notebooks/itslive-notebook.html">
+       Introduction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_lopez_etal/notebooks/LL_01_ITS_LIVE_global_glacier_velocity_exploration_and_analysis.html">
+       <strong>
+        ITS_LIVE
+       </strong>
+       Global Glacier Velocity Exploration and Analysis
+       <a class="anchor" id="chapter_1">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_martin_etal/README.html">
+     Frequency-domain analysis of large datasets
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_martin_etal/PM_01_Frequency-Domain_Analysis_of_Large_Datasets.html">
+       Frequency-Domain Analysis of Large Datasets
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_maussion_etal/README.html">
+     OGGM-edu EarthCube notebook
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_maussion_etal/FM_01_OGGM-Edu_learn_and_teach_about_glaciers.html">
+       OGGM-Edu - Jupyter notebooks to learn and teach about glaciers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_potnis_etal/README.html">
+     JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learn
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_potnis_etal/JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learning_using_CHORDS.html">
+       Real Time Alignment and Distribution of Weather Radar Data with Rain Gauge Data for Deep Learning using CHORDS
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_seijo_etal/README.html">
+     click Binder badge to launch notebook on Binder (no need to install environment):
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_shi_etal/README.html">
+     EC2021: Automated Machine Learning for Earth Science via AutoGluon
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_shi_etal/Xingjian_Shi_01_Automated_Machine_Learning_for_Earth_Science_via_AutoGluon.html">
+       Automated Machine Learning for Earth Science via AutoGluon
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_uchida_etal/notebooks/TU_05_Diagnosing-the-Eliassen-Palm-flux-from-a-quasi-geostrophic-double-gyre-ensemble.html">
+     Diagnosing the Eliassen-Palm flux from a quasi-geostrophic double gyre ensemble
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_zheng_etal/README.html">
+     EZ-FeatureTrack
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_zheng_etal/notebooks/WZ_01_mapping_ice_flow_velocity.html">
+       Mapping ice flow velocity using an easy and interactive feature tracking workflow
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/ec21_cych_etal/BC_01 Bias Corrected Estimation of Paleointensity.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/earthcube2021/ec21_book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/earthcube2021/ec21_book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/ec21_cych_etal/BC_01 Bias Corrected Estimation of Paleointensity.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/earthcube2021/ec21_book/master?urlpath=lab/tree/book/notebooks/ec21_cych_etal/BC_01 Bias Corrected Estimation of Paleointensity.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/earthcube2021/ec21_book/blob/master/book/notebooks/ec21_cych_etal/BC_01 Bias Corrected Estimation of Paleointensity.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   BC_01 Bias Corrected Estimation of Paleointensity
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#author-s">
+     Author(s)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#technical-contributions">
+     Technical contributions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methodology">
+     Methodology
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#results">
+     Results
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funding">
+     Funding
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keywords">
+     Keywords
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#citation">
+     Citation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#acknowledgements">
+     Acknowledgements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#library-import">
+     Library import
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#local-library-import">
+     Local library import
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parameter-definitions">
+   Parameter definitions
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-import">
+   Data import
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-processing-and-analysis">
+   Data processing and analysis
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#looking-at-site-and-specimen-data">
+     Looking at site and specimen data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-bicep-method-accounting-for-bias">
+     The BiCEP method- accounting for bias
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-manipulation-and-choosing-interpretations">
+     Data manipulation and choosing interpretations.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#saving-data-to-magic-format">
+     Saving data to MagIC format.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gui">
+     GUI
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gui-documentation">
+     GUI Documentation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-references-and-expected-field-values">
+     Data References and Expected Field Values
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="bc-01-bias-corrected-estimation-of-paleointensity">
+<h1>BC_01 Bias Corrected Estimation of Paleointensity<a class="headerlink" href="#bc-01-bias-corrected-estimation-of-paleointensity" title="Permalink to this headline">¶</a></h1>
+<h1>Table of Contents<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"><li><span><a href="#BC_01-Bias-Corrected-Estimation-of-Paleointensity" data-toc-modified-id="BC_01-Bias-Corrected-Estimation-of-Paleointensity-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>BC_01 Bias Corrected Estimation of Paleointensity</a></span><ul class="toc-item"><li><span><a href="#Author(s)" data-toc-modified-id="Author(s)-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Author(s)</a></span></li><li><span><a href="#Purpose" data-toc-modified-id="Purpose-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Purpose</a></span></li><li><span><a href="#Technical-contributions" data-toc-modified-id="Technical-contributions-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>Technical contributions</a></span></li><li><span><a href="#Methodology" data-toc-modified-id="Methodology-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>Methodology</a></span></li><li><span><a href="#Results" data-toc-modified-id="Results-1.5"><span class="toc-item-num">1.5&nbsp;&nbsp;</span>Results</a></span></li><li><span><a href="#Funding" data-toc-modified-id="Funding-1.6"><span class="toc-item-num">1.6&nbsp;&nbsp;</span>Funding</a></span></li><li><span><a href="#Keywords" data-toc-modified-id="Keywords-1.7"><span class="toc-item-num">1.7&nbsp;&nbsp;</span>Keywords</a></span></li><li><span><a href="#Citation" data-toc-modified-id="Citation-1.8"><span class="toc-item-num">1.8&nbsp;&nbsp;</span>Citation</a></span></li><li><span><a href="#Acknowledgements" data-toc-modified-id="Acknowledgements-1.9"><span class="toc-item-num">1.9&nbsp;&nbsp;</span>Acknowledgements</a></span></li></ul></li><li><span><a href="#Setup" data-toc-modified-id="Setup-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Setup</a></span><ul class="toc-item"><li><span><a href="#Library-import" data-toc-modified-id="Library-import-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Library import</a></span></li><li><span><a href="#Local-library-import" data-toc-modified-id="Local-library-import-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>Local library import</a></span></li></ul></li><li><span><a href="#Parameter-definitions" data-toc-modified-id="Parameter-definitions-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Parameter definitions</a></span></li><li><span><a href="#Data-import" data-toc-modified-id="Data-import-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Data import</a></span></li><li><span><a href="#Data-processing-and-analysis" data-toc-modified-id="Data-processing-and-analysis-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Data processing and analysis</a></span><ul class="toc-item"><li><ul class="toc-item"><li><span><a href="#Looking-at-site-and-specimen-data" data-toc-modified-id="Looking-at-site-and-specimen-data-5.0.1"><span class="toc-item-num">5.0.1&nbsp;&nbsp;</span>Looking at site and specimen data</a></span></li><li><span><a href="#The-BiCEP-method--accounting-for-bias" data-toc-modified-id="The-BiCEP-method--accounting-for-bias-5.0.2"><span class="toc-item-num">5.0.2&nbsp;&nbsp;</span>The BiCEP method- accounting for bias</a></span></li><li><span><a href="#Data-manipulation-and-choosing-interpretations." data-toc-modified-id="Data-manipulation-and-choosing-interpretations.-5.0.3"><span class="toc-item-num">5.0.3&nbsp;&nbsp;</span>Data manipulation and choosing interpretations.</a></span></li><li><span><a href="#Saving-data-to-MagIC-format." data-toc-modified-id="Saving-data-to-MagIC-format.-5.0.4"><span class="toc-item-num">5.0.4&nbsp;&nbsp;</span>Saving data to MagIC format.</a></span></li><li><span><a href="#GUI" data-toc-modified-id="GUI-5.0.5"><span class="toc-item-num">5.0.5&nbsp;&nbsp;</span>GUI</a></span></li><li><span><a href="#GUI-Documentation" data-toc-modified-id="GUI-Documentation-5.0.6"><span class="toc-item-num">5.0.6&nbsp;&nbsp;</span>GUI Documentation</a></span></li><li><span><a href="#Data-References-and-Expected-Field-Values" data-toc-modified-id="Data-References-and-Expected-Field-Values-5.0.7"><span class="toc-item-num">5.0.7&nbsp;&nbsp;</span>Data References and Expected Field Values</a></span></li></ul></li></ul></li><li><span><a href="#References" data-toc-modified-id="References-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>References</a></span></li></ul></div><div class="section" id="author-s">
+<h2>Author(s)<a class="headerlink" href="#author-s" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Author1</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Brendan Cych&quot;</span><span class="p">,</span><span class="s2">&quot;affiliation&quot;</span><span class="p">:</span><span class="s2">&quot;Scripps Institution of Oceanography, UCSD&quot;</span><span class="p">,</span><span class="s2">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;bcych@ucsd.edu&quot;</span><span class="p">,</span><span class="s2">&quot;orcid&quot;</span><span class="p">:</span><span class="s2">&quot;0000-0003-2387-3544&quot;</span><span class="p">}</span>
+<span class="n">Author2</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Matthias Morzfeld&quot;</span><span class="p">,</span><span class="s2">&quot;affiliation&quot;</span><span class="p">:</span><span class="s2">&quot;Scripps Institution of Oceanography, UCSD&quot;</span><span class="p">,</span><span class="s2">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;matti@ucsd.edu&quot;</span><span class="p">,</span><span class="s2">&quot;orcid&quot;</span><span class="p">:</span><span class="s2">&quot;0000-0003-2257-8930&quot;</span><span class="p">}</span>
+<span class="n">Author3</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Lisa Tauxe&quot;</span><span class="p">,</span><span class="s2">&quot;affiliation&quot;</span><span class="p">:</span><span class="s2">&quot;Scripps Institution of Oceanography, UCSD&quot;</span><span class="p">,</span><span class="s2">&quot;email&quot;</span><span class="p">:</span><span class="s2">&quot;ltauxe@ucsd.edu&quot;</span><span class="p">,</span><span class="s2">&quot;orcid&quot;</span><span class="p">:</span><span class="s2">&quot;0000-0002-4837-8200&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<p>Paleointensities are estimates of the Earth’s ancient magnetic field strength, obtained from materials including rocks and pottery sherds which cooled in that field. Paleointensity can be obtained by comparing the magnetization lost on cooling a specimen in zero field, to the magnetization gained on cooling in a known lab field. The theoretical relationship between these two magnetizations should be proportional at all temperatures for an ideal specimen, with the ratio of magnetization lost/magnetization gained being the same as the ratio of ancient field/lab field.</p>
+<p>In natural samples, the assumptions of the paleointensity experiment are frequently violated, leading to non linear behaviour on the Arai plot (Nagata et al, 1963). Traditionally, paleomagnetists use “selection criteria” to exclude specimens from the analysis if they believe they violate the experimental assumptions. These criteria are generally based on an empirical description of non-ideal behaviour, with a specimen being excluded if it fails to meet a threshold value. There is little agreement between labs on which set of criteria to use.</p>
+<p>Bias Corrected Estimation of Paleointensity (BiCEP) is a new method for analyzing Thellier-type paleointensity data. Instead of excluding specimens from the analysis, BiCEP assumes that the paleointensity estimate for each specimen has some amount of bias based on the values of the curvature criterion of Paterson (2011). In this way we can estimate the unbiased value of the paleointensity.</p>
+<p>BiCEP differs from other methods of paleointensity analysis, because it reduces the number of experiments that need to be excluded from the analysis. The credible intervals produced by BiCEP are more reliable than the standard deviation traditional selection criteria, with the precision on the estimate starting low, and increasing as more specimens are measured. It also allows for weighting of results from different specimens, as better results contribute more to the estimate than worse results. BiCEP can be used to analyze new paleointensity data, and to reanalyze old paleointensity data using a consistent methodology which significantly reduces the number of subjective choices needed to make a paleointensity estimate.</p>
+</div>
+<div class="section" id="technical-contributions">
+<h2>Technical contributions<a class="headerlink" href="#technical-contributions" title="Permalink to this headline">¶</a></h2>
+<p>This notebook</p>
+<ul class="simple">
+<li><p>Uses the BiCEP_functions library to read in, plot and analyze paleointensity data.</p></li>
+<li><p>Uses a Markov Chain Monte Carlo (MCMC) sampler using the <code class="docutils literal notranslate"><span class="pre">pystan</span></code> package (<a class="reference external" href="http://mc-stan.org">http://mc-stan.org</a>) to determine the relationship between the curvature (<span class="math notranslate nohighlight">\(\vec{k}\)</span>) parameter (Paterson, 2011) for specimens which were magnetized in the same field.</p></li>
+<li><p>Allows you to save these data into the MagIC database format (<a class="reference external" href="https://www2.earthref.org/MagIC">https://www2.earthref.org/MagIC</a>)</p></li>
+<li><p>Demonstrates a GUI which allows you to perform the previous steps more easily.</p></li>
+</ul>
+</div>
+<div class="section" id="methodology">
+<h2>Methodology<a class="headerlink" href="#methodology" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Thellier Type Paleointensity data must be imported using the MagIC format. A measurements.txt, specimens.txt, samples.txt and sites.txt are required. These are then saved as an internal csv format for use with BiCEP.</p></li>
+<li><p>Paleointensity data can be plotted and some limited analysis using different selection criteria can be performed.</p></li>
+<li><p>The BiCEP method can be fit to a collection of specimens, either sample or site, and the results can be plotted. Reanalysis is possible. For more information on the paleointensity method- see the citation for more detailed information on how the method operates.</p></li>
+<li><p>The results of the BiCEP method can be saved to MagIC format.</p></li>
+</ul>
+</div>
+<div class="section" id="results">
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<p>The BiCEP method yields a similar number of accurate paleointensity estimates to the looser sets of traditional selection criteria analyzed, but with higher precision and accuracy more akin to tighter sets of criteria which yield fewer estimates. See Figure 7 in Cych et al (in press) for more information.</p>
+</div>
+<div class="section" id="funding">
+<h2>Funding<a class="headerlink" href="#funding" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Award1</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;agency&quot;</span><span class="p">:</span> <span class="s2">&quot;National Science Foundation&quot;</span><span class="p">,</span> <span class="s2">&quot;award_code&quot;</span><span class="p">:</span> <span class="s2">&quot;EAR1547263&quot;</span><span class="p">,</span> <span class="s2">&quot;award_URL&quot;</span><span class="p">:</span> <span class="s2">&quot;award_URL&quot;</span><span class="p">}</span>
+<span class="n">Award2</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;agency&quot;</span><span class="p">:</span> <span class="s2">&quot;National Science Foundation&quot;</span><span class="p">,</span> <span class="s2">&quot;award_code&quot;</span><span class="p">:</span> <span class="s2">&quot;EAR1827263&quot;</span><span class="p">,</span> <span class="s2">&quot;award_URL&quot;</span><span class="p">:</span> <span class="s2">&quot;award_URL&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="keywords">
+<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<p>Include up to 5 keywords, using the template below.</p>
+<p>keywords=[“Data Analysis”, “Paleomagnetism”, “Paleointensity”, “Markov Chain Monte Carlo”, “Bayesian Statistics”]</p>
+</div>
+<div class="section" id="citation">
+<h2>Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h2>
+<p>Cych et al (In Press) doi: 10.1002/essoar.10506403.1 <a class="reference external" href="https://www.essoar.org/doi/10.1002/essoar.10506403.1">https://www.essoar.org/doi/10.1002/essoar.10506403.1</a></p>
+</div>
+<div class="section" id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p>We are deeply grateful to Lennart de Groot and Greig Paterson for their very helpful reviews and for the advice and guidance given by Andrew Roberts, David Heslop and Joseph Wilson.</p>
+</div>
+</div>
+<div class="section" id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="library-import">
+<h2>Library import<a class="headerlink" href="#library-import" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="local-library-import">
+<h2>Local library import<a class="headerlink" href="#local-library-import" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;modules_and_scripts/&#39;</span><span class="p">)</span> 
+<span class="c1">#The BiCEP_functions library imports all other needed libraries</span>
+<span class="kn">import</span> <span class="nn">BiCEP_functions</span> <span class="k">as</span> <span class="nn">BiCEP</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="parameter-definitions">
+<h1>Parameter definitions<a class="headerlink" href="#parameter-definitions" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">B_exp</span><span class="o">=</span><span class="mf">36.4</span> <span class="c1">#The expected field for the site we will be using BiCEP with today</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-import">
+<h1>Data import<a class="headerlink" href="#data-import" title="Permalink to this headline">¶</a></h1>
+<p>We can produce a data file that BiCEP can read internally from the magic format using the <code class="docutils literal notranslate"><span class="pre">generate_arai_plot_table</span></code> function in BiCEP_GUI. We will specify an output name of <code class="docutils literal notranslate"><span class="pre">example_data.csv</span></code>. For your convenience, we have included a set of MagIC formatted data to convert to the BiCEP format. This may take a few minutes</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">BiCEP</span><span class="o">.</span><span class="n">generate_arai_plot_table</span><span class="p">(</span><span class="s1">&#39;example_data&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:numexpr.utils:NumExpr defaulting to 8 threads.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-I- Using online data model
+-I- Getting method codes from earthref.org
+-I- Importing controlled vocabularies from https://earthref.org
+Working on: AL2360-1a
+Working on: AL2360-1b
+Working on: AL2360-1c
+Working on: AL2360-1d
+Working on: AL2360-1e
+Working on: AL2742-4a
+Working on: AL2742-4b
+Working on: AL2742-4e
+Working on: AL2742-4f
+Working on: AL2742-4g
+Working on: AL2770-3a
+Working on: AL2770-3b
+Working on: AL2770-3c
+Working on: AL2844-2a
+Working on: AL2844-2b
+Working on: AL2852-2a
+Working on: AL2852-2b
+Working on: AL2852-2c
+Working on: AL2852-2d
+Working on: AL2852-2e
+Working on: AL2852-2f
+Working on: AL3023-1a
+Working on: AL3023-1b
+Working on: AL3028-2a
+Working on: AL3028-2b
+Working on: AL3029-4a
+Working on: AL3029-4b
+Working on: AL3029-4c
+Working on: AL3029-5a
+Working on: AL3031-1a
+Working on: AL3031-1b
+Working on: AL3031-1c
+Working on: AL3031-1d
+Working on: AL3034-2a
+Working on: AL3034-2d
+Working on: AL3034-2e
+Working on: AL3034-5a
+Working on: AL3034-5b
+Working on: AL3034-5d
+Working on: AL3035-2a
+Working on: AL3035-2b
+Working on: AL3035-2h
+Working on: AL3035-2i
+Working on: AL3035-2j
+Working on: AL3156-1a
+Working on: AL3156-1b
+Working on: AL3159-1a
+Working on: AL3159-1b
+Working on: AL3159-1g
+Working on: AL3166-1a
+Working on: AL3166-1b
+Working on: AL3166-1g
+Working on: AL3166-1h
+Working on: hw108a1
+Working on: hw108a2
+Working on: hw108a3
+Working on: hw108a4
+Working on: hw108a5
+Working on: hw108b1
+Working on: hw108b2
+Working on: hw108b3
+Working on: hw108b4
+Working on: hw108b5
+Working on: hw108c1
+Working on: hw108c2
+Working on: hw108c3
+Working on: hw108c4
+Working on: hw108c5
+Working on: hw123a1
+Working on: hw123a2
+Working on: hw123a3
+Working on: hw123a4
+Working on: hw123a5
+Working on: hw126a1
+Working on: hw126a2
+Working on: hw126a3
+Working on: hw126a4
+Working on: hw126a5
+Working on: hw126b1
+Working on: hw126b2
+Working on: hw126b3
+Working on: hw126b4
+Working on: hw126b5
+Working on: hw128a1
+Working on: hw128a2
+Working on: hw128a3
+Working on: hw128a4
+Working on: hw128a5
+Working on: hw128b1
+Working on: hw128b2
+Working on: hw128b3
+Working on: hw128b4
+Working on: hw128b5
+Working on: hw128c1
+Working on: hw128c2
+Working on: hw128c3
+Working on: hw128c4
+Working on: hw128c5
+Working on: hw128d1
+Working on: hw128d2
+Working on: hw128d3
+Working on: hw128d4
+Working on: hw128d5
+Working on: hw108c10
+Working on: hw108c11
+Working on: hw108c12
+Working on: hw108c13
+Working on: hw108c6
+Working on: hw108c7
+Working on: hw108c8
+Working on: hw108c9
+Working on: hw123a10
+Working on: hw123a11
+Working on: hw123a12
+Working on: hw123a6
+Working on: hw123a7
+Working on: hw123a8
+Working on: hw123a9
+Working on: hw126a6
+Working on: hw126a7
+Working on: hw126a8
+Working on: hw128a10
+Working on: hw128a11
+Working on: hw128a6
+Working on: hw128a7
+Working on: hw128a8
+Working on: hw128a9
+Working on: hw201a1
+Working on: hw201a10
+Working on: hw201a11
+Working on: hw201a12
+Working on: hw201a2
+Working on: hw201a3
+Working on: hw201a4
+Working on: hw201a5
+Working on: hw201a6
+Working on: hw201a7
+Working on: hw201a8
+Working on: hw201a9
+Working on: hw226a1
+Working on: hw226a2
+Working on: hw226a3
+Working on: hw226a4
+Working on: hw226a5
+Working on: hw226a6
+Working on: hw226b1
+hw226b1 in site hw226 Not included, demagnetization not completed
+Working on: hw226b2
+Working on: hw226b3
+Working on: hw226b4
+Working on: hw226b5
+Working on: hw226b6
+Working on: hw241a1
+Working on: hw241a2
+Working on: hw241a3
+Working on: hw241a4
+Working on: hw241a5
+Working on: hw241a6
+Working on: hw241d1
+Working on: hw241d2
+Working on: hw241d3
+Working on: hw241d4
+Working on: hw241d5
+Working on: hw241d6
+Working on: hw241e1
+Working on: hw241e2
+Working on: hw241e3
+Working on: hw241e4
+Working on: hw241e5
+Working on: hw241e6
+Working on: BR06-3F
+Working on: BR06-4F
+Working on: BR06-5F
+Working on: p1ay
+Working on: p1c-stub1
+Working on: p1cy_u
+Working on: p1cz_u
+Working on: p1e_u
+Working on: p1fx_u
+Working on: p1fy_u
+Working on: p1ga_u
+Working on: p1gb_u
+Working on: p1gc_u
+Working on: p1h_u
+Working on: p1hb_u
+Working on: p1ka_u
+Working on: p1kb_u
+Working on: p1kc_u
+Working on: p1kd_u
+Working on: p1l_u
+Working on: p1my
+Working on: p1na_u
+Working on: p1nb
+Working on: p1o_u
+Working on: p2aa_u
+Working on: p2ab_u
+Working on: p2ac_u
+Working on: p2ad
+Working on: p2b_u
+Working on: p2d
+Working on: p2ey_u
+Working on: p2kx_u
+Working on: p2na_u
+Working on: p2nb_u
+Working on: p2o_u
+Working on: p2q
+Working on: p2qc
+Working on: p2rl_u
+Working on: p2s_u
+Working on: vm1a
+Working on: vm1c
+Working on: vm1dy
+Working on: vm1f
+Working on: vm1g
+Working on: vm1hx
+Working on: vm1i
+Working on: vm1kx
+Working on: vm1mx
+Working on: vm1my
+Working on: vm1nx
+Working on: vm1o
+Working on: vm1q
+Working on: vm1ry
+Working on: vm1s
+Working on: vm2ay
+Working on: vm2by
+Working on: vm2dy
+Working on: SBG_2352-2b
+Working on: SBG_2352-2e
+Working on: SBG_2352-2g
+Working on: SBG_2358-4f
+Working on: SBG_2372-2e
+Working on: SBG_2372-2g
+Working on: SBG_2372-2h
+Working on: SBG_2372-3d
+Working on: SBG_2372-3e
+Working on: SBG_2372-3f
+Working on: SBG_2392-4c
+Working on: SBG_2392-4e
+Working on: rs25b
+Working on: rs25e
+Working on: rs26c
+Working on: rs27a
+Working on: rs27d
+Working on: rs25a
+Working on: rs25c
+Working on: rs25d
+Working on: rs26a
+Working on: rs26b
+Working on: rs26d
+Working on: rs26e
+Working on: rs27b
+Working on: rs27c
+Working on: rs27e
+Working on: rs27f
+Working on: rs27g
+Working on: rs27h
+Working on: rs27i
+Working on: rs27j
+Working on: remag-rs61a
+Working on: remag-rs61c
+Working on: remag-rs61e
+Working on: remag-rs61f
+Working on: remag-rs61h
+Working on: remag-rs61i
+Working on: remag-rs62a
+Working on: remag-rs62b
+Working on: remag-rs62e
+Working on: remag-rs62f
+Working on: remag-rs62g
+Working on: remag-rs62h
+Working on: remag-rs63a
+Working on: remag-rs63f
+Working on: remag-rs63g
+Working on: remag-rs63i
+Working on: remag-rs63j
+Working on: remag-rs78a
+Working on: remag-rs78e
+Working on: remag-rs78f
+Working on: remag-rs78g
+remag-rs78g in site remag-rs78 Not included, demagnetization not completed
+Working on: remag-rs78i
+Working on: kf011
+Working on: kf031
+Working on: kf072
+Working on: A-1-3
+Working on: A-2-3
+Working on: A-3-3
+Working on: A-4-3
+Working on: A-4-4L
+Working on: A-5-3
+Working on: B-1-3
+Working on: B-10-1
+Working on: B-2-1
+Working on: B-3-3
+Working on: B-4-3
+Working on: B-5-1
+Working on: B-6-3
+Working on: B-7-3
+Working on: B-8-1
+Working on: B-9-3
+Working on: B-9-4L
+Working on: C-1-3
+Working on: C-2-3
+Working on: C-3-3
+Working on: C-4-1
+Working on: C-4-4L
+Working on: SW01-01A-2
+Working on: SW01-02A-2
+Working on: SW01-03A-2
+Working on: SW01-04A-2
+Working on: SW01-05A-2
+Working on: SW01-06A-2
+Working on: SW01-07A-2
+Working on: SW01-08A-2
+Working on: SW01-09A-2
+Working on: SW01-10A-2
+Working on: SW01-11A-2
+Working on: SW01-12A-2
+Working on: SW01-13A-2
+Working on: SW01-14A-2
+Working on: SW01-15A-2
+Working on: SW01-16A-2
+Working on: SW01-17A-2
+Working on: SW01-18A-2
+Working on: SW01-19A-2
+Working on: TS01-00A-2
+Working on: TS01-01A-2
+Working on: TS01-02A-2
+Working on: TS01-04A-1
+Working on: TS01-05A-2
+Working on: TS01-06A-3
+Working on: TS01-07A-2
+Working on: TS01-08A-2
+Working on: TS01-10A-2
+Working on: TS01-11A-2
+Working on: TS01-12A-2
+Working on: TS01-13A-2
+Working on: TS01-14A-2
+Working on: TS01-15A-2
+Working on: TS01-16A-2
+Working on: TS01-17A-2
+Working on: TS01-18A-2
+Working on: TS01-19A-2
+Working on: TS01-20A-2
+Working on: TS01-21A-2
+Working on: TS01-22A-2
+Working on: TS01-23A-2
+Working on: TS01-24A-2
+Working on: TS01-25A-2
+Working on: TS01-26A-2
+Working on: TS01-27A-2
+Working on: TS01-28A-2
+Working on: TS02-01A-2
+Working on: TS02-02A-2
+Working on: TS02-03A-2
+Working on: TS02-04A-2
+Working on: TS02-05A-3
+Working on: TS02-06A-2
+Working on: TS02-07A-2
+Working on: TS02-08A-2
+Working on: TS02-09A-3
+Working on: TS02-10A-3
+Working on: TS02-11A-2
+Working on: TS02-12A-2
+Working on: TS02-13A-2
+Working on: TS02-14A-2
+Working on: TS02-15A-2
+Working on: TS02-16A-2
+Working on: TS02-17A-2
+Working on: TS02-18A-2
+Working on: TS02-19A-2
+Working on: TS02-20A-3
+Working on: TS02-21A-2
+Working on: TS02-22A-2
+Working on: TS02-23A-2
+Working on: TS02-24A-2
+Working on: TS02-25A-2
+Working on: TS02-26A-2
+Working on: ET1_279BS
+ET1_279BS in site ET1 Not included, demagnetization not completed
+Working on: ET1_283E
+ET1_283E in site ET1 Not included, demagnetization not completed
+Working on: ET1_287D
+Working on: ET1_289D
+Working on: ET1_311E
+Working on: ET1_318A
+ET1_318A in site ET1 Not included, demagnetization not completed
+Working on: ET2_182B
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Working on: ET2_185A
+ET2_185A in site ET2 Not included, demagnetization not completed
+Working on: ET2_187A
+ET2_187A in site ET2 Not included, demagnetization not completed
+Working on: ET2_192A
+ET2_192A in site ET2 Not included, demagnetization not completed
+Working on: ET2_196D
+Working on: ET3_008A
+Working on: ET3_023E2
+Working on: ET3_059C
+Working on: ET3_064C
+Working on: ET3_146A
+ET3_146A in site ET3 Not included, demagnetization not completed
+Working on: ET3_150B
+ET3_150B in site ET3 Not included, demagnetization not completed
+Working on: MGH1
+Working on: W1
+Working on: W2
+Working on: W3
+Working on: W4
+Working on: W5
+Working on: W6
+Working on: LV10D3A
+Working on: LV11A2
+Working on: LV12A2A
+Working on: LV12D1
+Working on: LV12E2
+Working on: LV14C3A
+Working on: LV15B1
+Working on: LV16A2B
+Working on: LV16B1B
+Working on: LV17A1A
+Working on: LV18B3
+Working on: LV19A2
+Working on: LV19B1A
+LV19B1A in site LV Not included, demagnetization not completed
+Working on: LV19C1
+Working on: LV19D3
+Working on: LV19E1
+Working on: LV19F2
+Working on: LV19G2B
+Working on: LV20B1
+Working on: LV20C2
+Working on: LV21A2
+Working on: LV21B1
+Working on: LV21C1
+Working on: LV22D1
+Working on: LV23A2
+Working on: LV25C3
+Working on: LV26D2
+Working on: LV27B2
+Working on: LV28E3A
+Working on: LV29B2A
+Working on: LV30A3A
+Working on: LV30B2
+Working on: LV30D1
+Working on: LV3B3
+Working on: LV4A3
+Working on: LV4C3
+Working on: LV6A2
+Working on: LV6C3A
+Working on: LV6D1B
+Working on: LV6G1
+Working on: LV6I3A
+Working on: LV7B1
+Working on: LV7G1
+Working on: LV7H1
+Working on: LV9A2
+Working on: LV9F2
+Working on: M3B5
+Working on: M3C5
+Working on: M3G2
+M3G2 in site MSH Not included, demagnetization not completed
+Working on: M3L1
+M3L1 in site MSH Not included, demagnetization not completed
+Working on: M3O6
+Working on: M3S2
+M3S2 in site MSH Not included, demagnetization not completed
+Working on: M3U2
+M3U2 in site MSH Not included, demagnetization not completed
+Working on: M3V1
+M3V1 in site MSH Not included, demagnetization not completed
+Working on: M4F6
+M4F6 in site MSH Not included, demagnetization not completed
+Working on: M4G5
+M4G5 in site MSH Not included, demagnetization not completed
+Working on: M4M5
+M4M5 in site MSH Not included, demagnetization not completed
+Working on: M4S2
+M4S2 in site MSH Not included, demagnetization not completed
+Working on: M4T3
+Working on: M4U1
+M4U1 in site MSH Not included, demagnetization not completed
+Working on: M4V1
+M4V1 in site MSH Not included, demagnetization not completed
+Working on: M5B2
+M5B2 in site MSH Not included, demagnetization not completed
+Working on: M5D1
+Working on: M5E2
+Working on: M5G1
+M5G1 in site MSH Not included, demagnetization not completed
+Working on: M5M2
+M5M2 in site MSH Not included, demagnetization not completed
+Working on: M5N2
+M5N2 in site MSH Not included, demagnetization not completed
+Working on: M5N5
+Working on: M5P2
+Working on: M5Q1
+Working on: M5S2
+Working on: M5T2
+M5T2 in site MSH Not included, demagnetization not completed
+Working on: M5W2
+M5W2 in site MSH Not included, demagnetization not completed
+Working on: M6B7A
+Working on: M6C2
+M6C2 in site MSH Not included, demagnetization not completed
+Working on: M6D1
+Working on: M6E13
+Working on: M6G1
+Working on: M6K1
+Working on: M6L2
+M6L2 in site MSH Not included, demagnetization not completed
+Working on: M6M1
+Working on: M6O3
+Working on: M6P3
+Working on: M6Q2
+Working on: M6R4
+M6R4 in site MSH Not included, demagnetization not completed
+Working on: M6U2
+M6U2 in site MSH Not included, demagnetization not completed
+Working on: cr405g1-CZb
+Working on: cr418f-CZb
+Working on: cr423c-CZb
+Working on: hw226a-SZb
+Working on: jm009c1-CZb
+Working on: jm009d1-CZb
+Working on: jm009f2-CZb
+Working on: jm009i2-CZb
+Working on: jm011d1-CZb
+Working on: mc109d-SZb
+Working on: mc109e-SZb
+Working on: mc111d-SZb
+Working on: mc111e-SZb
+Working on: mc117a-SZb
+Working on: mc117b-SZb
+Working on: mc117d-SZb
+PTRM check at 373.0K has no corresponding infield measurement, ignoring
+Working on: mc117e-SZb
+Working on: mc120b-SZb
+Working on: mc120c-SZb
+Working on: mc167d2-SZb
+Working on: sc02e1-CZb
+Working on: sc03f-CZb
+Working on: sc03h-CZb
+Working on: sc06d-CZb
+Couldn&#39;t find Anisotropy Tensors, Generating...
+replacing existing ATRM data for  rs25a
+replacing existing ATRM data for  rs25b
+replacing existing ATRM data for  rs25c
+replacing existing ATRM data for  rs25d
+replacing existing ATRM data for  rs25e
+replacing existing ATRM data for  rs26a
+replacing existing ATRM data for  rs26b
+replacing existing ATRM data for  rs26c
+replacing existing ATRM data for  rs26d
+replacing existing ATRM data for  rs26e
+replacing existing ATRM data for  rs27a
+replacing existing ATRM data for  rs27b
+replacing existing ATRM data for  rs27c
+replacing existing ATRM data for  rs27d
+replacing existing ATRM data for  rs27e
+566  records written to file  /home/brendan/BiCEP_GUI/specimens.txt
+replacing existing AARM data for  hw108a1
+replacing existing AARM data for  hw108c1
+replacing existing AARM data for  hw108c10
+replacing existing AARM data for  hw108c11
+replacing existing AARM data for  hw123a1
+replacing existing AARM data for  hw123a3
+replacing existing AARM data for  hw123a4
+replacing existing AARM data for  hw123a9
+replacing existing AARM data for  hw126a4
+replacing existing AARM data for  hw126a5
+replacing existing AARM data for  hw241e2
+replacing existing AARM data for  hw241e3
+566  records written to file  /home/brendan/BiCEP_GUI/specimens.txt
+-W- WARNING: Can&#39;t fit tanh function to NLT data for rs25b
+</pre></div>
+</div>
+</div>
+</div>
+<p>When imported, BiCEP data is stored internally as a set of nested objects, one for the dataset which contains a object for each site (a set of samples expected to have been magnetized in the same field), or each sample (an object collected in the field) which are described using a SpecimenCollection object. Each of these SpecimenCollection objects contains an object for each specimen, which is a subsample that a set of independent measurements are made on. To make the data class, we can initialize a <code class="docutils literal notranslate"><span class="pre">ThellierData</span></code> object using our <code class="docutils literal notranslate"><span class="pre">example_data.csv</span></code> file. This may take a few seconds to create all of the objects. Printing our ThellierData object allows us to see the number of sites and specimens.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">BiCEP</span><span class="o">.</span><span class="n">ThellierData</span><span class="p">(</span><span class="s1">&#39;example_data.csv&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Set of Thellier Data Containing the Sites:
+1991-1992 Eruption Site	(53 specimens)
+hw108	(23 specimens)
+hw123	(12 specimens)
+hw126	(13 specimens)
+hw128	(26 specimens)
+hw201	(12 specimens)
+hw226	(11 specimens)
+hw241	(18 specimens)
+BR06	(3 specimens)
+P	(36 specimens)
+VM	(18 specimens)
+BBQ	(12 specimens)
+rs25	(5 specimens)
+rs26	(5 specimens)
+rs27	(10 specimens)
+remag-rs61	(6 specimens)
+remag-rs62	(6 specimens)
+remag-rs63	(5 specimens)
+remag-rs78	(4 specimens)
+kf	(3 specimens)
+Hawaii 1960 Flow	(22 specimens)
+SW	(19 specimens)
+TS	(53 specimens)
+ET1	(3 specimens)
+ET2	(2 specimens)
+ET3	(4 specimens)
+Synthetic60	(7 specimens)
+LV	(45 specimens)
+MSH	(19 specimens)
+FreshTRM	(24 specimens)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-processing-and-analysis">
+<h1>Data processing and analysis<a class="headerlink" href="#data-processing-and-analysis" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="looking-at-site-and-specimen-data">
+<h2>Looking at site and specimen data<a class="headerlink" href="#looking-at-site-and-specimen-data" title="Permalink to this headline">¶</a></h2>
+<p>We can index for our sites and specimens using a key for the site name. Let’s look at site “hw126” and print out the object to see the specimens. This site is a lava flow erupted in Hawaii in 1935 and originally analyzed by Cromwell et al (2015). Because this eruption occurred in the age of instrumentation, we know that the original field this lava flow was erupted in was approximately 36.4 μT.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">site</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;hw126&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">site</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Site containing the specimens:
+hw126a1
+hw126a2
+hw126a3
+hw126a4
+hw126a5
+hw126b1
+hw126b2
+hw126b3
+hw126b4
+hw126b5
+hw126a6
+hw126a7
+hw126a8
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s take a look at some of these data from one of the specimens from this site. We can use the <code class="docutils literal notranslate"><span class="pre">plot_arai()</span></code> method on our specimen to plot the Thellier data on an Arai plot (Nagata &amp; Arai, 1963), which shows the magnitude of the magnetization lost by cooling in zero field against the magnetization gained when cooling in a known field. We can also plot a Zijderveld plot, which plots the magnetization vectors of the zero field steps. In the zijderveld plot, black circles represent the component of the magnetization in the x,y plane, whereas red squares represent the component in the x,z plane.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">specimen</span><span class="o">=</span><span class="n">site</span><span class="p">[</span><span class="s1">&#39;hw126a1&#39;</span><span class="p">]</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">specimen</span><span class="o">.</span><span class="n">plot_arai</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">specimen</span><span class="o">.</span><span class="n">plot_zijd</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Arai Plot&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Zijderveld Plot&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/BC_01 Bias Corrected Estimation of Paleointensity_21_0.png" src="../../_images/BC_01 Bias Corrected Estimation of Paleointensity_21_0.png" />
+</div>
+</div>
+<p>Both our Arai plot and Zijderveld plot are a straight line. Because we’re plotting magnetization lost in zero field, against magnetization gained in a known field, the ratio of our two lines is the ratio of the Ancient field to the Lab field which is a little under 2. We can check the lab field using the <code class="docutils literal notranslate"><span class="pre">B_lab</span></code> attribute of the specimen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">specimen</span><span class="o">.</span><span class="n">B_lab</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>20.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>The lab field was 20 μT. If we expect a value of 36.4 μT, then a slope of slightly under 2 is what we might expect. Let’s look at another specimen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">specimen</span><span class="o">=</span><span class="n">site</span><span class="p">[</span><span class="s1">&#39;hw126a2&#39;</span><span class="p">]</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">specimen</span><span class="o">.</span><span class="n">plot_arai</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">specimen</span><span class="o">.</span><span class="n">plot_zijd</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Arai Plot&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Zijderveld Plot&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/BC_01 Bias Corrected Estimation of Paleointensity_25_0.png" src="../../_images/BC_01 Bias Corrected Estimation of Paleointensity_25_0.png" />
+</div>
+</div>
+<p>The data for this specimen do not follow a straight line. Although the line slope appears to start out at a reasonable value, it quickly becomes shallower at higher temperatures. If we were to fit a line to these data we might end up with an underestimate of the paleointensity, and there is no reason to suggest which temperature range to pick for our intensity data. Some strict selection criteria might exclude this specimen, others might include it, but could include an incorrect temperature range, which could give a biased paleointensity estimate.</p>
+</div>
+<div class="section" id="the-bicep-method-accounting-for-bias">
+<h2>The BiCEP method- accounting for bias<a class="headerlink" href="#the-bicep-method-accounting-for-bias" title="Permalink to this headline">¶</a></h2>
+<p>BiCEP works differently. It fits a circle to a scaled set of paleointensity data and uses the tangent joining the circle center and the origin. BiCEP generates many circle fits from a probability distribution. Let’s look at the circle fits that BiCEP samples from the posterior distribution, and the median tangent which we use to fit the line. BiCEP fits are performed at a site level for a reason which will become apparent later. We can use the method <code class="docutils literal notranslate"><span class="pre">site.BiCEP_fit()</span></code> to fit the BiCEP method (this may take several minutes depending on the speed of your processor and memory available) and plot the circle and tangent fits to the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#There is also a model_circle_slow which fits these circles using a slower model,</span>
+<span class="c1">#use this if you are having problems with sampling.</span>
+<span class="n">site</span><span class="o">.</span><span class="n">BiCEP_fit</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">BiCEP</span><span class="o">.</span><span class="n">model_circle_fast</span><span class="p">)</span>
+<span class="c1">#This cell may generate warnings from the internal pystan code. </span>
+<span class="c1">#The main error to watch for is one about R_hat, which indicates the sampler hasn&#39;t converged, a &quot;bad&quot; run</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pystan:938 of 60000 iterations ended with a divergence (1.56 %).
+WARNING:pystan:Try running with adapt_delta larger than 0.8 to remove the divergences.
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">specimen.plot_circ()</span></code> method to draw a circle under the Arai plot data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">specimen</span><span class="o">.</span><span class="n">plot_circ</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">tangent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">specimen</span><span class="o">.</span><span class="n">plot_arai</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">specimen</span><span class="o">.</span><span class="n">plot_zijd</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Arai Plot&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Zijderveld Plot&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/BC_01 Bias Corrected Estimation of Paleointensity_30_0.png" src="../../_images/BC_01 Bias Corrected Estimation of Paleointensity_30_0.png" />
+</div>
+</div>
+<p>We notice that this tangent is slightly less than the initial slope, how does this help us?</p>
+<p>BiCEP assumes that the curvature, <span class="math notranslate nohighlight">\(\vec{k}\)</span> (1/radius with sign depending on direction of curvature, Paterson, 2011) of the circle fit is proportional to the calculated ancient field (<span class="math notranslate nohighlight">\(B_{anc}\)</span>). For <span class="math notranslate nohighlight">\(\vec{k}=0\)</span>, our “circle” has infinite radius, and so becomes a perfect line. BiCEP tries to fit a linear relationship between <span class="math notranslate nohighlight">\(B_{anc}\)</span> and <span class="math notranslate nohighlight">\(\vec{k}\)</span> for all specimens in a site. The <span class="math notranslate nohighlight">\(B_{anc}\)</span> value can be extrapolated (or interpolated) to <span class="math notranslate nohighlight">\(\vec{k}\)</span>=0 to give us our unbiased paleointensity estimate. In the case of the plotted specimen hw126a2, BiCEP predicts that this specimen <strong>should</strong> underestimate the site paleointensity slightly, due to its curvature.</p>
+<p>We can plot the relationship between <span class="math notranslate nohighlight">\(B_{anc}\)</span> and <span class="math notranslate nohighlight">\(\vec{k}\)</span> using the method <code class="docutils literal notranslate"><span class="pre">site.regplot()</span></code>. We plot the expected field value as a red line.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">site</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="c1">#x limits, y limits and y label are not set by this method as it is used slightly differently in our GUI.</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$B_</span><span class="si">{anc}</span><span class="s1">$ ($\mu$T)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">36.4</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">zorder</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/BC_01 Bias Corrected Estimation of Paleointensity_32_0.png" src="../../_images/BC_01 Bias Corrected Estimation of Paleointensity_32_0.png" />
+</div>
+</div>
+<p>The green dots with black errorbars are our individual specimen estimates for <span class="math notranslate nohighlight">\(\vec{k}\)</span> and <span class="math notranslate nohighlight">\(B_{anc}\)</span> and their 95% confidence intervals. The blue lines are our BiCEP fits to these data. Notice that these lines cross the <span class="math notranslate nohighlight">\(\vec{k}=0\)</span> line close to the expected field value, yielding an accurate and precise estimate of the paleointensity, without excluding any specimens! We can get a sense of the distribution of estimates for <span class="math notranslate nohighlight">\(B_{anc}\)</span> using the <code class="docutils literal notranslate"><span class="pre">site.histplot()</span></code> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">site</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mf">36.4</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/BC_01 Bias Corrected Estimation of Paleointensity_34_0.png" src="../../_images/BC_01 Bias Corrected Estimation of Paleointensity_34_0.png" />
+</div>
+</div>
+<p>We can see that our estimate for <span class="math notranslate nohighlight">\(B_{anc}\)</span> is close to the median value of this distribution, and well within the 95% confidence interval denoted by the black line. Our estimate is accurate and precise, with a 95% confidence interval of ~4 μT</p>
+</div>
+<div class="section" id="data-manipulation-and-choosing-interpretations">
+<h2>Data manipulation and choosing interpretations.<a class="headerlink" href="#data-manipulation-and-choosing-interpretations" title="Permalink to this headline">¶</a></h2>
+<p>You might notice that some of our specimens have larger error bars on their <span class="math notranslate nohighlight">\(\vec{k}\)</span> estimates than others in our BiCEP fitting figure. Let’s investigate what’s going on with these specimens.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">));</span>
+<span class="n">hw126a7</span><span class="o">=</span><span class="n">site</span><span class="p">[</span><span class="s1">&#39;hw126a7&#39;</span><span class="p">]</span>
+<span class="n">hw126a8</span><span class="o">=</span><span class="n">site</span><span class="p">[</span><span class="s1">&#39;hw126a8&#39;</span><span class="p">]</span>
+<span class="n">hw126a7</span><span class="o">.</span><span class="n">plot_circ</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">tangent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">hw126a7</span><span class="o">.</span><span class="n">plot_arai</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;hw126a7&#39;</span><span class="p">)</span>
+
+<span class="n">hw126a8</span><span class="o">.</span><span class="n">plot_circ</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">tangent</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">hw126a8</span><span class="o">.</span><span class="n">plot_arai</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;hw126a8&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/BC_01 Bias Corrected Estimation of Paleointensity_37_0.png" src="../../_images/BC_01 Bias Corrected Estimation of Paleointensity_37_0.png" />
+</div>
+</div>
+<p>For these specimens, our analysis might be slightly different. Our specimen “hw126a7” has a pTRM check (triangle) which is very displaced from the line at the 300 °C temperature step. This is a repeat of the 300 °C in-field measurement after heating to 350 °C in zero field. It indicates a chemical alteration of the specimen between 300 °C and 350 °C. We can use this by calculating the DRAT statistic (Selkin &amp; Tauxe, 2000), using the attribute <code class="docutils literal notranslate"><span class="pre">specimen.drat</span></code>, and noticing that it is high (criteria vary, but 15 is considered a high value by any metric). Although we have already demonstrated the effectiveness of BiCEP without using this statistic, we have evidence that we should only be using the temperatures up to 300 °C for this specimen. We can do this using the method <code class="docutils literal notranslate"><span class="pre">specimen.change_temps()</span></code>, and we save this change using the method <code class="docutils literal notranslate"><span class="pre">specimen.save_changes()</span></code>. Note that our attributes, such as <code class="docutils literal notranslate"><span class="pre">specimen.drat</span></code> are affected by the change in temperatures.</p>
+<p>Our specimen “hw126a8” has a very early failed pTRM check, and fitting a circle seems like it would probably be inappropriate. We can elect to exclude this specimen as no part of the line is likely to give a good paleointensity estimate. This can be done by setting the attribute <code class="docutils literal notranslate"><span class="pre">specimen.active=False</span></code> Ultimately, due to its large uncertainty in the circle fit, it has very little effect on the estimate of <span class="math notranslate nohighlight">\(B_{anc}\)</span> in the first place.</p>
+<p>The MAD statistic of Kirshvink (1980) and the DANG Statistic (Tanaka &amp; Kobayashi, 2003, Tauxe &amp; Staudigel, 2004) are also available using the methods <code class="docutils literal notranslate"><span class="pre">specimen.mad</span></code> and <code class="docutils literal notranslate"><span class="pre">specimen.dang</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Printing the DRAT parameter of the specimen to </span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hw126a7 DRAT: </span><span class="si">%2.1f</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">hw126a7</span>.drat)
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hw126a8 DRAT: </span><span class="si">%2.1f</span><span class="s1">&#39;</span><span class="o">%</span><span class="k">hw126a8</span>.drat)
+
+<span class="n">lowerTemp</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">upperTemp</span><span class="o">=</span><span class="mi">300</span>
+<span class="n">lowerTempK</span><span class="p">,</span><span class="n">upperTempK</span><span class="o">=</span><span class="n">lowerTemp</span><span class="o">+</span><span class="mi">273</span><span class="p">,</span><span class="n">upperTemp</span><span class="o">+</span><span class="mi">273</span>
+
+<span class="n">hw126a7</span><span class="o">.</span><span class="n">change_temps</span><span class="p">(</span><span class="n">lowerTempK</span><span class="p">,</span><span class="n">upperTempK</span><span class="p">)</span>
+<span class="n">hw126a7</span><span class="o">.</span><span class="n">save_changes</span><span class="p">()</span>
+<span class="n">hw126a8</span><span class="o">.</span><span class="n">active</span><span class="o">=</span><span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hw126a7 DRAT: 4.2
+hw126a8 DRAT: 38.4
+</pre></div>
+</div>
+</div>
+</div>
+<p>We now run the BiCEP method again with these changes in place, and plot up our site results with the results for these two specimens.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">site</span><span class="o">.</span><span class="n">BiCEP_fit</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">BiCEP</span><span class="o">.</span><span class="n">model_circle_fast</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:pystan:947 of 60000 iterations ended with a divergence (1.58 %).
+WARNING:pystan:Try running with adapt_delta larger than 0.8 to remove the divergences.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#set up subplots</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="c1">#Plot our Arai plots with circle fits</span>
+<span class="n">hw126a7</span><span class="o">.</span><span class="n">plot_circ</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">hw126a7</span><span class="o">.</span><span class="n">plot_arai</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">hw126a8</span><span class="o">.</span><span class="n">plot_circ</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">hw126a8</span><span class="o">.</span><span class="n">plot_arai</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+
+
+<span class="c1">#Plot our plot of the BiCEP fit.</span>
+<span class="n">site</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$B_</span><span class="si">{anc}</span><span class="s1">$ ($\mu$T)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mf">36.4</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">zorder</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span>
+
+
+<span class="c1">#Plot our histogram</span>
+<span class="n">site</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mf">36.4</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/BC_01 Bias Corrected Estimation of Paleointensity_42_0.png" src="../../_images/BC_01 Bias Corrected Estimation of Paleointensity_42_0.png" />
+</div>
+</div>
+<p>We notice from our histogram that doing this data manipulation has very slightly improved our accuracy and precision- but the overall distribution has not changed vary much. We notice from our Arai plot for specimen hw126a7 that the uncertainty in our circle fits has become much larger by excluding these temperature steps. This is because we assume the uncertainty in the circle fit for the whole Arai plot, rather than just the segment we’re looking at. In this way, we are penalized for excluding data from the Arai plot, without having to use some kind of “length of the line” criterion.</p>
+</div>
+<div class="section" id="saving-data-to-magic-format">
+<h2>Saving data to MagIC format.<a class="headerlink" href="#saving-data-to-magic-format" title="Permalink to this headline">¶</a></h2>
+<p>Once we have run our site- we can save our results directly into the MagIC formatted data file. This will save results of the BiCEP method for our site and all specimens in that site. We can do this using the method
+<code class="docutils literal notranslate"><span class="pre">site.save_magic_tables()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">site</span><span class="o">.</span><span class="n">save_magic_tables</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>30  records written to file  sites.txt
+566  records written to file  specimens.txt
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="gui">
+<h2>GUI<a class="headerlink" href="#gui" title="Permalink to this headline">¶</a></h2>
+<p>As we think that using these functions for every site will be cumbersome, we present a GUI which performs all of these steps. The GUI can save figures produced, and also produces diagnostics about the sampler, as well as important diagnostic information about the sampler. We can use the <code class="docutils literal notranslate"><span class="pre">run_gui()</span></code> function to initialize the GUI. Note that the <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">widget</span></code> magic command is required to have the BiCEP GUI display plots correctly. Above figures can be set to the normal plotting style when rerunning cells using the <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> magic command.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;readme_image/GUI_layout.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/BC_01 Bias Corrected Estimation of Paleointensity_47_0.png" src="../../_images/BC_01 Bias Corrected Estimation of Paleointensity_47_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="gui-documentation">
+<h2>GUI Documentation<a class="headerlink" href="#gui-documentation" title="Permalink to this headline">¶</a></h2>
+<p>On launch you should have a GUI with the above layout:</p>
+<ol class="simple">
+<li><p>File selection button. Press select, choose your file, and press select again. Then press “Run” to import the data to the GUI. You cannot then select a new file.</p></li>
+<li><p>Site and specimen dropdowns. These dropdown menus allow you choose a particular paleointensity experiment.</p></li>
+<li><p>Minimum and maximum temperature steps (in Celcius) to use for the paleointensity experiment. We recommend using the Zijderveld plot (7.) and pTRM checks to choose which set of temperatures to use. By default, we use all temperature steps to make a paleointensity estimate. Currently it is required to make an estimate for all specimens.</p></li>
+<li><p>Statistics about the direction and alteration of the ChRM used for paleointensity estimation. These may help with choosing which set of temperature steps to use. See the standard paleointensity definitons (Paterson et al, 2014, <a class="reference external" href="https://earthref.org/PmagPy/SPD/DL/SPD_v1.1.pdf">https://earthref.org/PmagPy/SPD/DL/SPD_v1.1.pdf</a>) for more information on these statistics. In addition to these statistics, we present the worst R_hat diagnostic for a specimen. If R_hat&gt;1.1 or R_hat&lt;0.9, it may indicate an issue with the sampler (see 13.). In this case, this box will show up as red, and the specimen may be excluded using the checkbox (8.))</p></li>
+<li><p>Arai plot with zero field first steps plotted as red circles, in field first steps plotted as blue circles, pTRM checks plotted as triangles, and pTRM tail checks plotted as squares. Additivity checks are not currently plotted. Circle fits from the BiCEP method will be plotted as green lines under the Arai plot after the site fit (9) has been performed. All plots can be rescaled using the “move” button (3rd symbol from the bottom on left side of plot) and right clicking and dragging, or the “zoom” button (2nd symbol from the bottom) and left clicking and dragging to zoom in, or right clicking and dragging to zoom out. The “home” button (second symbol from the top) resets the plot axis, as does changing the temperatures.</p></li>
+<li><p>Zijderveld plot of the data, with x,y plotted as black circles and x,z plotted as red squares.</p></li>
+<li><p>Saves the temperatures used for that specimen to RAM. This must be done for each specimen individually to change temperatures before running the sampler (9.). By default, all temperature steps are used for every specimen.</p></li>
+<li><p>Checkbox for excluding a specimen. This should only be done if there is no reasonable interpretation of the specimen (e.g. alteration at low temperature, not demagnetizing to the origin).</p></li>
+<li><p>The “Process Site Data” button performs the BiCEP method on that site and calculates the site level paleointensity. Depending on the speed of your computer and the sampler parameters used (10), this may take a while to run, especially for sites with many specimens. Please be patient.</p></li>
+<li><p>Parameters for the MCMC sampler for the BiCEP method. The “n samples” slider increases the number of samples used in the MCMC sampler. Smaller numbers will take less time to run but result in lower accuracy in the resulting probability distribution. The “Sampler” button changes the parameterization of the MCMC sampler slightly (mathematically, the model is the same, but the parameters being sampled from are specified slightly differently). The “Slow, more accurate” sampler is much slower than the “Fast, less accurate” sampler, but generally (though not always) results in better sampler diagnostics than the “Fast, less accurate” sampler, particularly for sites with small numbers of specimens.</p></li>
+<li><p>Plot of the estimated paleointensity for each specimen against Arai plot curvature. The currently displayed specimen in the Arai and Zijderveld plots has a red circle around it in this plot. The blue lines are samples from the posterior distribution for the relationship between specimen level paleointensity and curvature. The y intercept is the estimated site level paleointensity.</p></li>
+<li><p>Histogram of the site level paleointensities sampled from the posterior distribution. This corresponds to the distribution of intercepts of the blue lines in (12.).</p></li>
+<li><p>Diagnostics for the MCMC sampler (see Cych et al, in prep. or the Stan Documentation at <a class="reference external" href="https://mc-stan.org/docs/2_26/reference-manual/notation-for-samples-chains-and-draws.html">https://mc-stan.org/docs/2_26/reference-manual/notation-for-samples-chains-and-draws.html</a>, <a class="reference external" href="https://mc-stan.org/docs/2_26/reference-manual/effective-sample-size-section.html">https://mc-stan.org/docs/2_26/reference-manual/effective-sample-size-section.html</a>). 0.9&lt;R_hat&lt;1.1 and n_eff&gt;1000 is desired, with R_hat=1.00 and n_eff&gt;10000 being ideal. Tweak the sampler parameters (10.) or measure more specimens if these parameters give poor results (indicated by an amber color for n_eff&lt;1000 or a red color for bad R_hat). Also displayed here is the 95% credible interval for the site and the Category (see Cych et al once again for an explanation). The color of the category box indicates how to proceed. Green (Category A or B): Accept site, Amber (Category C or D): Measure more specimens, Red (Category D): Ignore site.</p></li>
+<li><p>Saves figures to file. Currently the Zijderveld plot and Arai plot have to be saved together (as do both site plots).</p></li>
+<li><p>Saves the results from the BiCEP method to the MagIC tables (site and specimen tables are altered).</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget
+<span class="n">BiCEP</span><span class="o">.</span><span class="n">run_gui</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "f912d25b471d45a886e349b3d4b57e88", "version_major": 2, "version_minor": 0}
+</script></div>
+</div>
+</div>
+<div class="section" id="data-references-and-expected-field-values">
+<h2>Data References and Expected Field Values<a class="headerlink" href="#data-references-and-expected-field-values" title="Permalink to this headline">¶</a></h2>
+<p>We follow with a list of DOIs for sites included in our data file as well as the expected field values at those sites. This can be useful for comparison when using BiCEP_GUI.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">site_info</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;site_info.txt&#39;</span><span class="p">)</span>
+<span class="n">site_info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Site Name</th>
+      <th>doi</th>
+      <th>Lithology</th>
+      <th>LAT</th>
+      <th>LON</th>
+      <th>Year</th>
+      <th>B_exp</th>
+      <th>n_site</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1991-1992 Eruption Site</td>
+      <td>10.1029/2005GC001141</td>
+      <td>lava flow</td>
+      <td>9.80000</td>
+      <td>-104.30000</td>
+      <td>1991.0</td>
+      <td>36.2</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>hw108</td>
+      <td>10.1016/j.pepi.2014.12.007</td>
+      <td>lava flow</td>
+      <td>19.86270</td>
+      <td>-155.90850</td>
+      <td>1859.0</td>
+      <td>39.3</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>hw123</td>
+      <td>10.1016/j.pepi.2014.12.007</td>
+      <td>lava flow</td>
+      <td>19.07262</td>
+      <td>-155.71410</td>
+      <td>1907.0</td>
+      <td>37.7</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>hw126</td>
+      <td>10.1016/j.pepi.2014.12.007</td>
+      <td>lava flow</td>
+      <td>19.69000</td>
+      <td>-155.46000</td>
+      <td>1935.0</td>
+      <td>36.4</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>hw128</td>
+      <td>10.1016/j.pepi.2014.12.007</td>
+      <td>lava flow</td>
+      <td>19.26000</td>
+      <td>-155.87000</td>
+      <td>1950.0</td>
+      <td>36.2</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>hw201</td>
+      <td>10.1016/j.pepi.2014.12.007</td>
+      <td>lava flow</td>
+      <td>19.36000</td>
+      <td>-154.97000</td>
+      <td>1990.0</td>
+      <td>35.2</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>hw226</td>
+      <td>10.1016/j.pepi.2014.12.007</td>
+      <td>lava flow</td>
+      <td>19.64000</td>
+      <td>-155.51000</td>
+      <td>1843.0</td>
+      <td>39.9</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>hw241</td>
+      <td>10.1016/j.pepi.2014.12.007</td>
+      <td>lava flow</td>
+      <td>19.52000</td>
+      <td>-155.81000</td>
+      <td>1960.0</td>
+      <td>36.0</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>BR06</td>
+      <td>10.1016/j.pepi.2007.10.002</td>
+      <td>brick</td>
+      <td>60.10000</td>
+      <td>24.90000</td>
+      <td>1906.0</td>
+      <td>49.7</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>P</td>
+      <td>10.1029/2010JB007844, 2011</td>
+      <td>lava flow</td>
+      <td>19.30000</td>
+      <td>-102.10000</td>
+      <td>1943.0</td>
+      <td>44.6</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>VM</td>
+      <td>10.1029/2010JB007844, 2013</td>
+      <td>lava flow</td>
+      <td>40.80000</td>
+      <td>14.50000</td>
+      <td>1944.0</td>
+      <td>43.8</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>BBQ</td>
+      <td>10.1029/93jb01160</td>
+      <td>submarine lava flow</td>
+      <td>9.80000</td>
+      <td>-104.30000</td>
+      <td>1990.0</td>
+      <td>36.2</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>rs25</td>
+      <td>10.1016/j.epsl.2009.12.022</td>
+      <td>synthetic</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>30.0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>rs26</td>
+      <td>10.1016/j.epsl.2009.12.022</td>
+      <td>synthetic</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>60.0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>rs27</td>
+      <td>10.1016/j.epsl.2009.12.022</td>
+      <td>synthetic</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>90.0</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>remag-rs61</td>
+      <td>10.1016/j.epsl.2011.08.024</td>
+      <td>synthetic</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>40.0</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>remag-rs62</td>
+      <td>10.1016/j.epsl.2011.08.024</td>
+      <td>synthetic</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>60.0</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>remag-rs63</td>
+      <td>10.1016/j.epsl.2011.08.024</td>
+      <td>synthetic</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>80.0</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>remag-rs78</td>
+      <td>10.1016/j.epsl.2011.08.024</td>
+      <td>synthetic</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>20.0</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>kf</td>
+      <td>10.1111/j.1365-246X.2012.05412.x</td>
+      <td>lava flow</td>
+      <td>65.70000</td>
+      <td>-16.80000</td>
+      <td>1984.0</td>
+      <td>52.0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Hawaii 1960 Flow</td>
+      <td>10.1046/j.1365-246X.2003.01909.x</td>
+      <td>lava flow</td>
+      <td>19.52000</td>
+      <td>-155.81000</td>
+      <td>1960.0</td>
+      <td>36.0</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>SW</td>
+      <td>10.1016/j.pepi.2008.03.006</td>
+      <td>lava flow</td>
+      <td>31.60000</td>
+      <td>-130.60000</td>
+      <td>1946.0</td>
+      <td>46.4</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>TS</td>
+      <td>10.1016/j.pepi.2008.03.006</td>
+      <td>lava flow</td>
+      <td>31.60000</td>
+      <td>-130.60000</td>
+      <td>1914.0</td>
+      <td>47.8</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>ET1</td>
+      <td>10.1016/j.epsl.2007.03.017</td>
+      <td>basaltic lava</td>
+      <td>37.80000</td>
+      <td>15.00000</td>
+      <td>1950.0</td>
+      <td>43.3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>ET2</td>
+      <td>10.1016/j.epsl.2007.03.017</td>
+      <td>basaltic lava</td>
+      <td>37.80000</td>
+      <td>15.00000</td>
+      <td>1979.0</td>
+      <td>44.1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>ET3</td>
+      <td>10.1016/j.epsl.2007.03.017</td>
+      <td>basaltic lava</td>
+      <td>37.80000</td>
+      <td>15.00000</td>
+      <td>1983.0</td>
+      <td>44.2</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Synthetic60</td>
+      <td>10.1016/S1474-7065(03)00122-0</td>
+      <td>synthetic</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>60.0</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>LV</td>
+      <td>10.1029/2009JB006475</td>
+      <td>Lithic Clasts</td>
+      <td>-23.35261</td>
+      <td>67.74319</td>
+      <td>1993.0</td>
+      <td>24.0</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>MSH</td>
+      <td>10.1029/2009JB006475</td>
+      <td>Lithic Clasts</td>
+      <td>46.24550</td>
+      <td>-122.18650</td>
+      <td>1980.0</td>
+      <td>55.6</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>FreshTRM</td>
+      <td>10.1029/2018GC007946</td>
+      <td>remagnetized/synthetic</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>70.0</td>
+      <td>24</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+<p>List relevant references:</p>
+<p>Cromwell, G., Tauxe, L., Staudigel, H., &amp; Ron, H.(2015). Paleointensity estimates from historic and modern hawaiian lava flows using glassy basalt as a primary source material. Phys. Earth Planet. Int., 241, 44–56.  doi:89710.1016/j.pepi.2014.12.007</p>
+<p>Kirschvink, J. L. (1980), The least-squares line and plane and the analysis of palaeomagnetic data,Geophys. J. R. Astr. Soc.,62, 699–718, doi:10.1111/j.1365-246X.1980.tb02601.x</p>
+<p>Nagata, T., Arai, Y., &amp; Momose, K.  (1963).  Secular variation of the geomagnetic total force during the last 5000 years. J. Geophys. Res.,68(18), 5277-5281.   doi:0.1029/j.2156-2202.1963.tb00005.x</p>
+<p>Paterson, G. A. (2011), A simple test for the presence of multidomain behaviour during paleointensity experiments,J. Geophys. Res.,116, B10,104, doi:10.1029/2011JB008369.</p>
+<p>Paterson,  G.  A.,  L.  Tauxe,  A.  J.  Biggin,  R.  Shaar,  and  L.  C.  Jonestrask  (2014),  On  im-proving  the  selection  of  thellier-type  paleointensity  data,Geochem.  Geophys.  Geosyst.,  doi:10.1002/2013GC005135.</p>
+<p>Selkin, P. A., and L. Tauxe (2000), Long-term variations in palaeointensity, Phil.  Trans.  R.  Soc.London,358, 1065–1088, doi:10.1098/rsta.2000.0574.</p>
+<p>Tanaka,  H.,  and  T.  Kobayashi  (2003),  Paleomagnetism  of  the  late  Quaternary  Ontake  Volcano,Japan:  directions, intensities, and excursions,Earth Planets Space,55, 189–202.</p>
+<p>Tauxe, L., and H. Staudigel (2004), Strength of the geomagnetic field in the Cretaceous Normal Superchron:  New data from submarine basaltic glass of the Troodos Ophiolite,Geochem. Geophys.Geosyst.,5, Q02H06, doi:10.1029/2003GC000635</p>
+<p>Zijderveld, J. D. A.(1967).A. c. demagnetization of rocks:  Analysis of results. In D. W. Collinson, K. M. Creer, &amp; S. K. Runcorn (Eds.), Developments in solid earth geophysics (Vol. 3, pp. 254–286). Elsevier. doi:102110.1016/B978-1-4832-2894-5.50049-5</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/ec21_cych_etal"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../ec21_cherian_etal/DC_01_cf-xarray.html" title="previous page">cf-xarray: Scale your analysis across datasets with less data wrangling and more metadata handling</a>
+    <a class='right-next' id="next-link" href="../ec21_dye_etal/README.html" title="next page">Toward autonomous detection of anomalous GNSS data via applied unsupervised artificial intelligence</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By EarthCube Office<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

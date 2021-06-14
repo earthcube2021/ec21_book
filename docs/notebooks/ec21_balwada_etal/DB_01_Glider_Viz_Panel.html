@@ -1,0 +1,1521 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glider Viz Panel &#8212; EarthCube 2021 Call for Notebooks</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Programmatic Access to OpenTopography’s Cloud Optimized Geotiff (COG) Global Datasets" href="../ec21_beckley_etal/README.html" />
+    <link rel="prev" title="ec2021_balwada_etal" href="README.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.webp" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">EarthCube 2021 Call for Notebooks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../docs/about.html">
+   Call for Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Notebooks
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_anil_etal/README.html">
+     ec21_binder_anil
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_anil_etal/SA_01_Argo_Data_Exploration.html">
+       Interactive Jupyter notebook for hydrographic ocean data exploration, retrieval and visualization via the Argovis API
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="README.html">
+     ec2021_balwada_etal
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Glider Viz Panel
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_beckley_etal/README.html">
+     Programmatic Access to OpenTopography’s Cloud Optimized Geotiff (COG) Global Datasets
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_beckley_etal/OT_01_BulkAccessCOGs.html">
+       Programmatic Access to OpenTopography’s Cloud Optimized GeoTIFF (COG) Global Datasets
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_bourgault_etal/README.html">
+     xclim : Software ecosystem for climate services
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_bourgault_etal/PB_02_xclim_Software_ecosystem_for_climate_services.html">
+       xclim: Software ecosystem for climate services
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_cherian_etal/DC_01_cf-xarray.html">
+     cf-xarray: Scale your analysis across datasets with less data wrangling and more metadata handling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_cych_etal/BC_01%20Bias%20Corrected%20Estimation%20of%20Paleointensity.html">
+     BC_01 Bias Corrected Estimation of Paleointensity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_dye_etal/README.html">
+     Toward autonomous detection of anomalous GNSS data via applied unsupervised artificial intelligence
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_garzon_etal/README.html">
+     Exploring Research Data Repositories with geoextent.
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_garzon_etal/showcase/SG_01_Exploring_Research_Data_Repositories_with_geoextent.html">
+       Exploring Research Data Repositories with geoextent
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_gray_etal/README.html">
+     Leveraging satellite data and pangeo to investigate the role of Gulf Stream frontal dynamics in ocean productivity
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_gray_etal/PG_01_gulf_stream_dynamics_role_in_productivity.html">
+       Leveraging satellite data and pangeo to investigate the role of Gulf Stream frontal dynamics in ocean productivity
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_hu_etal/README.html">
+     Machine Learning Guided Weather Analogs
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_hu_etal/WH_01_Spatio-Temporal_Deep_Analogs_2021.html">
+       WH_01_Spatio-Temporal_Deep_Analogs_2021
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_lopez_etal/README.html">
+     ITS_LIVE Explorer
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_lopez_etal/notebooks/itslive-notebook-rendered.html">
+       Introduction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_lopez_etal/notebooks/itslive-notebook.html">
+       Introduction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_lopez_etal/notebooks/LL_01_ITS_LIVE_global_glacier_velocity_exploration_and_analysis.html">
+       <strong>
+        ITS_LIVE
+       </strong>
+       Global Glacier Velocity Exploration and Analysis
+       <a class="anchor" id="chapter_1">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_martin_etal/README.html">
+     Frequency-domain analysis of large datasets
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_martin_etal/PM_01_Frequency-Domain_Analysis_of_Large_Datasets.html">
+       Frequency-Domain Analysis of Large Datasets
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_maussion_etal/README.html">
+     OGGM-edu EarthCube notebook
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_maussion_etal/FM_01_OGGM-Edu_learn_and_teach_about_glaciers.html">
+       OGGM-Edu - Jupyter notebooks to learn and teach about glaciers
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_potnis_etal/README.html">
+     JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learn
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_potnis_etal/JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learning_using_CHORDS.html">
+       Real Time Alignment and Distribution of Weather Radar Data with Rain Gauge Data for Deep Learning using CHORDS
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_seijo_etal/README.html">
+     click Binder badge to launch notebook on Binder (no need to install environment):
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_shi_etal/README.html">
+     EC2021: Automated Machine Learning for Earth Science via AutoGluon
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_shi_etal/Xingjian_Shi_01_Automated_Machine_Learning_for_Earth_Science_via_AutoGluon.html">
+       Automated Machine Learning for Earth Science via AutoGluon
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_uchida_etal/notebooks/TU_05_Diagnosing-the-Eliassen-Palm-flux-from-a-quasi-geostrophic-double-gyre-ensemble.html">
+     Diagnosing the Eliassen-Palm flux from a quasi-geostrophic double gyre ensemble
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ec21_zheng_etal/README.html">
+     EZ-FeatureTrack
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ec21_zheng_etal/notebooks/WZ_01_mapping_ice_flow_velocity.html">
+       Mapping ice flow velocity using an easy and interactive feature tracking workflow
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/ec21_balwada_etal/DB_01_Glider_Viz_Panel.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/earthcube2021/ec21_book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/earthcube2021/ec21_book/issues/new?title=Issue%20on%20page%20%2Fnotebooks/ec21_balwada_etal/DB_01_Glider_Viz_Panel.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/earthcube2021/ec21_book/master?urlpath=lab/tree/book/notebooks/ec21_balwada_etal/DB_01_Glider_Viz_Panel.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/earthcube2021/ec21_book/blob/master/book/notebooks/ec21_balwada_etal/DB_01_Glider_Viz_Panel.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Glider Viz Panel
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#authors">
+     Authors
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#technical-contributions">
+     Technical contributions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methodology">
+     Methodology
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#results">
+     Results
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funding">
+     Funding
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keywords">
+     Keywords
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#citation">
+     Citation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#suggested-next-steps">
+     Suggested next steps
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#acknowledgements">
+     Acknowledgements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#library-import">
+     Library import
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-import">
+   Data import
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-glider-data">
+     Import glider data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-surface-data">
+     Import surface data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-processing-and-analysis">
+   Data processing and analysis
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-processing">
+     Data processing
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#surface-data-processing">
+       Surface Data Processing
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#glider-data-processing">
+       Glider Data Processing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-up-the-interactive-dashboard">
+     Setting up the interactive dashboard
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="glider-viz-panel">
+<h1>Glider Viz Panel<a class="headerlink" href="#glider-viz-panel" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<p><strong>Dhruv Balwada, Scott Henderson, Alison R Gray</strong></p>
+<ul class="simple">
+<li><p>Author1 = {“name”: “Dhruv Balwada”, “affiliation”: “School of Oceanography, University of Washington”, “email”: “<a class="reference external" href="mailto:dbalwada&#37;&#52;&#48;uw&#46;edu">dbalwada<span>&#64;</span>uw<span>&#46;</span>edu</a>”, “orcid”: “0000-0001-6632-0187”}</p></li>
+<li><p>Author2 = {“name”: “Scott Henderson”, “affiliation”: “Earth and Space Sciences, University of Washington”, “email”: “<a class="reference external" href="mailto:scottyh&#37;&#52;&#48;uw&#46;edu">scottyh<span>&#64;</span>uw<span>&#46;</span>edu</a>”, “orcid”: “0000-0003-0624-4965”}</p></li>
+<li><p>Author3 = {“name”: “Alison R Gray”, “affiliation”: “School of Oceanography, University of Washington”, “email”: “<a class="reference external" href="mailto:argray&#37;&#52;&#48;uw&#46;edu">argray<span>&#64;</span>uw<span>&#46;</span>edu</a>”, “orcid”: “0000-0002-1644-7654”}</p></li>
+</ul>
+</div>
+<div class="section" id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<p>Many oceanographic observational platforms, such as gliders, Argo floats, or ships, collect measurements on complex spatio-temporal paths. These sampling patterns are sometimes determined by logistical choices, e.g. due to weather, or sometimes dictated by the underlying oceanic flow causing the platforms to drift around. Deriving insights from these observations is challenging, and researchers almost always need to manually inspect the data. One such manual task might be to distinguish between signals that result due to sampling patterns vs signals that are an actual representation of the environment being studied.
+For example, a feature drifting by a  stationary platform, which samples the same location repeatedly, might look similar to a slowly evolving feature that a platform traverses through. These distinctions can be made by carefully inspecting the path of the instrument in reference to background measurements, like those from satellites, and this task can be made easier by using interactive visualizations.</p>
+<p>This notebook presents a workflow for setting up a visualization dashboard to interact with and analyze ocean glider data in combination with other available background measurements (eg. sea surface height, climatology, etc) that might be available in the geographical region sampled by the glider. This interactive visualization dashboard allows for easier data exploration and accelerates the rate at which insights can be derived. The primary purpose of this notebook is  not to simply build a standalone visualization dashboard for our specific data set, but rather provide an example that can be easily adapted to the specific use cases that individual researchers might have.</p>
+<p>We visualize data for a particular glider campaign that was conducted in the Southern Ocean from May to August 2019, where two SeaGliders sampled the top 1000m of the ocean water column (a profile every 4 hours) in close proximity to each other. Sea Surface Height (SSH) and Finite Size Lypunov Exponents (FSLE, a measure of strain in the flow) are available from satellite based measurements and help provide background context in the sampling region.</p>
+</div>
+<div class="section" id="technical-contributions">
+<h2>Technical contributions<a class="headerlink" href="#technical-contributions" title="Permalink to this headline">¶</a></h2>
+<p>The main technical contributions of this notebook are as follows:</p>
+<ul class="simple">
+<li><p>demonstrates how <a class="reference external" href="https://glidertools.readthedocs.io/en/latest/">GliderTools</a> in combination with Scipy interpolation routines can be used to grid data collected by gliders, which is stored as point measurements.</p></li>
+<li><p>demonstrates how <a class="reference external" href="http://xarray.pydata.org/">Xarray</a> and the <a class="reference external" href="https://holoviz.org/">Holoviz</a> visualization ecosystem, such as panel, hvplot, geoviews etc, can be used in combination to easily setup an interactive visualization tool to analyze glider data.</p></li>
+</ul>
+</div>
+<div class="section" id="methodology">
+<h2>Methodology<a class="headerlink" href="#methodology" title="Permalink to this headline">¶</a></h2>
+<p>The glider data is a collection of point measurements in space and time, where each measured variable has an associated position (longitude, latitude, depth) and time stamp. The glider data can be loaded and quality controlled using <a class="reference external" href="https://glidertools.readthedocs.io/en/latest/">GliderTools</a>. For making visualization easy and more interpretable this data is first gridded onto two regular grids; one is a time vs depth grid (T-grid) and the other other is an along track distance vs depth grid (D-grid). The T-grid helps visualize the duration of time over which different signals are observed, while the D-grid helps visualize the spatial size of the objects in the platform following coordinate. The gridding also helps colocate variables that might be slightly offset due to the different sampling frequencies of different sensors.  This gridded data set is then visualized along with the SSH and FSLE data sets, which are already available on a uniform grid.</p>
+<p>The visualization dashboard has three main parts. The first part is a set of widgets that allow the user to make choices, such as selecting which variable to plot, the range of time or distance, choice of colormaps etc. The second part is a spatial plot of the surface properties (SSH or FSLE) with the glider tracks overlaid on it, where the selected glider and time slice to plot are based on the widgets. The third part is a plot of the glider section, where the exact range of time or distances plotted and the variables plotted are based on the variables.</p>
+<p>The visualization is made possible using the <a class="reference external" href="https://holoviz.org/">Holoviz</a> libraries. Each widget selection sets the value of a certain parameter using the <a class="reference external" href="https://param.holoviz.org/index.html">param</a> library, where parameters could be the variable to plot, the choice of colormap, etc. The plots are made possible using the libraries like <a class="reference external" href="https://holoviews.org/">HoloViews</a>, <a class="reference external" href="https://hvplot.holoviz.org/">hvPlot</a>, or <a class="reference external" href="http://geoviews.org/">GeoViews</a>. The parameter values are relayed to the plots using <a class="reference external" href="https://panel.holoviz.org/">Panel</a>, which also controls of the layout of the different components and manages the updates when interactions take place.</p>
+</div>
+<div class="section" id="results">
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<p>The main purpose of this notebook is to demonstrate how a dashboard to explore glider data can be built using open source packages. The code is demonstrated in detail below and will hopefully serve as a useful example for others to explore their own datasets. The final cell of the notebook should result in dashboard that can be displayed in a notebook cell or in a standalone browser window. Some of the features of this dashboard are showcased in the gif below. The dashboard can also be accessed directly, without running all the cells in this notebook, by using the link to the ‘Binder panel’ in the repo readme; this makes the dashboard particularly appealing for sharing with collaborators that do not want to run the code.</p>
+<p><img alt="Animation showing how to use some of the different features of the glider dashboard." src="../../_images/glider_dashboard.gif" /></p>
+</div>
+<div class="section" id="funding">
+<h2>Funding<a class="headerlink" href="#funding" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Award1 = {“agency”: “US National Science Foundation”, “award_code”: “OCE-1756882”, “award_URL”: “<a class="reference external" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1756882">https://www.nsf.gov/awardsearch/showAward?AWD_ID=1756882</a>”}</p></li>
+</ul>
+</div>
+<div class="section" id="keywords">
+<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<p>keywords=[“gliders”, “interactive visualization”, “ocean tracers”, “submesoscale variability”]</p>
+</div>
+<div class="section" id="citation">
+<h2>Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h2>
+<p>Balwada, Henderson, &amp; Gray 2021. Interactive visualization tools for ocean glider data. Accessed at <a class="reference external" href="https://github.com/dhruvbalwada/ec2021_balwada_etal">https://github.com/dhruvbalwada/ec2021_balwada_etal</a></p>
+</div>
+<div class="section" id="suggested-next-steps">
+<h2>Suggested next steps<a class="headerlink" href="#suggested-next-steps" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>We recommend that readers try to adapt this dashboard for their own datasets!</p></li>
+<li><p>To generalize the current dashboard code to use with additional datasets, it would be useful to add an option to read remote web-optimized formats instead of storing preprocessed netcdf datasets with the dashboard code.</p></li>
+<li><p>A few possible (non-essential) user experience improvements were identified (see wishlist on <a class="reference external" href="https://github.com/dhruvbalwada/glider-panel-demo">https://github.com/dhruvbalwada/glider-panel-demo</a>), which can incorporated in future releases.</p></li>
+</ul>
+</div>
+<div class="section" id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p>This project was supported by University of Washington’s <a class="reference external" href="https://escience.washington.edu/">eScience Institute</a> as part of the the 2021 <a class="reference external" href="https://escience.washington.edu/winter-2021-incubator-projects/">Winter Incubator</a>, and benefited from conversations with <a class="reference external" href="https://escience.washington.edu/people/rob-fatland/">Rob Fatland</a> and <a class="reference external" href="https://escience.washington.edu/people/landung-don-setiawan/">Don Setiawan</a> during the incubator.
+We would also like to thank <a class="reference external" href="https://www.gps.caltech.edu/people/lilian-a-lily-dove?back_url=%2Fpeople%3Fcategory%3D11">Lily Dove</a> and <a class="reference external" href="http://web.gps.caltech.edu/~andrewt/">Andrew Thompson</a> from Caltech who processed a lot of the glider data that is used here, and a version of this data in a kriging mapped format can be found at <a class="reference external" href="https://www.ncei.noaa.gov/archive/accession/0228185">https://www.ncei.noaa.gov/archive/accession/0228185</a> and <a class="reference external" href="https://www.ncei.noaa.gov/archive/accession/0228187">https://www.ncei.noaa.gov/archive/accession/0228187</a>.</p>
+</div>
+</div>
+<div class="section" id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="library-import">
+<h2>Library import<a class="headerlink" href="#library-import" title="Permalink to this headline">¶</a></h2>
+<p>Import all the required Python libraries.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># For data manipulation</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">glidertools</span> <span class="k">as</span> <span class="nn">gt</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">griddata</span>
+
+<span class="c1"># For Visualization</span>
+<span class="kn">import</span> <span class="nn">panel</span> <span class="k">as</span> <span class="nn">pn</span>
+<span class="kn">import</span> <span class="nn">holoviews</span> <span class="k">as</span> <span class="nn">hv</span>
+<span class="kn">from</span> <span class="nn">holoviews</span> <span class="kn">import</span> <span class="n">opts</span>
+<span class="kn">import</span> <span class="nn">geoviews</span> <span class="k">as</span> <span class="nn">gv</span>
+<span class="kn">import</span> <span class="nn">param</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">## Import hvplot apis for xarray and pandas</span>
+<span class="kn">import</span> <span class="nn">hvplot.xarray</span>
+<span class="kn">import</span> <span class="nn">hvplot.pandas</span>  
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-import">
+<h1>Data import<a class="headerlink" href="#data-import" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import-glider-data">
+<h2>Import glider data<a class="headerlink" href="#import-glider-data" title="Permalink to this headline">¶</a></h2>
+<p>Two gliders were deployed in the Southern Ocean from May-August 2019 as part of an experiment called SOGOS (Southern Ocean Glider Observations of the Submesoscales). Here we use the data from these gliders, which is provided in the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder. This data is stored in single netcdf files for each sensor, where each file contains the data for all the glider dives. This data can be opened directly using xarray.</p>
+<p>Alternatively, often glider data is provided in single netcdf file for each dive. This dive data could be loaded using the instructions at <a class="reference external" href="https://glidertools.readthedocs.io/en/latest/loading.html">https://glidertools.readthedocs.io/en/latest/loading.html</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># locate the data folder</span>
+<span class="n">data_folder</span> <span class="o">=</span> <span class="s1">&#39;./data&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># open glider files</span>
+
+<span class="n">ds_CTD_659</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span> <span class="p">,</span> <span class="s1">&#39;sg659&#39;</span><span class="p">,</span> <span class="s1">&#39;CTD_659.nc&#39;</span><span class="p">))</span>
+<span class="n">ds_CTD_660</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span> <span class="p">,</span> <span class="s1">&#39;sg660&#39;</span><span class="p">,</span> <span class="s1">&#39;CTD_660.nc&#39;</span><span class="p">))</span>
+
+<span class="n">ds_O2_659</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span> <span class="p">,</span> <span class="s1">&#39;sg659&#39;</span><span class="p">,</span> <span class="s1">&#39;O2_659.nc&#39;</span><span class="p">))</span>
+<span class="n">ds_O2_660</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span> <span class="p">,</span> <span class="s1">&#39;sg660&#39;</span><span class="p">,</span> <span class="s1">&#39;O2_660.nc&#39;</span><span class="p">))</span>
+
+<span class="n">ds_Chl_659</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span> <span class="p">,</span> <span class="s1">&#39;sg659&#39;</span><span class="p">,</span> <span class="s1">&#39;Chl_659.nc&#39;</span><span class="p">))</span>
+<span class="n">ds_Chl_660</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span> <span class="p">,</span> <span class="s1">&#39;sg660&#39;</span><span class="p">,</span> <span class="s1">&#39;Chl_660.nc&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>These data files are stored as 1D arrays of measurements at each observation point, where the location (longitude, latitude, and depth) and time of measurement for the observation point are also part of the data set.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print to see what the data format is</span>
+<span class="n">ds_CTD_659</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="import-surface-data">
+<h2>Import surface data<a class="headerlink" href="#import-surface-data" title="Permalink to this headline">¶</a></h2>
+<p>The sea surface height (SSH) and finite scale Lyapunov exponent (FSLE) datasets were obtained from the Copernicus and Aviso websites respectively, and manually cut for the region and time period of the glider deployments. Other data sets can also be similarly accessed; some community datasets could also be directly accessed using different webservices.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># open SSH and FSLE files</span>
+<span class="n">ds_ssh</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;SSH_sogos.nc&#39;</span><span class="p">))</span>
+<span class="n">ds_fsle</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;FSLE_sogos.nc&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print to see what the data format is</span>
+<span class="n">ds_ssh</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-processing-and-analysis">
+<h1>Data processing and analysis<a class="headerlink" href="#data-processing-and-analysis" title="Permalink to this headline">¶</a></h1>
+<p>We first show how the data sets are processed to a form that is easily digestable by the visualization libraries. Then we show how the visualization libraries can be used to easily setup an interactive dashboard.</p>
+<div class="section" id="data-processing">
+<h2>Data processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="surface-data-processing">
+<h3>Surface Data Processing<a class="headerlink" href="#surface-data-processing" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">datetime2ytd</span><span class="p">(</span><span class="n">time</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;&quot; Return time in YTD format from datetime format.&quot;&quot;&quot;</span>
+    <span class="k">return</span>  <span class="p">(</span><span class="n">time</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">datetime64</span><span class="p">(</span><span class="s1">&#39;2019-01-01&#39;</span><span class="p">))</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create variables for quiver plot</span>
+<span class="c1"># Quiver plot requires the vectors to be defined in a very specific format.</span>
+<span class="n">ds_ssh</span><span class="p">[</span><span class="s1">&#39;mag&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">ds_ssh</span><span class="o">.</span><span class="n">ugos</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">ds_ssh</span><span class="o">.</span><span class="n">vgos</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ds_ssh</span><span class="p">[</span><span class="s1">&#39;angle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">2.</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">ds_ssh</span><span class="o">.</span><span class="n">ugos</span><span class="o">/</span><span class="n">ds_ssh</span><span class="p">[</span><span class="s1">&#39;mag&#39;</span><span class="p">],</span> 
+                                          <span class="n">ds_ssh</span><span class="o">.</span><span class="n">vgos</span><span class="o">/</span><span class="n">ds_ssh</span><span class="p">[</span><span class="s1">&#39;mag&#39;</span><span class="p">])</span>
+
+<span class="c1"># Create a new coordinate with time in year day units, as it is easier to work with.</span>
+<span class="c1"># In future version handling of regular datetime formats could be introduced.</span>
+<span class="n">ds_ssh</span> <span class="o">=</span> <span class="n">ds_ssh</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">(</span><span class="n">days</span> <span class="o">=</span> <span class="n">datetime2ytd</span><span class="p">(</span><span class="n">ds_ssh</span><span class="o">.</span><span class="n">time</span><span class="p">))</span>
+<span class="n">ds_fsle</span> <span class="o">=</span> <span class="n">ds_fsle</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">(</span><span class="n">days</span> <span class="o">=</span> <span class="n">datetime2ytd</span><span class="p">(</span><span class="n">ds_fsle</span><span class="o">.</span><span class="n">time</span><span class="p">))</span>
+
+<span class="k">del</span> <span class="n">ds_ssh</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;_NCProperties&#39;</span><span class="p">]</span>
+<span class="c1"># need to delete this attribute because of the issue:</span>
+<span class="c1"># https://github.com/pydata/xarray/issues/2822</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="glider-data-processing">
+<h3>Glider Data Processing<a class="headerlink" href="#glider-data-processing" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert glider time axis also to year day units, </span>
+<span class="c1"># so it matches that units for surface properties.</span>
+
+<span class="n">ds_CTD_659</span><span class="p">[</span><span class="s1">&#39;days&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime2ytd</span><span class="p">(</span><span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+<span class="n">ds_O2_659</span><span class="p">[</span><span class="s1">&#39;days&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">datetime2ytd</span><span class="p">(</span><span class="n">ds_O2_659</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+<span class="n">ds_Chl_659</span><span class="p">[</span><span class="s1">&#39;days&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime2ytd</span><span class="p">(</span><span class="n">ds_Chl_659</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+
+<span class="n">ds_CTD_660</span><span class="p">[</span><span class="s1">&#39;days&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime2ytd</span><span class="p">(</span><span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+<span class="n">ds_O2_660</span><span class="p">[</span><span class="s1">&#39;days&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">datetime2ytd</span><span class="p">(</span><span class="n">ds_O2_660</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+<span class="n">ds_Chl_660</span><span class="p">[</span><span class="s1">&#39;days&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime2ytd</span><span class="p">(</span><span class="n">ds_Chl_660</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate along track distance</span>
+<span class="n">dXdist</span> <span class="o">=</span> <span class="n">gt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">distance</span><span class="p">(</span><span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span> <span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">latitude</span><span class="p">)</span><span class="o">/</span><span class="mf">1e3</span> <span class="c1"># Convert to km</span>
+<span class="n">ds_CTD_659</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nancumsum</span><span class="p">(</span><span class="n">dXdist</span><span class="p">),</span> 
+                                       <span class="n">dims</span><span class="o">=</span><span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">dims</span><span class="p">,</span>
+                                       <span class="n">coords</span><span class="o">=</span><span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">coords</span><span class="p">)</span>
+
+<span class="n">dXdist</span> <span class="o">=</span> <span class="n">gt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">distance</span><span class="p">(</span><span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span> <span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">latitude</span><span class="p">)</span><span class="o">/</span><span class="mf">1e3</span>
+<span class="n">ds_CTD_660</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nancumsum</span><span class="p">(</span><span class="n">dXdist</span><span class="p">),</span> 
+                                       <span class="n">dims</span><span class="o">=</span><span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">dims</span><span class="p">,</span>
+                                       <span class="n">coords</span><span class="o">=</span><span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">coords</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Group and average locations by dives </span>
+<span class="c1"># This makes plotting of locations on a map much faster, as</span>
+<span class="c1"># there are less points to plot.</span>
+<span class="c1"># These are used is only for plotting on a 2D map,</span>
+<span class="c1"># where the depth coordinate is compressed.</span>
+<span class="n">ds_659_locs</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
+<span class="n">ds_660_locs</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
+
+<span class="n">ds_659_diveav</span> <span class="o">=</span> <span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;dives&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">ds_660_diveav</span> <span class="o">=</span> <span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;dives&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">ds_659_locs</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds_659_diveav</span><span class="o">.</span><span class="n">longitude</span>
+<span class="n">ds_659_locs</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">ds_659_diveav</span><span class="o">.</span><span class="n">latitude</span>
+<span class="n">ds_659_locs</span><span class="p">[</span><span class="s1">&#39;days&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="n">ds_659_diveav</span><span class="o">.</span><span class="n">days</span>
+<span class="n">ds_659_locs</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">ds_659_diveav</span><span class="o">.</span><span class="n">distance</span>
+
+<span class="n">ds_660_locs</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds_660_diveav</span><span class="o">.</span><span class="n">longitude</span>
+<span class="n">ds_660_locs</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">ds_660_diveav</span><span class="o">.</span><span class="n">latitude</span>
+<span class="n">ds_660_locs</span><span class="p">[</span><span class="s1">&#39;days&#39;</span><span class="p">]</span>      <span class="o">=</span> <span class="n">ds_660_diveav</span><span class="o">.</span><span class="n">days</span>
+<span class="n">ds_660_locs</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span>  <span class="o">=</span> <span class="n">ds_660_diveav</span><span class="o">.</span><span class="n">distance</span>
+
+<span class="c1"># convert to pandas dataframe as it is much easier to handle in holoviz for traj data.</span>
+<span class="n">ds_659_locs</span> <span class="o">=</span> <span class="n">ds_659_locs</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span>
+<span class="n">ds_660_locs</span> <span class="o">=</span> <span class="n">ds_660_locs</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Estimate additional derived variables</span>
+<span class="c1"># Here we estimate density from the CTD measurements </span>
+<span class="n">ds_CTD_659</span><span class="p">[</span><span class="s1">&#39;potdens&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gt</span><span class="o">.</span><span class="n">physics</span><span class="o">.</span><span class="n">potential_density</span><span class="p">(</span><span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">salinity</span><span class="p">,</span> 
+                                                     <span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">temperature</span><span class="p">,</span> 
+                                                     <span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">pressure</span><span class="p">,</span> 
+                                                     <span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> 
+                                                     <span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">longitude</span><span class="p">)</span>
+
+<span class="n">ds_CTD_660</span><span class="p">[</span><span class="s1">&#39;potdens&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gt</span><span class="o">.</span><span class="n">physics</span><span class="o">.</span><span class="n">potential_density</span><span class="p">(</span><span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">salinity</span><span class="p">,</span> 
+                                                     <span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">temperature</span><span class="p">,</span> 
+                                                     <span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">pressure</span><span class="p">,</span>
+                                                     <span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> 
+                                                     <span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">longitude</span><span class="p">)</span>
+
+<span class="c1"># we can add mixed layer depth, N2 etc in the future versions</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we have calculated some extra variables and new coordinates, we will go to the step of gridding the data onto a regular grid.</p>
+<p>In addition to the above tasks additional quality control procedures can be introduced at this stage (prior to gridding), using the QC procedures that are part of GliderTools (<a class="reference external" href="https://glidertools.readthedocs.io/en/latest/quality_control.html">https://glidertools.readthedocs.io/en/latest/quality_control.html</a>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make functions that put the point measurements from the glider </span>
+<span class="c1"># onto a regular grid. </span>
+<span class="c1"># There are many ways this can be done. Here we choose a simple linear interpolation </span>
+<span class="c1"># in time and pressure/depth or along-track distance and pressure/depth.</span>
+
+<span class="c1"># Note this is different from how Glidertools goes gridding at the moment.</span>
+<span class="c1"># These functions might be absorbed into Glidertools in future releases.</span>
+
+<span class="k">def</span> <span class="nf">interp_pres_time</span><span class="p">(</span><span class="n">ds_glid</span><span class="p">,</span> <span class="n">var</span><span class="p">):</span> 
+    <span class="sd">&quot;&quot;&quot; Return data variable interpolated onto a pressure-time grid.</span>
+<span class="sd">    </span>
+<span class="sd">    Keyword argument.</span>
+<span class="sd">    ds_glid -- dataset of the glider data</span>
+<span class="sd">    var     -- variable that needs to be interpolated</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">pres_ug</span> <span class="o">=</span> <span class="n">ds_glid</span><span class="o">.</span><span class="n">pressure</span>
+    <span class="n">time_ug</span> <span class="o">=</span> <span class="n">ds_glid</span><span class="o">.</span><span class="n">days</span>
+    
+    <span class="c1"># convert to points values</span>
+    <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">time_ug</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">pres_ug</span><span class="o">.</span><span class="n">values</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="n">ds_glid</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    
+    <span class="c1"># remove nans</span>
+    <span class="n">non_nan</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span>
+                                    <span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">points</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]),</span> 
+                                    <span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">points</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])),</span>
+                              <span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">values</span><span class="p">))</span>
+    
+    <span class="n">points</span> <span class="o">=</span><span class="n">points</span><span class="p">[</span><span class="n">non_nan</span><span class="p">,:]</span>
+    <span class="n">values</span> <span class="o">=</span><span class="n">values</span><span class="p">[</span><span class="n">non_nan</span><span class="p">]</span>
+    
+    <span class="c1"># define grid </span>
+    <span class="c1"># In the future this can be made into an input from the users</span>
+    <span class="n">pres_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">251</span><span class="p">)</span> 
+    <span class="n">time_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">119</span><span class="p">,</span> <span class="mi">207</span><span class="p">,</span> <span class="mi">2</span><span class="o">/</span><span class="mi">24</span><span class="p">)</span>
+    <span class="n">grid_p</span><span class="p">,</span> <span class="n">grid_t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">pres_grid</span><span class="p">,</span> <span class="n">time_grid</span><span class="p">)</span>
+    
+    <span class="n">temp_grided</span> <span class="o">=</span> <span class="n">griddata</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> 
+                           <span class="n">values</span><span class="p">,</span> 
+                           <span class="p">(</span><span class="n">grid_t</span><span class="p">,</span> <span class="n">grid_p</span><span class="p">),</span> 
+                           <span class="n">method</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> 
+                           <span class="n">rescale</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">temp_grided</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> 
+                        <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;pressure&quot;</span><span class="p">,</span> <span class="s2">&quot;time&quot;</span><span class="p">],</span>
+                        <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;pressure&quot;</span><span class="p">:</span><span class="n">pres_grid</span><span class="p">,</span> <span class="s2">&quot;time&quot;</span><span class="p">:</span><span class="n">time_grid</span><span class="p">}</span>
+                       <span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">interp_pres_dist</span><span class="p">(</span><span class="n">ds_glid</span><span class="p">,</span> <span class="n">var</span><span class="p">):</span> 
+    <span class="sd">&quot;&quot;&quot; Return data variable interpolated onto a pressure-along track distance grid.</span>
+<span class="sd">    </span>
+<span class="sd">    Keyword argument.</span>
+<span class="sd">    ds_glid -- dataset of the glider data</span>
+<span class="sd">    var     -- variable that needs to be interpolated</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">pres_ug</span> <span class="o">=</span> <span class="n">ds_glid</span><span class="o">.</span><span class="n">pressure</span>
+    <span class="n">dist_ug</span> <span class="o">=</span> <span class="n">ds_glid</span><span class="o">.</span><span class="n">distance</span>
+    
+    <span class="c1"># convert to points values</span>
+    <span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">dist_ug</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">pres_ug</span><span class="o">.</span><span class="n">values</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="n">ds_glid</span><span class="p">[</span><span class="n">var</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    
+    <span class="c1"># remove nans</span>
+    <span class="n">non_nan</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span>
+                                    <span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">points</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]),</span> 
+                                    <span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">points</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])),</span>
+                             <span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">values</span><span class="p">))</span>
+    
+    <span class="n">points</span> <span class="o">=</span><span class="n">points</span><span class="p">[</span><span class="n">non_nan</span><span class="p">,:]</span>
+    <span class="n">values</span> <span class="o">=</span><span class="n">values</span><span class="p">[</span><span class="n">non_nan</span><span class="p">]</span>
+    
+    <span class="c1"># define grid</span>
+    <span class="c1"># In the future this can be made into an input from the users    </span>
+    <span class="n">pres_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">251</span><span class="p">)</span>
+    <span class="n">dist_grid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">dist_ug</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="n">grid_p</span><span class="p">,</span> <span class="n">grid_d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">pres_grid</span><span class="p">,</span> <span class="n">dist_grid</span><span class="p">)</span>
+    
+    <span class="n">temp_grided</span> <span class="o">=</span> <span class="n">griddata</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> 
+                           <span class="n">values</span><span class="p">,</span> 
+                           <span class="p">(</span><span class="n">grid_d</span><span class="p">,</span> <span class="n">grid_p</span><span class="p">),</span> 
+                           <span class="n">method</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> 
+                           <span class="n">rescale</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">temp_grided</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> 
+                        <span class="n">dims</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;pressure&quot;</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">],</span>
+                        <span class="n">coords</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;pressure&quot;</span><span class="p">:</span><span class="n">pres_grid</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">:</span><span class="n">dist_grid</span><span class="p">}</span>
+                       <span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">convert_glider_time_pres</span><span class="p">(</span><span class="n">ds_glid</span><span class="p">,</span> <span class="n">vars_convert</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">,</span><span class="s1">&#39;salinity&#39;</span><span class="p">,</span><span class="s1">&#39;potdens&#39;</span><span class="p">,</span><span class="s1">&#39;spice&#39;</span><span class="p">]):</span>
+    <span class="sd">&quot;&quot;&quot; Return a dataset gridded onto pressure vs time grid.</span>
+<span class="sd">    </span>
+<span class="sd">    This is a helper function to apply gridding to multiple glider variables.</span>
+<span class="sd">    &quot;&quot;&quot;</span>    
+    <span class="n">ds_grid</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
+    
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vars_convert</span><span class="p">:</span>
+        <span class="n">ds_grid</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">interp_pres_time</span><span class="p">(</span><span class="n">ds_glid</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Gridded &#39;</span> <span class="o">+</span> <span class="n">v</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">ds_grid</span>
+
+<span class="k">def</span> <span class="nf">convert_glider_dist_pres</span><span class="p">(</span><span class="n">ds_glid</span><span class="p">,</span> <span class="n">vars_convert</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">,</span><span class="s1">&#39;salinity&#39;</span><span class="p">,</span><span class="s1">&#39;potdens&#39;</span><span class="p">,</span><span class="s1">&#39;spice&#39;</span><span class="p">]):</span>
+    <span class="sd">&quot;&quot;&quot; Return a dataset gridded onto pressure vs along track distance grid.</span>
+<span class="sd">    </span>
+<span class="sd">    This is a helper function to apply gridding to multiple glider variables.</span>
+<span class="sd">    &quot;&quot;&quot;</span> 
+    <span class="n">ds_grid</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">()</span>
+    
+    <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vars_convert</span><span class="p">:</span>
+        <span class="n">ds_grid</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">interp_pres_dist</span><span class="p">(</span><span class="n">ds_glid</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Gridded &#39;</span> <span class="o">+</span> <span class="n">v</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">ds_grid</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Some variables measured by different sensors might be at different points. </span>
+<span class="c1"># Here we use a simple interpolation, from numpy, to collocate the Oxygen and Chlorophyll</span>
+<span class="c1"># measurements to the CTD data point.</span>
+
+<span class="n">ds_CTD_659</span><span class="p">[</span><span class="s1">&#39;oxygen&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">days</span><span class="p">,</span> <span class="n">ds_O2_659</span><span class="o">.</span><span class="n">days</span><span class="p">,</span> <span class="n">ds_O2_659</span><span class="o">.</span><span class="n">oxygen</span><span class="p">),</span>
+                                    <span class="n">dims</span> <span class="o">=</span> <span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">dims</span><span class="p">,</span> 
+                                    <span class="n">coords</span> <span class="o">=</span> <span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">coords</span>
+                                   <span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;oxygen&#39;</span><span class="p">)</span>
+<span class="n">ds_CTD_659</span><span class="p">[</span><span class="s1">&#39;Chl&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">days</span><span class="p">,</span> <span class="n">ds_Chl_659</span><span class="o">.</span><span class="n">days</span><span class="p">,</span> <span class="n">ds_Chl_659</span><span class="o">.</span><span class="n">Chl</span><span class="p">),</span>
+                                 <span class="n">dims</span> <span class="o">=</span> <span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">dims</span><span class="p">,</span> 
+                                 <span class="n">coords</span> <span class="o">=</span> <span class="n">ds_CTD_659</span><span class="o">.</span><span class="n">coords</span>
+                                <span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;Chl&#39;</span><span class="p">)</span>
+<span class="n">ds_CTD_660</span><span class="p">[</span><span class="s1">&#39;oxygen&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">days</span><span class="p">,</span> <span class="n">ds_O2_660</span><span class="o">.</span><span class="n">days</span><span class="p">,</span> <span class="n">ds_O2_660</span><span class="o">.</span><span class="n">oxygen</span><span class="p">),</span>
+                                    <span class="n">dims</span> <span class="o">=</span> <span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">dims</span><span class="p">,</span> 
+                                    <span class="n">coords</span> <span class="o">=</span> <span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">coords</span>
+                                   <span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;oxygen&#39;</span><span class="p">)</span>
+<span class="n">ds_CTD_660</span><span class="p">[</span><span class="s1">&#39;Chl&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">days</span><span class="p">,</span> <span class="n">ds_Chl_660</span><span class="o">.</span><span class="n">days</span><span class="p">,</span> <span class="n">ds_Chl_660</span><span class="o">.</span><span class="n">Chl</span><span class="p">),</span>
+                                 <span class="n">dims</span> <span class="o">=</span> <span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">dims</span><span class="p">,</span> 
+                                 <span class="n">coords</span> <span class="o">=</span> <span class="n">ds_CTD_660</span><span class="o">.</span><span class="n">coords</span>
+                                <span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s1">&#39;Chl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Note:</strong> The next 4 cells can take a lot of time to run as a lot of compute heavy interpolations need to be done.
+At this point the <code class="docutils literal notranslate"><span class="pre">load_flag</span></code> is set to 1, which will bypass the code in these cells without doing anything. The data that is generated here has been saved and provided with the repo, which will be loaded in the 5th cell below.
+However, incase you want to run these set the <code class="docutils literal notranslate"><span class="pre">load_flag</span></code> to 0.
+These cells will run with some waiting on local machines; while I have managed to get these to run on Binder, it often crashes due to the 2gb limit on Binder memory.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="c1"># convert from point data to gridded data</span>
+<span class="c1"># This cell will take the most time to run </span>
+<span class="c1"># (~10mins on laptop, ~20 mins on Binder). </span>
+
+<span class="n">load_flag</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Set this to 1 for loading the data instead of running the cells below, or 0 if you want to see what these cells do</span>
+<span class="k">if</span> <span class="n">load_flag</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">ds_659_Tgrid</span> <span class="o">=</span> <span class="n">convert_glider_time_pres</span><span class="p">(</span><span class="n">ds_CTD_659</span><span class="p">,</span> <span class="n">vars_convert</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">,</span><span class="s1">&#39;salinity&#39;</span><span class="p">,</span><span class="s1">&#39;potdens&#39;</span><span class="p">,</span> <span class="s1">&#39;oxygen&#39;</span><span class="p">,</span> <span class="s1">&#39;Chl&#39;</span><span class="p">])</span>
+    <span class="n">ds_660_Tgrid</span> <span class="o">=</span> <span class="n">convert_glider_time_pres</span><span class="p">(</span><span class="n">ds_CTD_660</span><span class="p">,</span> <span class="n">vars_convert</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">,</span><span class="s1">&#39;salinity&#39;</span><span class="p">,</span><span class="s1">&#39;potdens&#39;</span><span class="p">,</span> <span class="s1">&#39;oxygen&#39;</span><span class="p">,</span> <span class="s1">&#39;Chl&#39;</span><span class="p">])</span>
+
+    <span class="n">ds_659_Dgrid</span> <span class="o">=</span> <span class="n">convert_glider_dist_pres</span><span class="p">(</span><span class="n">ds_CTD_659</span><span class="p">,</span> <span class="n">vars_convert</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">,</span><span class="s1">&#39;salinity&#39;</span><span class="p">,</span><span class="s1">&#39;potdens&#39;</span><span class="p">,</span> <span class="s1">&#39;oxygen&#39;</span><span class="p">,</span> <span class="s1">&#39;Chl&#39;</span><span class="p">])</span>
+    <span class="n">ds_660_Dgrid</span> <span class="o">=</span> <span class="n">convert_glider_dist_pres</span><span class="p">(</span><span class="n">ds_CTD_660</span><span class="p">,</span> <span class="n">vars_convert</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">,</span><span class="s1">&#39;salinity&#39;</span><span class="p">,</span><span class="s1">&#39;potdens&#39;</span><span class="p">,</span> <span class="s1">&#39;oxygen&#39;</span><span class="p">,</span> <span class="s1">&#39;Chl&#39;</span><span class="p">])</span>
+
+
+<span class="c1"># Alternatively users can separate the data processing and data </span>
+<span class="c1"># visualization sections into separate notebooks, and the gridded output can be generated once </span>
+<span class="c1"># and saved as netcdf files (using xarray&#39;s .to_netcdf() option). These netcdf files can then </span>
+<span class="c1"># directly be read into a visualization only notebook. </span>
+<span class="c1"># An example of how to do this is available at: https://github.com/dhruvbalwada/glider-panel-demo</span>
+<span class="c1"># This is how the data sets were saved, which are being loaded if load_flag is set to 1. </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Estimate an anomaly field based on time mean. </span>
+<span class="c1"># This is just an additional variable that we were interested in looking at.</span>
+<span class="c1"># Could be defined in more complex ways too, like choose climatology as mean.</span>
+<span class="k">if</span> <span class="n">load_flag</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">ds_659_Tgrid_anomaly</span> <span class="o">=</span> <span class="n">ds_659_Tgrid</span> <span class="o">-</span> <span class="n">ds_659_Tgrid</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+    <span class="n">ds_660_Tgrid_anomaly</span> <span class="o">=</span> <span class="n">ds_660_Tgrid</span> <span class="o">-</span> <span class="n">ds_660_Tgrid</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+
+    <span class="n">ds_659_Dgrid_anomaly</span> <span class="o">=</span> <span class="n">ds_659_Dgrid</span> <span class="o">-</span> <span class="n">ds_659_Dgrid</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;distance&#39;</span><span class="p">)</span>
+    <span class="n">ds_660_Dgrid_anomaly</span> <span class="o">=</span> <span class="n">ds_660_Dgrid</span> <span class="o">-</span> <span class="n">ds_660_Dgrid</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;distance&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Estimate the distance axis that goes with the time axis</span>
+<span class="c1"># The gridding to a time axis was done for a uniform time grid,</span>
+<span class="c1"># so the associated distance axis will likely be non-uniform.</span>
+<span class="k">if</span> <span class="n">load_flag</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">ds_659_Tgrid_loc</span> <span class="o">=</span> <span class="n">convert_glider_time_pres</span><span class="p">(</span><span class="n">ds_CTD_659</span><span class="p">,</span> <span class="n">vars_convert</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span><span class="s1">&#39;longitude&#39;</span><span class="p">])</span>
+    <span class="n">ds_660_Tgrid_loc</span> <span class="o">=</span> <span class="n">convert_glider_time_pres</span><span class="p">(</span><span class="n">ds_CTD_660</span><span class="p">,</span> <span class="n">vars_convert</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span><span class="s1">&#39;longitude&#39;</span><span class="p">])</span>
+
+    <span class="n">dXdist</span> <span class="o">=</span> <span class="n">gt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">distance</span><span class="p">(</span><span class="n">ds_659_Tgrid_loc</span><span class="o">.</span><span class="n">longitude</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;pressure&#39;</span><span class="p">),</span> 
+                               <span class="n">ds_659_Tgrid_loc</span><span class="o">.</span><span class="n">latitude</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;pressure&#39;</span><span class="p">))</span><span class="o">/</span><span class="mf">1e3</span>
+    <span class="n">ds_659_Tgrid</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nancumsum</span><span class="p">(</span><span class="n">dXdist</span><span class="p">)</span>
+    <span class="n">ds_659_Tgrid_anomaly</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nancumsum</span><span class="p">(</span><span class="n">dXdist</span><span class="p">)</span>
+
+    <span class="n">dXdist</span> <span class="o">=</span> <span class="n">gt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">distance</span><span class="p">(</span><span class="n">ds_660_Tgrid_loc</span><span class="o">.</span><span class="n">longitude</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;pressure&#39;</span><span class="p">),</span> 
+                               <span class="n">ds_660_Tgrid_loc</span><span class="o">.</span><span class="n">latitude</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;pressure&#39;</span><span class="p">))</span><span class="o">/</span><span class="mf">1e3</span>
+
+    <span class="n">ds_660_Tgrid</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nancumsum</span><span class="p">(</span><span class="n">dXdist</span><span class="p">)</span>
+    <span class="n">ds_660_Tgrid_anomaly</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nancumsum</span><span class="p">(</span><span class="n">dXdist</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Estimate the time axis that goes with the along track distance </span>
+<span class="c1"># Similar to above cell, but now the non-uniform time axis that goes </span>
+<span class="c1"># with the uniform distance axis. </span>
+<span class="k">if</span> <span class="n">load_flag</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">convert_glider_dist_pres</span><span class="p">(</span><span class="n">ds_CTD_659</span><span class="p">,</span> <span class="n">vars_convert</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;days&#39;</span><span class="p">])</span>
+    <span class="n">ds_659_Dgrid</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">days</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;pressure&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">convert_glider_dist_pres</span><span class="p">(</span><span class="n">ds_CTD_660</span><span class="p">,</span> <span class="n">vars_convert</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;days&#39;</span><span class="p">])</span>
+    <span class="n">ds_660_Dgrid</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">days</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="s1">&#39;pressure&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Incase you don&#39;t have the time to run the above 4 cells</span>
+<span class="c1"># Or if binder keeps crashing trying to run the above 4 cells.</span>
+
+<span class="k">if</span> <span class="n">load_flag</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">ds_659_Tgrid</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;659_Tgrid.nc&#39;</span><span class="p">))</span>
+    <span class="n">ds_660_Tgrid</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;660_Tgrid.nc&#39;</span><span class="p">))</span>
+
+    <span class="n">ds_659_Tgrid_anomaly</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;659_Tgrid_anomaly.nc&#39;</span><span class="p">))</span>
+    <span class="n">ds_660_Tgrid_anomaly</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;660_Tgrid_anomaly.nc&#39;</span><span class="p">))</span>
+
+    <span class="n">ds_659_Dgrid</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;659_Dgrid.nc&#39;</span><span class="p">))</span>
+    <span class="n">ds_660_Dgrid</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;660_Dgrid.nc&#39;</span><span class="p">))</span>
+
+    <span class="n">ds_659_Dgrid_anomaly</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;659_Dgrid_anomaly.nc&#39;</span><span class="p">))</span>
+    <span class="n">ds_660_Dgrid_anomaly</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_folder</span><span class="p">,</span> <span class="s1">&#39;660_Dgrid_anomaly.nc&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>At this point in the notebook all the data processing steps have been executed, and the data sets are in a format that is ready to be visualized.</p>
+</div>
+</div>
+<div class="section" id="setting-up-the-interactive-dashboard">
+<h2>Setting up the interactive dashboard<a class="headerlink" href="#setting-up-the-interactive-dashboard" title="Permalink to this headline">¶</a></h2>
+<p>This is the main contribution of this submission. Here we show how Holoviz libraries can be used to create an interactive visualization of glider data. The visualization choices here are based on our particular use case, and we accordingly chose the variables that will be plotted and the widgets that are available. However, this notebook should be viewed more as an example that can be modified to the particular visualization use case that others might have.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create variable maps </span>
+<span class="c1"># These are dictionaries linking variable names to particular data sets</span>
+
+<span class="c1"># The different gliders</span>
+<span class="n">glider_nums</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sg659&#39;</span><span class="p">,</span> <span class="s1">&#39;sg660&#39;</span><span class="p">]</span>
+
+<span class="c1"># The different surface variables</span>
+<span class="n">surface_var_map</span> <span class="o">=</span> <span class="p">{</span>
+              <span class="s1">&#39;SSH&#39;</span> <span class="p">:</span> <span class="n">ds_ssh</span><span class="p">[</span><span class="s1">&#39;adt&#39;</span><span class="p">],</span>
+              <span class="s1">&#39;SSHA&#39;</span><span class="p">:</span> <span class="n">ds_ssh</span><span class="p">[</span><span class="s1">&#39;sla&#39;</span><span class="p">],</span>
+              <span class="s1">&#39;FSLE&#39;</span><span class="p">:</span> <span class="n">ds_fsle</span><span class="p">[</span><span class="s1">&#39;fsle_max&#39;</span><span class="p">]</span>
+              <span class="p">}</span>
+
+<span class="c1"># The different variables in a particular glider data set</span>
+<span class="n">glider_vars</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ds_659_Tgrid</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="c1"># just need to do once bevause all glider data sets here have same variables</span>
+
+<span class="c1"># The different colormaps available</span>
+<span class="n">cmap_options</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colormaps</span><span class="p">()</span>
+
+<span class="c1"># Dictionary linking variables to default properties</span>
+<span class="c1"># Here we only define a default colormap, but other defaults </span>
+<span class="c1"># can be added.</span>
+<span class="n">var_select_map</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;oxygen&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;cmap_sel&#39;</span><span class="p">:</span> <span class="s1">&#39;YlOrBr&#39;</span> <span class="p">},</span>
+            <span class="s1">&#39;Chl&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;cmap_sel&#39;</span><span class="p">:</span> <span class="s1">&#39;Greens&#39;</span> <span class="p">},</span>
+            <span class="s1">&#39;salinity&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;cmap_sel&#39;</span><span class="p">:</span> <span class="s1">&#39;YlGnBu&#39;</span><span class="p">},</span>
+            <span class="s1">&#39;temperature&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;cmap_sel&#39;</span><span class="p">:</span> <span class="s1">&#39;RdBu_r&#39;</span><span class="p">},</span>
+            <span class="s1">&#39;potdens&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;cmap_sel&#39;</span><span class="p">:</span> <span class="s1">&#39;Purples&#39;</span> <span class="p">}</span>
+             <span class="p">}</span>
+<span class="c1"># For future versions would be nice if some of these things could come from the attributes. </span>
+
+<span class="c1"># Different data sets for each glider</span>
+<span class="n">glider_map</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;sg659&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Time grid&#39;</span><span class="p">:</span> <span class="n">ds_659_Tgrid</span><span class="p">,</span> <span class="s1">&#39;Distance grid&#39;</span><span class="p">:</span> <span class="n">ds_659_Dgrid</span><span class="p">,</span> <span class="s1">&#39;loc&#39;</span><span class="p">:</span> <span class="n">ds_659_locs</span><span class="p">},</span>
+            <span class="s1">&#39;sg660&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Time grid&#39;</span><span class="p">:</span> <span class="n">ds_660_Tgrid</span><span class="p">,</span> <span class="s1">&#39;Distance grid&#39;</span><span class="p">:</span> <span class="n">ds_660_Dgrid</span><span class="p">,</span> <span class="s1">&#39;loc&#39;</span><span class="p">:</span> <span class="n">ds_660_locs</span><span class="p">},</span>
+             <span class="p">}</span>
+
+<span class="n">glider_map_anom</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;sg659&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Time grid&#39;</span><span class="p">:</span> <span class="n">ds_659_Tgrid_anomaly</span><span class="p">,</span> <span class="s1">&#39;Distance grid&#39;</span><span class="p">:</span> <span class="n">ds_659_Dgrid_anomaly</span><span class="p">},</span>
+            <span class="s1">&#39;sg660&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Time grid&#39;</span><span class="p">:</span> <span class="n">ds_660_Tgrid_anomaly</span><span class="p">,</span> <span class="s1">&#39;Distance grid&#39;</span><span class="p">:</span> <span class="n">ds_660_Dgrid_anomaly</span><span class="p">},</span>
+             <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The dashboard will be made using three classes that will correspond to the:</p>
+<ul class="simple">
+<li><p>Widgets: <code class="docutils literal notranslate"><span class="pre">GliderParams</span></code>: containing definitions of all the widgets.</p></li>
+<li><p>Trajectory plot: <code class="docutils literal notranslate"><span class="pre">GliderTrajectoryPlot</span></code>: sets up the plot with the glider trajectories overlaid on the surface variable plots and bahtymetry.</p></li>
+<li><p>Glider section plot: <code class="docutils literal notranslate"><span class="pre">GliderVerticalSectionPlot</span></code>: sets up the plot for the glider section.</p></li>
+</ul>
+<p>The plotting classes will inherit the class with the widgets, and then a combined class (<code class="docutils literal notranslate"><span class="pre">GliderCombinedPlot</span></code>) will inherit the plotting classes. The dashboard will be an object of this combined class, which can be passed to panel for being layed out.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">GliderParams</span><span class="p">(</span><span class="n">param</span><span class="o">.</span><span class="n">Parameterized</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Class containting all the parameters for the widgets, and some default methods. &quot;&quot;&quot;</span>
+    
+    <span class="n">surface_var</span>       <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="n">Selector</span><span class="p">(</span><span class="n">surface_var_map</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;SSH&#39;</span><span class="p">,</span>
+                                       <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Surface Field&#39;</span><span class="p">,</span> <span class="n">precedence</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">glider_num</span>        <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="n">Selector</span><span class="p">(</span><span class="n">glider_map</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;sg659&#39;</span><span class="p">,</span>
+                                       <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Glider Num&#39;</span><span class="p">,</span> <span class="n">precedence</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">time_slider</span>       <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Days in 2019&#39;</span><span class="p">,</span> 
+                                    <span class="n">bounds</span><span class="o">=</span><span class="p">(</span><span class="mi">119</span><span class="p">,</span> <span class="mi">205</span><span class="p">),</span> 
+                                    <span class="n">default</span><span class="o">=</span><span class="p">(</span><span class="mi">119</span><span class="p">,</span> <span class="mi">135</span><span class="p">),</span> <span class="n">precedence</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">alpha_slider</span>      <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="n">Magnitude</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Transparency&#39;</span><span class="p">,</span> <span class="n">precedence</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">glider_grid</span>       <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="n">Selector</span><span class="p">([</span><span class="s1">&#39;Time grid&#39;</span><span class="p">,</span> <span class="s1">&#39;Distance grid&#39;</span><span class="p">],</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;Time grid&#39;</span><span class="p">,</span> 
+                                       <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Grid Type&#39;</span><span class="p">,</span> <span class="n">precedence</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">glider_var</span>        <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="n">Selector</span><span class="p">(</span><span class="n">glider_vars</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s1">&#39;temperature&#39;</span><span class="p">,</span> 
+                                       <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Glider Variable&#39;</span><span class="p">,</span> <span class="n">precedence</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">var_colormap</span>      <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="n">Selector</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="s1">&#39;RdBu_r&#39;</span><span class="p">,</span> <span class="n">objects</span><span class="o">=</span><span class="n">cmap_options</span><span class="p">,</span> 
+                                       <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Glider Section Colormap&#39;</span><span class="p">,</span> <span class="n">precedence</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">distance_slider</span>   <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Along Track Distance&#39;</span><span class="p">,</span>
+                                    <span class="n">bounds</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">2.2e3</span><span class="p">),</span> <span class="n">default</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">400</span><span class="p">),</span> 
+                                    <span class="n">precedence</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># start with a negative precedence, in accordance with default being Tgrid</span>
+    <span class="n">anomaly_boolean</span>   <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="n">Boolean</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Anomaly&#39;</span><span class="p">,</span> <span class="n">precedence</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">density_boolean</span>   <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="n">Boolean</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Show Density Contours&#39;</span><span class="p">,</span> <span class="n">precedence</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">density_range</span>     <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Density range&#39;</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="p">(</span><span class="mf">1026.8</span><span class="p">,</span> <span class="mf">1027.9</span><span class="p">),</span> <span class="n">default</span><span class="o">=</span><span class="p">(</span><span class="mf">1026.8</span><span class="p">,</span> <span class="mf">1027.9</span><span class="p">),</span><span class="n">precedence</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">density_gradation</span> <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Density levels&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">21</span><span class="p">),</span><span class="n">precedence</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">_set_tools</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plot</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Method to not revome default active toolbars. &quot;&quot;&quot;</span>
+        <span class="n">plot</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">toolbar</span><span class="o">.</span><span class="n">active_drag</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">plot</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">toolbar</span><span class="o">.</span><span class="n">active_inspect</span> <span class="o">=</span> <span class="kc">None</span>
+    
+    <span class="nd">@param</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="s1">&#39;glider_var&#39;</span><span class="p">,</span> <span class="n">watch</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_update_colormap</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Update default colormap choices with changing variables. &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">var_colormap</span> <span class="o">=</span> <span class="n">var_select_map</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_var</span><span class="p">][</span><span class="s1">&#39;cmap_sel&#39;</span><span class="p">]</span>
+    
+    <span class="c1"># The next couple of methods toggle the widgets visible or not. </span>
+    <span class="nd">@param</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="s1">&#39;density_boolean&#39;</span><span class="p">,</span> <span class="n">watch</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_update_density_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Remove density widgets when not being used. &quot;&quot;&quot;</span> 
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">density_boolean</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">density_range</span><span class="o">.</span><span class="n">precedence</span><span class="o">=</span><span class="mi">10</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">density_gradation</span><span class="o">.</span><span class="n">precedence</span><span class="o">=</span><span class="mi">10</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">density_range</span><span class="o">.</span><span class="n">precedence</span><span class="o">=-</span><span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">density_gradation</span><span class="o">.</span><span class="n">precedence</span><span class="o">=-</span><span class="mi">1</span>
+            
+    <span class="nd">@param</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="s1">&#39;glider_grid&#39;</span><span class="p">,</span> <span class="n">watch</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">_update_grid_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Show time or distance widgets based on grid choice. &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">glider_grid</span> <span class="o">==</span> <span class="s1">&#39;Time grid&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">time_slider</span><span class="o">.</span><span class="n">precedence</span><span class="o">=</span><span class="mi">3</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">distance_slider</span><span class="o">.</span><span class="n">precedence</span><span class="o">=-</span><span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span> 
+            <span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">time_slider</span><span class="o">.</span><span class="n">precedence</span><span class="o">=-</span><span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">distance_slider</span><span class="o">.</span><span class="n">precedence</span><span class="o">=</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">GliderTrajectoryPlot</span><span class="p">(</span><span class="n">GliderParams</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Class containing the setup for the trajectory plot. &quot;&quot;&quot;</span>
+    
+    <span class="nd">@param</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="s1">&#39;glider_num&#39;</span><span class="p">,</span> <span class="s1">&#39;time_slider&#39;</span><span class="p">,</span> <span class="s1">&#39;distance_slider&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">plot_traj</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Plot glider trajectories. &quot;&quot;&quot;</span>
+        <span class="n">time_rng</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_slider</span>
+        <span class="n">dist_rng</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distance_slider</span>
+        
+        <span class="c1">###</span>
+        <span class="c1"># For the selected glider do the proper time vs distance conversion</span>
+        <span class="c1"># but for the unselected glider and surface plots always stick to the</span>
+        <span class="c1"># corresponding time </span>
+        <span class="n">ds</span> <span class="o">=</span> <span class="n">glider_map</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_num</span><span class="p">][</span><span class="s1">&#39;loc&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">glider_grid</span><span class="o">==</span><span class="s1">&#39;Time grid&#39;</span><span class="p">:</span>
+            <span class="n">ds_tsel</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">ds</span><span class="o">.</span><span class="n">days</span><span class="o">&gt;=</span><span class="n">time_rng</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">days</span><span class="o">&lt;=</span><span class="n">time_rng</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
+            <span class="n">dsel</span> <span class="o">=</span> <span class="p">(</span><span class="n">ds_tsel</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">distance</span><span class="p">,</span> <span class="n">ds_tsel</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">distance</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">distance_slider</span> <span class="o">=</span> <span class="n">dsel</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ds_tsel</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">ds</span><span class="o">.</span><span class="n">distance</span><span class="o">&gt;=</span><span class="n">dist_rng</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">distance</span><span class="o">&lt;=</span><span class="n">dist_rng</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
+            <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">ds_tsel</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">days</span><span class="p">)</span><span class="o">&lt;=</span><span class="mi">205</span><span class="p">:</span> <span class="c1"># since the netcdf files for surface fields don&#39;t have a 206</span>
+                <span class="n">tsel</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">ds_tsel</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">days</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">ds_tsel</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">days</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">tsel</span> <span class="o">=</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">ds_tsel</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">days</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="mi">205</span><span class="p">))</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">time_slider</span> <span class="o">=</span> <span class="n">tsel</span>
+        <span class="c1">###</span>
+        
+        <span class="n">time_rng</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_slider</span> <span class="c1"># make sure time_rng has the most up to date values</span>
+        
+        <span class="n">traj</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">glid</span> <span class="ow">in</span> <span class="n">glider_nums</span><span class="p">:</span>
+            <span class="n">ds</span> <span class="o">=</span> <span class="n">glider_map</span><span class="p">[</span><span class="n">glid</span><span class="p">][</span><span class="s1">&#39;loc&#39;</span><span class="p">]</span>
+            <span class="n">ds_tsel</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">ds</span><span class="o">.</span><span class="n">days</span><span class="o">&gt;</span><span class="n">time_rng</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">days</span><span class="o">&lt;</span><span class="n">time_rng</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
+        
+            <span class="n">traj</span><span class="p">[</span><span class="n">glid</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds_tsel</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="n">geo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="n">x</span><span class="o">=</span><span class="s1">&#39;longitude&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span> 
+                                               <span class="n">hover</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hover_cols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;days&#39;</span><span class="p">],</span> 
+                                               <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">traj</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_num</span><span class="p">]</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">traj</span><span class="p">[</span><span class="s1">&#39;sg659&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">traj</span><span class="p">[</span><span class="s1">&#39;sg660&#39;</span><span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">surf_tiles</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Plot bathymetry tile. &quot;&quot;&quot;</span>
+        <span class="n">gebco_tiles</span> <span class="o">=</span> <span class="s1">&#39;https://tiles.arcgis.com/tiles/C8EMgrsFcRFL6LrL/arcgis/rest/services/GEBCO_basemap_NCEI/MapServer/tile/</span><span class="si">{Z}</span><span class="s1">/</span><span class="si">{Y}</span><span class="s1">/</span><span class="si">{X}</span><span class="s1">&#39;</span>
+        <span class="k">return</span> <span class="n">gv</span><span class="o">.</span><span class="n">WMTS</span><span class="p">(</span> <span class="n">gebco_tiles</span> <span class="p">)</span>
+    
+    <span class="nd">@param</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="s1">&#39;time_slider&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">surf_vec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Plot velocity vectors as quivers. &quot;&quot;&quot;</span>
+        <span class="n">time_sel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_slider</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># show map for last day on time slider</span>
+        
+        <span class="k">return</span> <span class="n">ds_ssh</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">ds_ssh</span><span class="o">.</span><span class="n">days</span><span class="o">==</span><span class="n">time_sel</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="s1">&#39;time&#39;</span>
+                    <span class="p">)</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">vectorfield</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;longitude&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;latitude&#39;</span><span class="p">,</span> 
+                                         <span class="n">angle</span><span class="o">=</span><span class="s1">&#39;angle&#39;</span><span class="p">,</span> <span class="n">mag</span><span class="o">=</span><span class="s1">&#39;mag&#39;</span><span class="p">,</span>
+                                         <span class="n">geo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hover</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">magnitude</span><span class="o">=</span><span class="s1">&#39;mag&#39;</span><span class="p">)</span>
+    
+    <span class="nd">@param</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="s1">&#39;surface_var&#39;</span><span class="p">,</span> <span class="s1">&#39;time_slider&#39;</span><span class="p">,</span> <span class="s1">&#39;alpha_slider&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">plot_surface</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Plot surface variable of choice. &quot;&quot;&quot;</span>
+        <span class="n">time_sel</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_slider</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># show map for last day on time slider</span>
+        
+        <span class="n">ds_all</span> <span class="o">=</span> <span class="n">surface_var_map</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">surface_var</span><span class="p">]</span>
+        <span class="n">ds</span> <span class="o">=</span> <span class="n">ds_all</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">ds_all</span><span class="o">.</span><span class="n">days</span><span class="o">==</span><span class="n">time_sel</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">surface_var</span> <span class="o">==</span> <span class="s1">&#39;FSLE&#39;</span><span class="p">:</span>    
+            <span class="n">surf_plot</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="n">geo</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">surf_plot</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">clim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.6</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues_r&#39;</span><span class="p">,</span> <span class="n">clabel</span><span class="o">=</span><span class="s1">&#39;FSLE&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">surface_var</span> <span class="o">==</span> <span class="s1">&#39;SSH&#39;</span><span class="p">:</span>
+            <span class="n">surf_plot</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="n">geo</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">surf_plot</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">clim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;cividis&#39;</span><span class="p">,</span> <span class="n">clabel</span><span class="o">=</span><span class="s1">&#39;SSH&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span> 
+            <span class="n">surf_plot</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">image</span><span class="p">(</span><span class="n">geo</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">surf_plot</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">clim</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.3</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;RdBu_r&#39;</span><span class="p">,</span> <span class="n">clabel</span><span class="o">=</span><span class="s1">&#39;SSHA&#39;</span><span class="p">)</span>
+        
+        <span class="n">surf_plot</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">frame_width</span><span class="o">=</span><span class="mi">450</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha_slider</span><span class="p">,</span> <span class="n">tools</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;hover&#39;</span><span class="p">],</span> <span class="n">hooks</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_set_tools</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">surf_plot</span>
+        
+   
+    <span class="k">def</span> <span class="nf">view</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Make lat-lon plot with surface vars, bathymetry, and glider tracks. &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">hv</span><span class="o">.</span><span class="n">DynamicMap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">)</span>
+                <span class="o">*</span> <span class="n">hv</span><span class="o">.</span><span class="n">DynamicMap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">surf_tiles</span><span class="p">)</span>
+                <span class="o">*</span> <span class="n">hv</span><span class="o">.</span><span class="n">DynamicMap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">surf_vec</span><span class="p">)</span>
+                <span class="o">*</span> <span class="n">hv</span><span class="o">.</span><span class="n">DynamicMap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">plot_traj</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">GliderVerticalSectionPlot</span><span class="p">(</span><span class="n">GliderParams</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Class containing the setup for the glider section plot &quot;&quot;&quot;</span>
+    
+    <span class="nd">@param</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="s1">&#39;density_range&#39;</span><span class="p">,</span> <span class="s1">&#39;density_gradation&#39;</span><span class="p">,</span> <span class="s1">&#39;glider_grid&#39;</span><span class="p">,</span><span class="s1">&#39;glider_num&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">density_contours</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Plot the density contours. &quot;&quot;&quot;</span>
+        <span class="c1">#print(&#39;in contour&#39;)</span>
+        <span class="n">contour</span> <span class="o">=</span> <span class="n">glider_map</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_num</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_grid</span><span class="p">][</span><span class="s1">&#39;potdens&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span>
+                        <span class="n">flip_yaxis</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">density_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">density_range</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="bp">self</span><span class="o">.</span><span class="n">density_gradation</span><span class="p">)</span>
+                        <span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">tools</span><span class="o">=</span><span class="p">[])</span>
+        <span class="k">return</span> <span class="n">contour</span>
+    
+    <span class="nd">@param</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="s1">&#39;anomaly_boolean&#39;</span><span class="p">,</span> <span class="s1">&#39;glider_grid&#39;</span><span class="p">,</span> <span class="s1">&#39;glider_num&#39;</span><span class="p">,</span> <span class="s1">&#39;glider_var&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">glider_image</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Plot the image for the glider section. &quot;&quot;&quot;</span>
+        <span class="c1"># Change the data set if wanting to plot anomaly</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">anomaly_boolean</span><span class="p">:</span>
+            <span class="n">glid_ds</span> <span class="o">=</span> <span class="n">glider_map_anom</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">glid_ds</span> <span class="o">=</span> <span class="n">glider_map</span>
+
+        <span class="c1"># plot the image in Distance or Time</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">glider_grid</span><span class="o">==</span><span class="s1">&#39;Distance grid&#39;</span><span class="p">:</span>
+            <span class="n">image</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span> 
+                    <span class="p">(</span><span class="n">glid_ds</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_num</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_grid</span><span class="p">]</span><span class="o">.</span><span class="n">distance</span><span class="p">,</span> 
+                     <span class="n">glid_ds</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_num</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_grid</span><span class="p">]</span><span class="o">.</span><span class="n">pressure</span><span class="p">,</span>
+                     <span class="n">glid_ds</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_num</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_grid</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_var</span><span class="p">]),</span> 
+                    <span class="p">[</span><span class="s1">&#39;Distance [km]&#39;</span><span class="p">,</span> <span class="s1">&#39;Pressure [dBar]&#39;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">glider_var</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">image</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span> 
+                    <span class="p">(</span><span class="n">glid_ds</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_num</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_grid</span><span class="p">]</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> 
+                     <span class="n">glid_ds</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_num</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_grid</span><span class="p">]</span><span class="o">.</span><span class="n">pressure</span><span class="p">,</span>
+                     <span class="n">glid_ds</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_num</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_grid</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_var</span><span class="p">]),</span> 
+                    <span class="p">[</span><span class="s1">&#39;Time [days]&#39;</span><span class="p">,</span> <span class="s1">&#39;Pressure [dBar]&#39;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">glider_var</span><span class="p">)</span>
+        
+        <span class="c1"># estimate the color range so that outliers don&#39;t create problems</span>
+        <span class="n">bin_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nanpercentile</span><span class="p">(</span><span class="n">glid_ds</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_num</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_grid</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_var</span><span class="p">],</span> <span class="p">[</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span><span class="mf">99.5</span><span class="p">])</span>
+        
+        <span class="c1"># set properties for image like colorbar etcs.</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">opts</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span>
+                        <span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                        <span class="n">cmap</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">var_colormap</span><span class="p">,</span>
+                        <span class="n">invert_yaxis</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                        <span class="n">clim</span><span class="o">=</span><span class="p">(</span><span class="n">bin_range</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">bin_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+                        <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>
+                        <span class="n">tools</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;hover&#39;</span><span class="p">],</span> <span class="n">hooks</span><span class="o">=</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_set_tools</span><span class="p">]</span>
+                        <span class="p">))</span>
+        <span class="k">return</span> <span class="n">image</span>
+
+    <span class="k">def</span> <span class="nf">viewable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Make combined plot of the glider section. &quot;&quot;&quot;</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">DynamicMap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">glider_image</span><span class="p">)</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>
+                
+        <span class="n">title</span> <span class="o">=</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_slider</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span><span class="s1">&#39;-&#39;</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">time_slider</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                 <span class="o">+</span> <span class="s1">&#39; Days &amp; &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">distance_slider</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span><span class="o">+</span><span class="s1">&#39;-&#39;</span>
+                 <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">distance_slider</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="o">+</span> <span class="s1">&#39; km&#39;</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">glider_grid</span><span class="o">==</span><span class="s1">&#39;Distance grid&#39;</span><span class="p">:</span>
+            <span class="n">image</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">opts</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">xlim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">distance_slider</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">image</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">opts</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">xlim</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_slider</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">))</span>
+
+        <span class="c1"># add the density contours or not. </span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">density_boolean</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">image</span><span class="o">*</span><span class="n">hv</span><span class="o">.</span><span class="n">DynamicMap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">density_contours</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">image</span>
+            
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">GliderCombinedPlot</span><span class="p">(</span><span class="n">GliderTrajectoryPlot</span><span class="p">,</span> <span class="n">GliderVerticalSectionPlot</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Acombined class that inherits the above classes and will be used to define the main object. &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dashboard</span> <span class="o">=</span> <span class="n">GliderCombinedPlot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text_title</span> <span class="o">=</span> <span class="s1">&#39;## Southern Ocean Glider Observations of the Submesoscales</span><span class="se">\n</span><span class="s1"> Interactive dashboard to explore glider data collected in the Southern Ocean (zoom out on top panel to see exact location) during May-August 2019&#39;</span>
+<span class="n">text_tip</span> <span class="o">=</span> <span class="s1">&#39;*Tip: The box select tool (from tools on top right of this plot) can be used to select a range on the histogram plot to the right, which adjusts the color limits for the section plot*&#39;</span>
+<span class="n">dashboard_panel</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">pn</span><span class="o">.</span><span class="n">Row</span><span class="p">(</span>
+                                <span class="n">pn</span><span class="o">.</span><span class="n">Param</span><span class="p">(</span><span class="n">dashboard</span><span class="o">.</span><span class="n">param</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">),</span>
+                                <span class="n">pn</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">pn</span><span class="o">.</span><span class="n">panel</span><span class="p">(</span><span class="n">text_title</span><span class="p">),</span><span class="n">dashboard</span><span class="o">.</span><span class="n">view</span><span class="p">())),</span> 
+                            <span class="n">pn</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span>
+                                <span class="n">dashboard</span><span class="o">.</span><span class="n">viewable</span><span class="p">,</span> 
+                                <span class="n">pn</span><span class="o">.</span><span class="n">panel</span><span class="p">(</span><span class="n">text_tip</span><span class="p">)))</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>You will need to comment out and uncomment the different lines below based on how you want to view the dashboard. By default we have it setup to be able to view the dashboard directly as a standalone app using the Binder panel button.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># To render in this notebook and make available as a panel app</span>
+<span class="n">dashboard_panel</span><span class="o">.</span><span class="n">servable</span><span class="p">()</span>
+
+<span class="c1"># To run locally in a standalone browser window (this may not work on Binder)</span>
+<span class="c1">#dashboard_panel.show()</span>
+
+<span class="c1"># To display in notebook cell below</span>
+<span class="c1">#dashboard_panel</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "conda-env-ec_2021_gliderviz-py"
+        },
+        kernelOptions: {
+            kernelName: "conda-env-ec_2021_gliderviz-py",
+            path: "./notebooks/ec21_balwada_etal"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'conda-env-ec_2021_gliderviz-py'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="README.html" title="previous page">ec2021_balwada_etal</a>
+    <a class='right-next' id="next-link" href="../ec21_beckley_etal/README.html" title="next page">Programmatic Access to OpenTopography’s Cloud Optimized Geotiff (COG) Global Datasets</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By EarthCube Office<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
