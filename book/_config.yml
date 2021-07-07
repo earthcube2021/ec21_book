@@ -16,7 +16,7 @@ html:
   use_repository_button: true
   
 # Interact link settings
-notebook_interface            : "notebook"
+# notebook_interface            : "notebook"
 
 # Launch button settings
 repository:
