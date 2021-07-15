@@ -7,7 +7,7 @@ parts:
     - file: docs/about
     - file: notebooks/index
   - caption: Notebook Submissions
-    numbered: True   
+    numbered: 1   
     chapters:
     - file: notebooks/ec21_anil_etal/README.md
       title: "Hydrographic Ocean Data Exploration"
