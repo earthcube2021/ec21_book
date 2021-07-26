@@ -12,7 +12,7 @@ execute:
 
 # HTML-specific settings
 html:
-  home_page_in_navbar         : true
+  home_page_in_navbar : true
   use_issues_button: true
   use_repository_button: true
   
@@ -31,6 +31,7 @@ repository:
 # LaTeX settings
 bibtex_bibfiles:
    - _bibliography/references.bib
+
 latex:
   latex_engine: "xelatex"
   latex_documents:
