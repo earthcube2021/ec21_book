@@ -1,10 +1,11 @@
 title : EarthCube 2021 Call for Notebooks
-author: EarthCube Office
+# author: EarthCube Office
 logo: 'logo.webp'
+copyright : "Supported by NSF Award Number: 1928208"  # Copyright year to be placed in the footer
+
 
 # Short description about the book
-description: >-
-  A unified collection of the EarthCube 2021 notebook submissions. 
+description: EarthCube 2021 notebook submissions
 
 execute:
   execute_notebooks           : off
@@ -31,7 +32,7 @@ repository:
 bibtex_bibfiles:
    - _bibliography/references.bib
 latex:
-  latex_engine                : "xelatex"
+  latex_engine: "xelatex"
   latex_documents:
     targetname: book.tex
 
