@@ -1,0 +1,1816 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EC 01 Volcanic activity detection and noise characterization using machine learning &#8212; EarthCube 2021 Call for Notebooks</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.webp" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">EarthCube 2021 Call for Notebooks</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  EarthCube 2021 Call
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../docs/about.html">
+   Call for Notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../index.html">
+   2021 Notebooks
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Notebook Submissions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_anil_etal/README.html">
+   1. Hydrographic Ocean Data Exploration
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_anil_etal/SA_01_Argo_Data_Exploration.html">
+     Interactive Jupyter notebook for hydrographic ocean data exploration, retrieval and visualization via the Argovis API
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_balwada_etal/README.html">
+   2. Interactive Visualization Tools for Ocean Glider Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_balwada_etal/DB_01_Glider_Viz_Panel.html">
+     Glider Viz Panel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_beckley_etal/README.html">
+   3. Programmatic Access to OpenTopography’s Cloud Optimized Geotiff (COG) Global Datasets
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_beckley_etal/OT_01_BulkAccessCOGs.html">
+     Programmatic Access to OpenTopography’s Cloud Optimized GeoTIFF (COG) Global Datasets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_bourgault_etal/README.html">
+   4. xclim : Software ecosystem for climate services
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_bourgault_etal/PB_02_xclim_Software_ecosystem_for_climate_services.html">
+     xclim: Software ecosystem for climate services
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_cherian_etal/README.html">
+   5. cf-xarray-earthcube
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_cherian_etal/DC_01_cf-xarray.html">
+     cf-xarray: Scale your analysis across datasets with less data wrangling and more metadata handling
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_cych_etal/readme.html">
+   6. Reanalysis of archived paleointensity data using a new statistical method.
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_cych_etal/BC_01%20Bias%20Corrected%20Estimation%20of%20Paleointensity.html">
+     BC_01 Bias Corrected Estimation of Paleointensity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_dye_etal/README.html">
+   7. Toward autonomous detection of anomalous GNSS data via applied unsupervised artificial intelligence
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_dye_etal/MD_01_TZVOLCANO_Unsupervised_AI_Anomaly_Detection.html">
+     Toward autonomous detection of anomalous GNSS data via applied unsupervised artificial intelligence
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_garzon_etal/README.html">
+   8. Exploring Research Data Repositories with geoextent.
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_garzon_etal/showcase/SG_01_Exploring_Research_Data_Repositories_with_geoextent.html">
+     Exploring Research Data Repositories with geoextent
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_gray_etal/README.html">
+   9. Leveraging satellite data and pangeo to investigate the role of Gulf Stream frontal dynamics in ocean productivity
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_gray_etal/PG_01_gulf_stream_dynamics_role_in_productivity.html">
+     Leveraging satellite data and pangeo to investigate the role of Gulf Stream frontal dynamics in ocean productivity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_hu_etal/README.html">
+   10. Machine Learning Guided Weather Analogs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_hu_etal/WH_01_Spatio-Temporal_Deep_Analogs_2021.html">
+     WH_01_Spatio-Temporal_Deep_Analogs_2021
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_lopez_etal/README.html">
+   11. ITS_LIVE Explorer
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_lopez_etal/notebooks/itslive-notebook-rendered.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_lopez_etal/notebooks/LL_01_ITS_LIVE_global_glacier_velocity_exploration_and_analysis.html">
+     <strong>
+      ITS_LIVE
+     </strong>
+     Global Glacier Velocity Exploration and Analysis
+     <a class="anchor" id="chapter_1">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_martin_etal/README.html">
+   12. Frequency-domain analysis of large datasets
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_martin_etal/PM_01_Frequency-Domain_Analysis_of_Large_Datasets.html">
+     Frequency-Domain Analysis of Large Datasets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ec21_mason_etal/README.html">
+   13. Volcanic activity detection and noise characterization using machine learning
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_maussion_etal/README.html">
+   15. OGGM-edu EarthCube notebook
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_maussion_etal/FM_01_OGGM-Edu_learn_and_teach_about_glaciers.html">
+     OGGM-Edu - Jupyter notebooks to learn and teach about glaciers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_potnis_etal/README.html">
+   16. JP 01 Real Time Alignment and Distribution of Weather Radar Data with Rain Gauge Data for Deep Learn
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_potnis_etal/JP_01_Real_Time_Alignment_and_Distribution_of_Weather_Radar_Data_with_Rain_Gauge_Data_for_Deep_Learning_using_CHORDS.html">
+     Real Time Alignment and Distribution of Weather Radar Data with Rain Gauge Data for Deep Learning using CHORDS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_seijo_etal/README.html">
+   17. Notebook: Investigating upper ocean variability during tropical cyclones and seasonal sea ice formation and melting: Argovis APIs exposed to co-locate oceanic and atmospheric datasets
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_seijo_etal/GS_02_Argovis_TropicalCyclones_SeaIce.html">
+     Investigating upper ocean variability  during tropical cyclones and seasonal  sea ice formation and melting: Argovis APIs exposed to co-locate oceanic and atmospheric datasets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_shi_etal/README.html">
+   18. Automated Machine Learning for Earth Science via AutoGluon
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+  <label for="toctree-checkbox-16">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_shi_etal/Xingjian_Shi_01_Automated_Machine_Learning_for_Earth_Science_via_AutoGluon.html">
+     Automated Machine Learning for Earth Science via AutoGluon
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_uchida_etal/README.html">
+   19. QG Eliassen-Palm flux
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+  <label for="toctree-checkbox-17">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_uchida_etal/notebooks/TU_05_Diagnosing-the-Eliassen-Palm-flux-from-a-quasi-geostrophic-double-gyre-ensemble.html">
+     Diagnosing the Eliassen-Palm flux from a quasi-geostrophic double gyre ensemble
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ec21_zheng_etal/README.html">
+   20. EZ-FeatureTrack
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+  <label for="toctree-checkbox-18">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ec21_zheng_etal/notebooks/WZ_01_mapping_ice_flow_velocity.html">
+     Mapping ice flow velocity using an easy and interactive feature tracking workflow
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/ec21_mason_etal_old/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   EC 01 Volcanic activity detection and noise characterization using machine learning
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#author-s">
+     Author(s)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#purpose">
+     Purpose
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#technical-contributions">
+     Technical contributions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methodology">
+     Methodology
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#results">
+     Results
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funding">
+     Funding
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keywords">
+     Keywords
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#citation">
+     Citation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#suggested-next-steps">
+     Suggested next steps
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#acknowledgements">
+     Acknowledgements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup">
+   Setup
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#library-import">
+     Library import
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parameter-definitions">
+   Parameter definitions
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-import">
+   Data import
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-processing-and-analysis">
+   Data processing and analysis
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualization-of-basic-statistics-from-measurements-height-and-linear-regression">
+     Visualization of basic statistics from measurements_height and linear regression
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#two-through-twenty-one-and-three-through-twenty-two">
+     TWO_THROUGH_TWENTY_ONE and THREE_THROUGH_TWENTY_TWO
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-regression-from-single-day">
+     Linear Regression from single day
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#method-to-increase-sample-size-for-the-model">
+     Method to increase sample size for the model
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#increased-data-points-for-linear-regression">
+     Increased data points for linear regression
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-data-demonstration">
+     35% Test Data demonstration
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     55% Test Data demonstration
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     75% Test Data demonstration
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-one-day-s-data-to-predict-a-different-day-s-data">
+     Using one day’s data to predict a different day’s data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prediction-from-10-test-size-data">
+     Prediction from 10% test size data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prediction-from-20-test-size-data">
+     Prediction from 20% test size data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prediction-from-30-test-size-data">
+     Prediction from 30% test size data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prediction-from-40-test-size-data">
+     Prediction from 40% test size data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prediction-from-50-test-size-data">
+     Prediction from 50% test size data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prediction-from-60-test-size-data">
+     Prediction from 60% test size data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prediction-from-70-test-size-data">
+     Prediction from 70% test size data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prediction-from-80-test-size-data">
+     Prediction from 80% test size data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prediction-from-90-test-size-data">
+     Prediction from 90% test size data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Results
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="ec-01-volcanic-activity-detection-and-noise-characterization-using-machine-learning">
+<h1>EC 01 Volcanic activity detection and noise characterization using machine learning<a class="headerlink" href="#ec-01-volcanic-activity-detection-and-noise-characterization-using-machine-learning" title="Permalink to this headline">¶</a></h1>
+<p>Linear regression prediction of height point.</p>
+<div class="section" id="author-s">
+<h2>Author(s)<a class="headerlink" href="#author-s" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Author1 = {“name”: “Myles Mason”, “affiliation”: “Virginia Tech”, “email”: “<a class="reference external" href="mailto:mylesm18&#37;&#52;&#48;vt&#46;edu">mylesm18<span>&#64;</span>vt<span>&#46;</span>edu</a>”, “orcid”: “0000-0002-8811-8294”}</p></li>
+<li><p>Author2 = {“name”: “John Wenskovitch”, “affiliation”: “Virginia Tech”, “email”: “<a class="reference external" href="mailto:jw87&#37;&#52;&#48;vt&#46;edu">jw87<span>&#64;</span>vt<span>&#46;</span>edu</a>”, “orcid”: “0000-0002-0573-6442”}</p></li>
+<li><p>Author3 = {“name”: “D. Sarah Stamps”, “affiliation”: “Virginia Tech”, “email”: “<a class="reference external" href="mailto:dstamps&#37;&#52;&#48;vt&#46;edu">dstamps<span>&#64;</span>vt<span>&#46;</span>edu</a>”,”orcid”: “0000-0002-3531-1752”}</p></li>
+<li><p>Author4 = {“name”: “Joshua Robert Jones”, “affiliation”: “Virginia Tech”, “email”: “<a class="reference external" href="mailto:joshj55&#37;&#52;&#48;vt&#46;edu">joshj55<span>&#64;</span>vt<span>&#46;</span>edu</a>”, “orcid”: “0000-0002-6078-4287”}</p></li>
+<li><p>Author5 = {“name”: “Mike Dye”, “affiliation”: “Unaffiliated”, “email”: “<a class="reference external" href="mailto:mike&#37;&#52;&#48;mikedye&#46;com">mike<span>&#64;</span>mikedye<span>&#46;</span>com</a>”, “orcid”: ” 0000-0003-2065-870X”}</p></li>
+</ul>
+</div>
+<div class="section" id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<p>This Jupyter notebook explores methods towards characterizing noise and eventually predicting volcanic activity for <a class="reference external" href="http://tzvolcano.chordsrt.com">Ol Doinyo Lengai</a>
+(an active volcano in Tanzania) with machine learning. Machine learning is a powerful tool that enables the automatization of complex mathematical and analytical models. In this Jupyter notebook, the components are time, height, latitude, and longitude. The predicted component values are the following heights. This project uses Global Navigation Satellite System (GNSS) data from the EarthCube CHORDS portal TZVOLCANO (Stamps et al. 2016; Daniels et al., 2016; Kerkez et al., 2016), which is the online interface for obtaining open-access real-time positioning data collected around Ol Doinyo Lengai(<a class="reference external" href="http://tzvolcano.chordsrt.com">http://tzvolcano.chordsrt.com</a>). The bulk of the project is the exploration of the data and later prediction of height points. The station that this project analyzes is OLO1 for days 12/16/2020 and 04/16/2021.</p>
+</div>
+<div class="section" id="technical-contributions">
+<h2>Technical contributions<a class="headerlink" href="#technical-contributions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The training of the models and analysis uses basic linear algebra and statistics</p></li>
+<li><p>The main libraries used (NumPy and pandas) are both libraries for data manipulation and linear algebra</p></li>
+<li><p>The CHORDS site linked above is the location of the data and the interface of <a class="reference external" href="http://tzvolcano.chordsrt.com">CHORDS</a></p></li>
+<li><p>Implementation of Linear Regression for prediction on time-series data</p></li>
+</ul>
+</div>
+<div class="section" id="methodology">
+<h2>Methodology<a class="headerlink" href="#methodology" title="Permalink to this headline">¶</a></h2>
+<p>The desired data was imported and selected. Pre-processing and cleaning of the data occurred. The information was then visualized for better analysis along with statistical metrics running. Finally, linear regression models were built and analyzed for the data.</p>
+</div>
+<div class="section" id="results">
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<p>This notebook explored predicting height data from the TZVOLCANO CHORDS portal using Linear Regression from different days. It also evaluates how much test data is needed to best predict height data. We find that having 10% test data yields the best results for predictions with the Mean Squared Error of 8.325e-5% . For predictions from data inputted and predicted from a single day we find the 75% test data yields the best results with an average error of -1.074e-4 meters.</p>
+</div>
+<div class="section" id="funding">
+<h2>Funding<a class="headerlink" href="#funding" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Award1 = {“agency”: “National Science Foundation EarthCube Program”, “award_code”: “1639554”, “award_URL”: <a class="reference external" href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1639554&amp;HistoricalAwards=false">https://www.nsf.gov/awardsearch/showAward?AWD_ID=1639554&amp;HistoricalAwards=false</a> }</p></li>
+<li><p>Award2 = {“agency”: “Virginia Tech Academy of Integrated Sciences Hamlett Undergraduate Research Award”, “award_code”: “44672”, “award_URL”: “”}</p></li>
+</ul>
+</div>
+<div class="section" id="keywords">
+<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<p>keywords=[“tzDF”, “Linear Regression”, “Concat”, “Transpose”,”Mean Squared Error(MSE)”]</p>
+</div>
+<div class="section" id="citation">
+<h2>Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h2>
+<p>Mason, Myles, John Wenskovitch, D. Sarah Stamps, Joshua Robert Jones,  Mike Dye (2021), EC_01_Volcanic_activity_detection_and_noise_characterization_using_machine learning, EarthCube Annual Meeting.</p>
+</div>
+<div class="section" id="suggested-next-steps">
+<h2>Suggested next steps<a class="headerlink" href="#suggested-next-steps" title="Permalink to this headline">¶</a></h2>
+<p>The next step for this notebook will be increasing the inputs for the prediction model. More analysis of the noise will be crucial in the next step for further volcanic activity prediction. They are explicitly generating synthetic data that will mimic volcanic activity.</p>
+</div>
+<div class="section" id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Virginia Tech Department of Geosciences</p></li>
+<li><p>Alice and Luther Hamlet</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="library-import">
+<h2>Library import<a class="headerlink" href="#library-import" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data manipulation</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span>
+
+
+<span class="c1"># Visualizations</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># Modeling</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="parameter-definitions">
+<h1>Parameter definitions<a class="headerlink" href="#parameter-definitions" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>‘tzDF’: intial dataframe contains 12/06/2020 data</p></li>
+<li><p>‘tz2DF’: secondary dataframe contains 04/16/2021 data</p></li>
+<li><p>‘ONE_THROUGH_TWENTY’: array of values in tzDF[“measurements_height”] used for prediction</p></li>
+<li><p>‘TWO_THROUGH_TWENTY_ONE’:array of values in tzDF[“measurements_height”] used for prediction</p></li>
+<li><p>‘THREE_THROUGH_TWENTY_TWO’: array of values in tzDF[“measurements_height”] used for prediction</p></li>
+<li><p>‘FOUR_THROUGH_TWENTY_THREE’: array of values in tzDF[“measurements_height”] used for prediction</p></li>
+<li><p>‘DECEMBER_SERIES_X’: inputted height for 12/16/2020 data for Linear Regression</p></li>
+<li><p>‘DECEMBER_SERIES_Y’: target height data for 12/16/2020</p></li>
+<li><p>‘APRIL_SERIES_X’: inputted height data for 04/16/2021</p></li>
+<li><p>‘APRIL_SERIES_Y’: target height data for 04/16/2021</p></li>
+<li><p>‘APRIL_PREDICTION’: Predicted values from the two days</p></li>
+</ul>
+</div>
+<div class="section" id="data-import">
+<h1>Data import<a class="headerlink" href="#data-import" title="Permalink to this headline">¶</a></h1>
+<p>The CHORDS notebook portal is where the data is acessed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Import for JSON files for manipulation</span>
+<span class="sd">&#39;&#39;&#39; Both files are station one, but the first date is December 16,2020</span>
+<span class="sd">    while the second date is April 16 2021.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;OLO1_12_16_20.geojson&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">:</span>
+    <span class="n">tzList</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">infile</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;OLO1_4_16_21.geojson&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">infile</span><span class="p">:</span>
+    <span class="n">tz2List</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">infile</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-processing-and-analysis">
+<h1>Data processing and analysis<a class="headerlink" href="#data-processing-and-analysis" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Convert both JSON&#39;s into  a partially-flattened pandas DataFrame   </span>
+<span class="n">tzDF</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">json_normalize</span><span class="p">(</span><span class="n">tzList</span><span class="p">[</span><span class="s2">&quot;features&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;properties&quot;</span><span class="p">][</span><span class="s2">&quot;data&quot;</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
+<span class="n">tz2DF</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">json_normalize</span><span class="p">(</span><span class="n">tzList</span><span class="p">[</span><span class="s2">&quot;features&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;properties&quot;</span><span class="p">][</span><span class="s2">&quot;data&quot;</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;_&#39;</span><span class="p">)</span>
+<span class="c1">#Overview of numerical elements of the data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tzDF</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+<span class="n">tzDF</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       measurements_lat  measurements_height  measurements_lon
+count      5.990000e+03          5990.000000      5.990000e+03
+mean       2.734205e+00           988.153415      3.595022e+01
+std        2.869056e-13             0.020116      1.547341e-07
+min        2.734205e+00           988.095000      3.595022e+01
+25%        2.734205e+00           988.139000      3.595022e+01
+50%        2.734205e+00           988.152000      3.595022e+01
+75%        2.734205e+00           988.167000      3.595022e+01
+max        2.734205e+00           988.226000      3.595022e+01
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>time</th>
+      <th>test</th>
+      <th>measurements_lat</th>
+      <th>measurements_height</th>
+      <th>measurements_lon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2020-12-16T05:08:18Z</td>
+      <td>false</td>
+      <td>2.734205</td>
+      <td>988.203</td>
+      <td>35.950217</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2020-12-16T05:08:19Z</td>
+      <td>false</td>
+      <td>2.734205</td>
+      <td>988.206</td>
+      <td>35.950217</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2020-12-16T05:08:20Z</td>
+      <td>false</td>
+      <td>2.734205</td>
+      <td>988.214</td>
+      <td>35.950217</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2020-12-16T05:08:21Z</td>
+      <td>false</td>
+      <td>2.734205</td>
+      <td>988.226</td>
+      <td>35.950217</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2020-12-16T05:24:41Z</td>
+      <td>false</td>
+      <td>2.734205</td>
+      <td>988.199</td>
+      <td>35.950217</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>5985</th>
+      <td>2020-12-17T04:48:44Z</td>
+      <td>false</td>
+      <td>2.734205</td>
+      <td>988.139</td>
+      <td>35.950217</td>
+    </tr>
+    <tr>
+      <th>5986</th>
+      <td>2020-12-17T04:53:51Z</td>
+      <td>false</td>
+      <td>2.734205</td>
+      <td>988.147</td>
+      <td>35.950217</td>
+    </tr>
+    <tr>
+      <th>5987</th>
+      <td>2020-12-17T04:53:52Z</td>
+      <td>false</td>
+      <td>2.734205</td>
+      <td>988.132</td>
+      <td>35.950217</td>
+    </tr>
+    <tr>
+      <th>5988</th>
+      <td>2020-12-17T04:55:09Z</td>
+      <td>false</td>
+      <td>2.734205</td>
+      <td>988.137</td>
+      <td>35.950217</td>
+    </tr>
+    <tr>
+      <th>5989</th>
+      <td>2020-12-17T04:59:54Z</td>
+      <td>false</td>
+      <td>2.734205</td>
+      <td>988.147</td>
+      <td>35.950217</td>
+    </tr>
+  </tbody>
+</table>
+<p>5990 rows × 5 columns</p>
+</div></div></div>
+</div>
+<p>From the .describe call looking at our data frame, there does not seem to be much variation in columns measurements_lat and measurements_lon because the DataFrame is from a single day. The reason for choosing to explore the measurements_height column in this notebook is because of the hypothesis that the surface will uplift if there is magma reservoir inflation or the surface will subside if there is magma reservior deflation. From viewing the data frame, the time column is in a time series form with extra separator variables “T” and “Z” in the following two cells; we will convert the timestamp column into an integer form for easy manipulation.</p>
+<p>Function to convert timestamp column of tzDF and tz2DF from time series to an integer for easy manipulation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">timeconvertfunc</span><span class="p">(</span><span class="n">timestamp</span><span class="p">):</span>
+ <span class="c1">#The format of tzDF[&quot;measurments_height] is in string form and timeseries so this method make it an integer&quot;</span>
+  <span class="n">ts</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">tz</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="o">.</span><span class="n">to_pydatetime</span><span class="p">()</span>
+  <span class="n">ts</span> <span class="o">=</span> <span class="mi">3600</span><span class="o">*</span><span class="n">ts</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="mi">60</span><span class="o">*</span><span class="n">ts</span><span class="o">.</span><span class="n">minute</span> <span class="o">+</span> <span class="n">ts</span><span class="o">.</span><span class="n">second</span>
+
+  <span class="k">return</span> <span class="n">ts</span>
+<span class="c1">#Applying above method to the two data frames</span>
+<span class="n">tzDF</span><span class="p">[</span><span class="s2">&quot;timeconvert&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tzDF</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">timeconvertfunc</span><span class="p">)</span>
+<span class="n">tz2DF</span><span class="p">[</span><span class="s2">&quot;timeconvert&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tzDF</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">timeconvertfunc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="visualization-of-basic-statistics-from-measurements-height-and-linear-regression">
+<h2>Visualization of basic statistics from measurements_height and linear regression<a class="headerlink" href="#visualization-of-basic-statistics-from-measurements-height-and-linear-regression" title="Permalink to this headline">¶</a></h2>
+<p>In the code block below the four series objects are partitions of the measurements_height column in the tzDF DataFrame. We create these partitions to feed into a linear regression model for predictions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Series from the first Data Frame</span>
+
+<span class="n">ONE_THROUGH_TWENTY</span> <span class="o">=</span> <span class="n">tzDF</span><span class="p">[</span><span class="s2">&quot;measurements_height&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">21</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">TWO_THROUGH_TWENTY_ONE</span> <span class="o">=</span> <span class="n">tzDF</span><span class="p">[</span><span class="s2">&quot;measurements_height&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">22</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">THREE_THROUGH_TWENTY_TWO</span> <span class="o">=</span><span class="n">tzDF</span><span class="p">[</span><span class="s2">&quot;measurements_height&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">23</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">FOUR_THROUGH_TWENTY_FOUR</span> <span class="o">=</span> <span class="n">tzDF</span><span class="p">[</span><span class="s2">&quot;measurements_height&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">24</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">#Linear Regression model on columns 1-20 and 2-21</span>
+
+<span class="n">lm</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">lm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">ONE_THROUGH_TWENTY</span> <span class="p">,</span><span class="n">TWO_THROUGH_TWENTY_ONE</span><span class="p">)</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">lm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">ONE_THROUGH_TWENTY</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;actual height(meters)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;predicted height(meters)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;actual height vs predicted height&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">ONE_THROUGH_TWENTY</span><span class="p">,</span><span class="n">TWO_THROUGH_TWENTY_ONE</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ONE_THROUGH_TWENTY</span><span class="p">,</span><span class="n">y_pred</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1">#Method to round for sigfigs</span>
+<span class="k">def</span> <span class="nf">to_precision</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">p</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mf">0.</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;0.&quot;</span> <span class="o">+</span> <span class="s2">&quot;0&quot;</span><span class="o">*</span><span class="p">(</span><span class="n">p</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="n">x</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="n">tens</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">e</span> <span class="o">-</span> <span class="n">p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="n">tens</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">p</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">e</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="n">tens</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">e</span> <span class="o">-</span> <span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">tens</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">abs</span><span class="p">((</span><span class="n">n</span> <span class="o">+</span> <span class="mf">1.</span><span class="p">)</span> <span class="o">*</span> <span class="n">tens</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="n">tens</span> <span class="o">-</span><span class="n">x</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">p</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mf">10.</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">e</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%.*g</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">2</span> <span class="ow">or</span> <span class="n">e</span> <span class="o">&gt;=</span> <span class="n">p</span><span class="p">:</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">p</span><span class="p">])</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">e</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;+&quot;</span><span class="p">)</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">e</span> <span class="o">==</span> <span class="p">(</span><span class="n">p</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">e</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">[:</span><span class="n">e</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">e</span><span class="o">+</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+            <span class="n">out</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="n">e</span><span class="o">+</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;0.&quot;</span><span class="p">)</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;0&quot;</span><span class="p">]</span><span class="o">*-</span><span class="p">(</span><span class="n">e</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The b value is&quot;</span><span class="p">,</span><span class="n">to_precision</span><span class="p">(</span><span class="n">lm</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The m value is&quot;</span><span class="p">,</span><span class="n">to_precision</span><span class="p">(</span><span class="n">lm</span><span class="o">.</span><span class="n">intercept_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">4</span><span class="p">))</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The R^2 value is&quot;</span><span class="p">,</span><span class="n">to_precision</span><span class="p">(</span><span class="n">lm</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">ONE_THROUGH_TWENTY</span><span class="p">,</span><span class="n">TWO_THROUGH_TWENTY_ONE</span><span class="p">),</span><span class="mi">4</span><span class="p">),)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_17_0.png" src="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_17_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The b value is 0.8366
+The m value is 161.5
+The R^2 value is 0.7395
+</pre></div>
+</div>
+</div>
+</div>
+<p>From the above model using the first through the twentieth column and second, through the twenty-second column, we yield a Coefficient of Correlation (R^2) value of about 0.73, which shows a positive correlation between the two inputs. So about 37% of the variation is residing in the residual.</p>
+</div>
+<div class="section" id="two-through-twenty-one-and-three-through-twenty-two">
+<h2>TWO_THROUGH_TWENTY_ONE and THREE_THROUGH_TWENTY_TWO<a class="headerlink" href="#two-through-twenty-one-and-three-through-twenty-two" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lm</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">lm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">TWO_THROUGH_TWENTY_ONE</span> <span class="p">,</span><span class="n">THREE_THROUGH_TWENTY_TWO</span><span class="p">)</span>
+<span class="n">y_pred1</span> <span class="o">=</span> <span class="n">lm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">TWO_THROUGH_TWENTY_ONE</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">TWO_THROUGH_TWENTY_ONE</span><span class="p">,</span><span class="n">THREE_THROUGH_TWENTY_TWO</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">TWO_THROUGH_TWENTY_ONE</span><span class="p">,</span><span class="n">y_pred1</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;actual height(meters)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;predicted height(meters)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;actual height vs predicted height&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is the b value&quot;</span><span class="p">,</span><span class="n">to_precision</span><span class="p">(</span><span class="n">lm</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is the m value&quot;</span><span class="p">,</span><span class="n">to_precision</span><span class="p">(</span><span class="n">lm</span><span class="o">.</span><span class="n">intercept_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is the R^2&quot;</span><span class="p">,</span><span class="n">to_precision</span><span class="p">(</span><span class="n">lm</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">TWO_THROUGH_TWENTY_ONE</span><span class="p">,</span><span class="n">THREE_THROUGH_TWENTY_TWO</span><span class="p">),</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_20_0.png" src="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_20_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is the b value 0.8102
+This is the m value 187.5
+This is the R^2 0.7257
+</pre></div>
+</div>
+</div>
+</div>
+<p>From the above model using the first through the twentieth column and the second through the twenty-second column, we yield a Coefficient of Correlation (R^2) value of about 0.72, which shows a positive correlation between the two inputs. So about 38% of the variation is residing in the residual.</p>
+</div>
+<div class="section" id="linear-regression-from-single-day">
+<h2>Linear Regression from single day<a class="headerlink" href="#linear-regression-from-single-day" title="Permalink to this headline">¶</a></h2>
+<p>The following code chunk uses  Linear Regression (specifically with rows of height measurement) for  one_Through_Twenty,two_Through_Twenty_One, and
+three_Through_Twenty_Two. The data frame used for the model is tzDF, and we display the predicted values versus actual values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Set up series object for partions in the dataframe</span>
+<span class="n">ONE_THROUGH_TWENTY</span> <span class="o">=</span> <span class="n">tzDF</span><span class="p">[</span><span class="s2">&quot;measurements_height&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">21</span><span class="p">]</span>
+<span class="n">TWO_THROUGH_TWENTY_ONE</span><span class="o">=</span> <span class="n">tzDF</span><span class="p">[</span><span class="s2">&quot;measurements_height&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">22</span><span class="p">]</span>
+<span class="n">THREE_THROUGH_TWENTY_TWO</span> <span class="o">=</span><span class="n">tzDF</span><span class="p">[</span><span class="s2">&quot;measurements_height&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">23</span><span class="p">]</span>
+<span class="n">FOUR_THROUGH_TWENTY_THREE</span> <span class="o">=</span> <span class="n">tzDF</span><span class="p">[</span><span class="s2">&quot;measurements_height&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">24</span><span class="p">]</span>
+
+<span class="c1">#Renaming the series objects</span>
+<span class="n">ONE_THROUGH_TWENTY</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">&quot;measurements_height&quot;</span><span class="p">:</span><span class="s2">&quot;w&quot;</span><span class="p">},</span><span class="n">axis</span> <span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">TWO_THROUGH_TWENTY_ONE</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">&quot;measurements_height&quot;</span><span class="p">:</span><span class="s2">&quot;x&quot;</span><span class="p">},</span><span class="n">axis</span> <span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">THREE_THROUGH_TWENTY_TWO</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">&quot;measurements_height&quot;</span><span class="p">:</span><span class="s2">&quot;y&quot;</span><span class="p">},</span><span class="n">axis</span> <span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">FOUR_THROUGH_TWENTY_THREE</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s2">&quot;measurements_height&quot;</span><span class="p">:</span><span class="s2">&quot;z&quot;</span><span class="p">},</span><span class="n">axis</span> <span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">#Concating the series objects to one dataframe, result_DF</span>
+<span class="n">result_DF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">ONE_THROUGH_TWENTY</span><span class="p">,</span><span class="n">TWO_THROUGH_TWENTY_ONE</span><span class="p">,</span><span class="n">THREE_THROUGH_TWENTY_TWO</span><span class="p">,</span><span class="n">FOUR_THROUGH_TWENTY_THREE</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">result_DF</span>
+
+<span class="c1">#Modefying dataframe by shifting the coulmns up </span>
+<span class="n">result_DF</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">result_DF</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">result_DF</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">result_DF</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">result_DF</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">result_DF</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1">#Aligning all coulmns of the data frame together</span>
+<span class="n">result_DF</span> <span class="o">=</span> <span class="n">result_DF</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">result_DF</span> <span class="o">=</span> <span class="n">result_DF</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+<span class="n">result_DF</span>
+
+<span class="c1">#Linear Regression on all rows and 1-19 coulmns </span>
+<span class="n">lm</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">result_DF</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">result_DF</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">20</span><span class="p">]</span>
+<span class="n">lm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">y_pred1</span> <span class="o">=</span> <span class="n">lm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">y_pred1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;actual height(m)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;predicted height(m)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;actual height vs predicted height&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1">#REMOVE CODE</span>
+<span class="c1">#print(&quot;This is the b value&quot;,lm.coef_,)</span>
+<span class="c1">#print(&quot;This is the m value&quot;,lm.intercept_)</span>
+<span class="c1">#print(&quot;This is the R^2&quot;,lm.score(x,y))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">y_pred1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_24_0.png" src="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_24_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This is the b value 0.019411749567623295
+measurements_height    0.0
+measurements_height    0.0
+measurements_height    0.0
+measurements_height    0.0
+Name: 21, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>From the above graph, all points are predicted as the values overlap graphically with a b value of 0.0194. The height difference is zero. We will now increase the sample size of the data.</p>
+</div>
+<div class="section" id="method-to-increase-sample-size-for-the-model">
+<h2>Method to increase sample size for the model<a class="headerlink" href="#method-to-increase-sample-size-for-the-model" title="Permalink to this headline">¶</a></h2>
+<p>The method below takes in a data frame, goes into measurement height, and gets the first through nineteenth values in the height data frame. The first and nineteenth values are increased by one thousand times. The Data frame is transposed into columns then added to an empty list to be concatenated into a data frame.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Making an empty list to store coulmn values</span>
+<span class="n">empty_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">def</span> <span class="nf">make_list</span><span class="p">(</span><span class="n">DataFrame</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>  
+        <span class="n">change</span> <span class="o">=</span> <span class="n">tzDF</span><span class="p">[</span><span class="s2">&quot;measurements_height&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">21</span><span class="p">]</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span>
+        <span class="c1">#Names of the columns</span>
+        <span class="n">change</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;history_1&quot;</span><span class="p">,</span><span class="s2">&quot;history_2&quot;</span><span class="p">,</span><span class="s2">&quot;history_3&quot;</span><span class="p">,</span><span class="s2">&quot;history_4&quot;</span><span class="p">,</span><span class="s2">&quot;history_5&quot;</span><span class="p">,</span>
+                          <span class="s2">&quot;history_6&quot;</span><span class="p">,</span><span class="s2">&quot;history_7&quot;</span><span class="p">,</span><span class="s2">&quot;history_8&quot;</span><span class="p">,</span><span class="s2">&quot;history_9&quot;</span><span class="p">,</span><span class="s2">&quot;history_10&quot;</span><span class="p">,</span>
+                          <span class="s2">&quot;history_11&quot;</span><span class="p">,</span><span class="s2">&quot;history_12&quot;</span><span class="p">,</span><span class="s2">&quot;history_13&quot;</span><span class="p">,</span><span class="s2">&quot;history_14&quot;</span><span class="p">,</span><span class="s2">&quot;history_15&quot;</span><span class="p">,</span>
+                          <span class="s2">&quot;history_16&quot;</span><span class="p">,</span><span class="s2">&quot;history_17&quot;</span><span class="p">,</span><span class="s2">&quot;history_18&quot;</span><span class="p">,</span><span class="s2">&quot;history_19&quot;</span><span class="p">,</span><span class="s2">&quot;history_20&quot;</span><span class="p">]</span>
+        <span class="n">change</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">empty_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">change</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">empty_list</span>
+<span class="c1"># List of all columns values </span>
+<span class="n">tzDF_list</span> <span class="o">=</span> <span class="n">make_list</span><span class="p">(</span><span class="n">tzDF</span><span class="p">[</span><span class="s2">&quot;measurements_height&quot;</span><span class="p">])</span>
+<span class="n">tzDF_two_list</span> <span class="o">=</span> <span class="n">make_list</span><span class="p">(</span><span class="n">tz2DF</span><span class="p">[</span><span class="s2">&quot;measurements_height&quot;</span><span class="p">])</span>
+
+<span class="c1">#List iteration to combine all elements in list</span>
+<span class="n">finalDF</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">tzDF_list</span><span class="p">])</span>
+<span class="n">finalDF_two</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">m</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">tzDF_two_list</span><span class="p">])</span>
+<span class="n">finalDF_two</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>history_1</th>
+      <th>history_2</th>
+      <th>history_3</th>
+      <th>history_4</th>
+      <th>history_5</th>
+      <th>history_6</th>
+      <th>history_7</th>
+      <th>history_8</th>
+      <th>history_9</th>
+      <th>history_10</th>
+      <th>history_11</th>
+      <th>history_12</th>
+      <th>history_13</th>
+      <th>history_14</th>
+      <th>history_15</th>
+      <th>history_16</th>
+      <th>history_17</th>
+      <th>history_18</th>
+      <th>history_19</th>
+      <th>history_20</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>988.206</td>
+      <td>988.214</td>
+      <td>988.226</td>
+      <td>988.199</td>
+      <td>988.220</td>
+      <td>988.212</td>
+      <td>988.202</td>
+      <td>988.167</td>
+      <td>988.167</td>
+      <td>988.126</td>
+      <td>988.129</td>
+      <td>988.132</td>
+      <td>988.151</td>
+      <td>988.135</td>
+      <td>988.108</td>
+      <td>988.114</td>
+      <td>988.129</td>
+      <td>988.169</td>
+      <td>988.162</td>
+      <td>988.147</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>988.214</td>
+      <td>988.226</td>
+      <td>988.199</td>
+      <td>988.220</td>
+      <td>988.212</td>
+      <td>988.202</td>
+      <td>988.167</td>
+      <td>988.167</td>
+      <td>988.126</td>
+      <td>988.129</td>
+      <td>988.132</td>
+      <td>988.151</td>
+      <td>988.135</td>
+      <td>988.108</td>
+      <td>988.114</td>
+      <td>988.129</td>
+      <td>988.169</td>
+      <td>988.162</td>
+      <td>988.147</td>
+      <td>988.143</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>988.226</td>
+      <td>988.199</td>
+      <td>988.220</td>
+      <td>988.212</td>
+      <td>988.202</td>
+      <td>988.167</td>
+      <td>988.167</td>
+      <td>988.126</td>
+      <td>988.129</td>
+      <td>988.132</td>
+      <td>988.151</td>
+      <td>988.135</td>
+      <td>988.108</td>
+      <td>988.114</td>
+      <td>988.129</td>
+      <td>988.169</td>
+      <td>988.162</td>
+      <td>988.147</td>
+      <td>988.143</td>
+      <td>988.146</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>988.199</td>
+      <td>988.220</td>
+      <td>988.212</td>
+      <td>988.202</td>
+      <td>988.167</td>
+      <td>988.167</td>
+      <td>988.126</td>
+      <td>988.129</td>
+      <td>988.132</td>
+      <td>988.151</td>
+      <td>988.135</td>
+      <td>988.108</td>
+      <td>988.114</td>
+      <td>988.129</td>
+      <td>988.169</td>
+      <td>988.162</td>
+      <td>988.147</td>
+      <td>988.143</td>
+      <td>988.146</td>
+      <td>988.142</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>988.220</td>
+      <td>988.212</td>
+      <td>988.202</td>
+      <td>988.167</td>
+      <td>988.167</td>
+      <td>988.126</td>
+      <td>988.129</td>
+      <td>988.132</td>
+      <td>988.151</td>
+      <td>988.135</td>
+      <td>988.108</td>
+      <td>988.114</td>
+      <td>988.129</td>
+      <td>988.169</td>
+      <td>988.162</td>
+      <td>988.147</td>
+      <td>988.143</td>
+      <td>988.146</td>
+      <td>988.142</td>
+      <td>988.136</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>995</th>
+      <td>988.100</td>
+      <td>988.106</td>
+      <td>988.131</td>
+      <td>988.121</td>
+      <td>988.129</td>
+      <td>988.129</td>
+      <td>988.146</td>
+      <td>988.148</td>
+      <td>988.131</td>
+      <td>988.130</td>
+      <td>988.145</td>
+      <td>988.112</td>
+      <td>988.127</td>
+      <td>988.140</td>
+      <td>988.114</td>
+      <td>988.122</td>
+      <td>988.151</td>
+      <td>988.164</td>
+      <td>988.140</td>
+      <td>988.143</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>988.106</td>
+      <td>988.131</td>
+      <td>988.121</td>
+      <td>988.129</td>
+      <td>988.129</td>
+      <td>988.146</td>
+      <td>988.148</td>
+      <td>988.131</td>
+      <td>988.130</td>
+      <td>988.145</td>
+      <td>988.112</td>
+      <td>988.127</td>
+      <td>988.140</td>
+      <td>988.114</td>
+      <td>988.122</td>
+      <td>988.151</td>
+      <td>988.164</td>
+      <td>988.140</td>
+      <td>988.143</td>
+      <td>988.146</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>988.131</td>
+      <td>988.121</td>
+      <td>988.129</td>
+      <td>988.129</td>
+      <td>988.146</td>
+      <td>988.148</td>
+      <td>988.131</td>
+      <td>988.130</td>
+      <td>988.145</td>
+      <td>988.112</td>
+      <td>988.127</td>
+      <td>988.140</td>
+      <td>988.114</td>
+      <td>988.122</td>
+      <td>988.151</td>
+      <td>988.164</td>
+      <td>988.140</td>
+      <td>988.143</td>
+      <td>988.146</td>
+      <td>988.132</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>988.121</td>
+      <td>988.129</td>
+      <td>988.129</td>
+      <td>988.146</td>
+      <td>988.148</td>
+      <td>988.131</td>
+      <td>988.130</td>
+      <td>988.145</td>
+      <td>988.112</td>
+      <td>988.127</td>
+      <td>988.140</td>
+      <td>988.114</td>
+      <td>988.122</td>
+      <td>988.151</td>
+      <td>988.164</td>
+      <td>988.140</td>
+      <td>988.143</td>
+      <td>988.146</td>
+      <td>988.132</td>
+      <td>988.133</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>988.129</td>
+      <td>988.129</td>
+      <td>988.146</td>
+      <td>988.148</td>
+      <td>988.131</td>
+      <td>988.130</td>
+      <td>988.145</td>
+      <td>988.112</td>
+      <td>988.127</td>
+      <td>988.140</td>
+      <td>988.114</td>
+      <td>988.122</td>
+      <td>988.151</td>
+      <td>988.164</td>
+      <td>988.140</td>
+      <td>988.143</td>
+      <td>988.146</td>
+      <td>988.132</td>
+      <td>988.133</td>
+      <td>988.117</td>
+    </tr>
+  </tbody>
+</table>
+<p>2000 rows × 20 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="increased-data-points-for-linear-regression">
+<h2>Increased data points for linear regression<a class="headerlink" href="#increased-data-points-for-linear-regression" title="Permalink to this headline">¶</a></h2>
+<p>Below we will take the freshly made data frame finalDF with 200 rows x 20 columns, put the data into a linear regression utilizing the train test split module from the sci-kit library. The test sizes of 35, 55, and 75 are used for variability. The x is all of the rows in the new data frame and columns 1-19, while the or output is all of the rows and the 19th column that we are predicting.</p>
+</div>
+<div class="section" id="test-data-demonstration">
+<h2>35% Test Data demonstration<a class="headerlink" href="#test-data-demonstration" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_prediction</span><span class="p">(</span><span class="n">DataFrame</span><span class="p">,</span><span class="n">number</span><span class="p">):</span> 
+    <span class="n">input_Data</span> <span class="o">=</span> <span class="n">finalDF</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">19</span><span class="p">]</span>
+    <span class="n">target_Data</span> <span class="o">=</span> <span class="n">finalDF</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">19</span><span class="p">]</span>
+    <span class="n">lm</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+    <span class="n">lm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">input_Data</span><span class="p">,</span><span class="n">target_Data</span><span class="p">)</span>
+    <span class="n">y_pred1</span> <span class="o">=</span> <span class="n">lm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">input_Data</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">target_Data</span><span class="p">,</span><span class="n">y_pred1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;target height(m)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;predicted height(m)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Target vs Predicted&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span>
+    <span class="c1"># x axis is actual height and y is what lm model is predicting in scatter</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">input_Data</span><span class="p">,</span> <span class="n">target_Data</span><span class="p">,</span><span class="n">test_size</span> <span class="o">=</span> <span class="n">number</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">lm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+    <span class="n">prediction</span> <span class="o">=</span> <span class="n">lm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="c1">#Series of the difference of the test the leng</span>
+    <span class="n">error_Series</span> <span class="o">=</span> <span class="n">y_test</span><span class="o">-</span><span class="n">prediction</span>
+    <span class="c1">#average</span>
+    <span class="n">average_Difference</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">error_Series</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">error_Series</span><span class="p">))</span>
+    <span class="c1">#print(average_Difference)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">to_precision</span><span class="p">(</span><span class="n">average_Difference</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">make_prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="mf">0.35</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.296e-4
+</pre></div>
+</div>
+<img alt="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_32_1.png" src="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_32_1.png" />
+</div>
+</div>
+<p>When y_test-y_prediciton, we get an average difference of -0.0003 from the model’s actual and predicted values in the above cell. From the outliers in the plot, we can view the noise graphically.</p>
+</div>
+<div class="section" id="id1">
+<h2>55% Test Data demonstration<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Function Call for 55% test data dem</span>
+<span class="n">make_prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="mf">0.55</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-3.078e-4
+</pre></div>
+</div>
+<img alt="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_35_1.png" src="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_35_1.png" />
+</div>
+</div>
+<p>In the above cell, when y_test-y_prediciton, we get an average difference of -0.00030778063659289 from the model’s actual and predicted values.</p>
+</div>
+<div class="section" id="id2">
+<h2>75% Test Data demonstration<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Function Call for 75% test data dem</span>
+<span class="n">make_prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="mf">0.75</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1.074e-4
+</pre></div>
+</div>
+<img alt="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_38_1.png" src="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_38_1.png" />
+</div>
+</div>
+<p>In the above cell when y_test-y_prediciton we get an average difference of -0.0001 from the model’s actual and predicted values.</p>
+</div>
+<div class="section" id="using-one-day-s-data-to-predict-a-different-day-s-data">
+<h2>Using one day’s data to predict a different day’s data<a class="headerlink" href="#using-one-day-s-data-to-predict-a-different-day-s-data" title="Permalink to this headline">¶</a></h2>
+<p>The demonstrations below utilize the second data frame now named finalDF_two. The December 16, 2020 dates data will be trained to predict the April 16, 2020 dates data. The test size increases by ten percent in the range of 20-90 for variability. We will be using the Mean Squared value that shows the error for linear regression to view the model’s accuracy.</p>
+</div>
+<div class="section" id="prediction-from-10-test-size-data">
+<h2>Prediction from 10% test size data<a class="headerlink" href="#prediction-from-10-test-size-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">different_Day_Prediction</span><span class="p">(</span><span class="n">DataFrame</span><span class="p">,</span><span class="n">number</span><span class="p">):</span>
+    <span class="n">DECEMBER_SERIES_X</span>  <span class="o">=</span> <span class="n">finalDF</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">19</span><span class="p">]</span>
+    <span class="n">DECEMBER_SERIES_Y</span> <span class="o">=</span> <span class="n">finalDF</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">19</span><span class="p">]</span>
+    <span class="n">APRIL_SERIES_X</span> <span class="o">=</span> <span class="n">finalDF_two</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">19</span><span class="p">]</span>
+    <span class="n">APRIL_SERIES_Y</span><span class="o">=</span> <span class="n">finalDF_two</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">19</span><span class="p">]</span>
+    <span class="n">lm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">DECEMBER_SERIES_X</span><span class="p">,</span><span class="n">DECEMBER_SERIES_Y</span><span class="p">)</span>
+    <span class="n">y_pred1</span> <span class="o">=</span> <span class="n">lm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">DECEMBER_SERIES_X</span><span class="p">)</span>
+    <span class="c1">#train_test_split_module</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">DECEMBER_SERIES_X</span><span class="p">,</span> <span class="n">APRIL_SERIES_Y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="n">number</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">lm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">intercept_</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">coef_</span>
+    <span class="c1">#setting the prediciton variable </span>
+    <span class="n">APRIL_PREDICTION</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">APRIL_SERIES_X</span><span class="p">)</span>
+    <span class="c1">#50 bins were picked for all of the models below</span>
+    <span class="c1">#Distrubution of Errors pred vs actual</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">APRIL_PREDICTION</span><span class="o">-</span><span class="n">APRIL_SERIES_Y</span><span class="p">,</span><span class="n">bins</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span><span class="n">color</span> <span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;meters(m)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;distribution&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distrbution of predicted minus actual&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="c1">#Displaying Mean Squared Error</span>
+    <span class="n">twenty_MSE</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">APRIL_SERIES_Y</span><span class="p">,</span><span class="n">APRIL_PREDICTION</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mean squared error for this model is&quot;</span><span class="p">,</span><span class="n">to_precision</span><span class="p">(</span><span class="n">twenty_MSE</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="s2">&quot;%.&quot;</span><span class="p">)</span>
+
+<span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_43_0.png" src="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_43_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean squared error for this model is 8.325e-5 %.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="prediction-from-20-test-size-data">
+<h2>Prediction from 20% test size data<a class="headerlink" href="#prediction-from-20-test-size-data" title="Permalink to this headline">¶</a></h2>
+<p>In the cell below, december_Series_X and decemeber_Series_Y will be the data that is used to train the model. April_Series_X and april_Series_Y will be the different days and data that we predict it points from. We will display a histogram to view the error distribution between the actual and predicted data as well as</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_46_0.png" src="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_46_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean squared error for this model is 8.344e-5 %.
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the above cell, the histogram displayed displays the error from the prediction minus the series. Most of the distribution of the data is centered around zero, indicating the performance of the model. The MSE is extremely low, showing the accuracy of the model.</p>
+</div>
+<div class="section" id="prediction-from-30-test-size-data">
+<h2>Prediction from 30% test size data<a class="headerlink" href="#prediction-from-30-test-size-data" title="Permalink to this headline">¶</a></h2>
+<p>In the cell below our we will be inputting in 30% test data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_50_0.png" src="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_50_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean squared error for this model is 8.354e-5 %.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="prediction-from-40-test-size-data">
+<h2>Prediction from 40% test size data<a class="headerlink" href="#prediction-from-40-test-size-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_52_0.png" src="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_52_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean squared error for this model is 8.383e-5 %.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="prediction-from-50-test-size-data">
+<h2>Prediction from 50% test size data<a class="headerlink" href="#prediction-from-50-test-size-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_54_0.png" src="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_54_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean squared error for this model is 8.383e-5 %.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="prediction-from-60-test-size-data">
+<h2>Prediction from 60% test size data<a class="headerlink" href="#prediction-from-60-test-size-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_56_0.png" src="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_56_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean squared error for this model is 8.487e-5 %.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="prediction-from-70-test-size-data">
+<h2>Prediction from 70% test size data<a class="headerlink" href="#prediction-from-70-test-size-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_58_0.png" src="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_58_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean squared error for this model is 8.563e-5 %.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="prediction-from-80-test-size-data">
+<h2>Prediction from 80% test size data<a class="headerlink" href="#prediction-from-80-test-size-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_60_0.png" src="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_60_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean squared error for this model is 8.615e-5 %.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="prediction-from-90-test-size-data">
+<h2>Prediction from 90% test size data<a class="headerlink" href="#prediction-from-90-test-size-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_62_0.png" src="../../_images/MM_01_Volcanic_activity_detection_and_noise_characterization_using_machine_learning_62_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean squared error for this model is 8.956e-5 %.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The mean square error for the above models is deficient, showing the success of inputting in height data for one day and predicting height data from another day.</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h1>Results<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+<p>With this notebook we explored the use of machine learning for predictive analytics applied to vertical surface motions at an active volcano in Tanzania, Ol Doinyo Lengai. When training a model on one day and using that model to predict height values from another day, our lowest error was 8.325e-5 %. The future implications for this project and data are important because Ol Doinyo Lengai future eruption could cause distress for not only Tanzania, but other countries surrounding Tanzania. The ability to predict volcanic activity will be a valuable contribution to volcanic hazards assessment.</p>
+</div>
+<div class="section" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+<p>Daniels, Mike, Branko Kerkez, V. Chandrasekar, Sara Graves, D. Sarah Stamps, Charles Martin, Aaron Botnick, Michael Dye, Ryan Gooch, Josh Jones, Ken Keiser, Matthew Bartos, Thaovy Nguyen, Robyn Collins, Sophia Chen, Terrie Yang, Abbi Devins-Suresh (2016). Cloud-Hosted Real-time Data Services for the Geosciences (CHORDS) software (Version 1.0.1). UCAR/NCAR - EarthCube. <a class="reference external" href="https://doi.org/10.5065/d6v1236q">https://doi.org/10.5065/d6v1236q</a></p>
+<p>Kerkez, Branko, Michael Daniels, Sara Graves, V. Chandrasekar, Ken Keiser, Charlie Martin, Michael Dye, Manil Maskey, and Frank Vernon. “Cloud Hosted Real‐time Data Services for the Geosciences (CHORDS).” (2016), doi: 10.1002/gdj3.36.</p>
+<p>GeÌ ron, Aureì lien. 2019. Hands-on Machine Learning with Scikit-Learn, Keras and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems. 2nd ed. CA 95472: O’Reilly.</p>
+<p>Stamps, D. S., Saria, E., Ji, K. H., Jones, J. R., Ntambila, D., Daniels, M. D., &amp; Mencin, D. (2016). <i>Real-time data from the Tanzania Volcano Observatory at the Ol Doinyo Lengai volcano in Tanzania (TZVOLCANO).</i> UCAR/NCAR - EarthCube. <a class="reference external" href="https://doi.org/10.5065/D6P849BM">https://doi.org/10.5065/D6P849BM</a></p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/ec21_mason_etal_old"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By EarthCube Office<br/>
+        
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
