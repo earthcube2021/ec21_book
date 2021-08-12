@@ -1,7 +1,57 @@
-# EarthCube 2021
+# EarthCube 2021 Notebooks
 
-As scientific studies become more data intensive and software dependent, reproducibility principles and other factors increase the importance of making work such as reusable workflows, software, and data-access procedures citable. This importance is reflected in new academic journals, such as the Journal of Open Source Software (JOSS), whose peer reviewed articles highlight the software itself, and often can include executable notebooks (such as Jupyter, R Studio, etc.) In this spirit, EarthCube is issuing its 2nd Call for Notebooks as primary, peer-reviewed submissions to a digital proceedings for this year’s EarthCube Annual Meeting.
+The NSF EarthCube program was created to advance cyberinfrastructure and
+technological practices in support of Geoscience research.  A key aspect of that
+has long been a challenge with the sharing, reuse, and reproducibility of
+software and tools developed by the community.  Towards this the EarthCube
+office (ECO) in conjunction with the Leadership Council (LC) and Technical
+Architecture Committee (TAC) piloted the notion of soliciting peer reviewed
+notebooks as scholarly objects to be published as part of the EarthCube annual
+meeting.   Submitted notebooks would highlight a tool (i.e. software, service,
+library, dataset, standard), explaining and demonstrating interactively how the
+tool may be used to address a significant problem in geoscience. Submissions are
+then peer reviewed in terms of their impact on geoscience research and overall
+usability by reviewers from the geoscience and cyberinfrastructure communities.
+The accepted notebooks can be found here as part of this JupyterBook serving as
+the 2021 EarthCube Annual Meeting proceedings.
 
- Submitted notebooks should highlight a tool (i.e. software, service, library, dataset, standard), explaining and demonstrating interactively how the tool may be used to address a significant problem in geoscience.  There will be two tracks. One track will be focused on submissions where the goal is describing scientific outputs. In this case, the novelty is based on the analysis being done and the scientific conclusions drawn. The other is on demonstrating new software and tools. Here the emphasis is on new software and showing how it can be used. 
+## Notebook Organizing Committee:
 
- Submissions will be peer reviewed in terms of their impact on geoscience research and overall usability, by reviewers from the geoscience and cyberinfrastructure communities.  Authors of accepted notebooks will have the opportunity to present their notebook at the EarthCube Annual Meeting and their notebooks will be published in an EarthCube digital proceedings for others to discover, use, and cite.​
+* Hugh Shanahan - Royal Holloway, University of London
+* Matt Turk - University of Illinois
+* Ryan Abernathey - Columbia University
+* Keith Maull - NCAR
+* Donata Giglio - University of Colorado, EarthCube TAC
+* Lynne Schreiber - SDSC, UCSD - EarthCube Office
+* Daniel S. Katz  - University of Illinois - EarthCube Office
+* Kenton McHenry - University of Illinois - EarthCube Office
+
+## Notebook Reviewers:
+
+* Anderson Banihirwe (UCAR)
+* Shay Carter (UNIDATA)
+* Gui Castelao (UCSD)
+* Julien Chastang (UNIDATA)
+* Kelly Enloe (University of Colorado)
+* Brian Grivna (University of Minnesota)
+* Christopher Havlin (University of Illinois)
+* Spencer Jones (Columbia)
+* Phong Le (University of Illinois)
+* Trevor Leonard (University of Colorodo)
+* Zhiyu Li (University of Illinois)
+* Rupert Minnett (EarthRef)
+* Thomas Nicholas (University of York)
+* Chris Olson (UCSD)
+* Kevin Paul (UCAR)
+* Jessica Scheick (University of Maine)
+* David Shumway
+* Aiman Soliman (University of Illinois)
+* Charles Stern (University of Colorado)
+* Lisa Tauxe (UCSD)
+* Kristen Thyng (Axiom Data Science)
+* Wen-wen Tung (Purdue)
+* Ana Beatriz Villas Boas (UCSD)
+* Kunxuan Wang (University of Illinois)
+* Carol Willing (Project Jupyter)
+* Bidhyananda Yadav (Ohio State University)
+* Whyjay Zheng (UC Berkeley)
