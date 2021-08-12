@@ -1,4 +1,4 @@
-# Volcanic Activity Detection
+# Volcanic activity detection and noise characterization using machine learning
 Authors 
 Myles Mason, John Wenskovitch, D. Sarah Stamps, Joshua Robert Jones, Mike Dye
 
@@ -12,10 +12,12 @@ This Jupyter notebook aims to explore methods towards characterizing noise in po
 
 
 
-## Required Packages
-* six==1.15.0
-* pandas==1.1.3
-* numpy==1.19.2
-* matplotlib==3.3.2
-* seaborn==0.11.0
-* scikit-learn==0.23.2
+Required Packages
+## six==1.15.0
+## pandas==1.1.3
+## numpy==1.19.2
+## matplotlib==3.3.2
+## seaborn==0.11.0
+## scikit-learn==0.23.2
+## jupyter_contrib_nbextensions == 0.5.1
+

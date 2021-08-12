@@ -1,18 +1,18 @@
 format: jb-book
-root: docs/index
+root: docs/index_dup.md
 parts:
   - caption: EarthCube 2021 Call
     numbered: False   
     chapters:
-    - file: docs/about
-    - file: notebooks/index
+    - file: docs/index.md
   - caption: Notebook Submissions
-    numbered: True   
+    numbered: 1   
     chapters:
     - file: notebooks/ec21_anil_etal/README.md
       title: "Hydrographic Ocean Data Exploration"
       sections:
       - file: notebooks/ec21_anil_etal/SA_01_Argo_Data_Exploration.ipynb
+        title: "Notebook"
     - file: notebooks/ec21_balwada_etal/README.md
       title: "Interactive Visualization Tools for Ocean Glider Data"
       sections:

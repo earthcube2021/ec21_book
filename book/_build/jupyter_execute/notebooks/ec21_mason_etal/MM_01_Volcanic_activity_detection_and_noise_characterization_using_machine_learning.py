@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # EC 01 Volcanic activity detection and noise characterization using machine learning
-
-# Linear regression prediction of height point.
+# # Volcanic activity detection and noise characterization using machine learning
 
 # ## Author(s)
 # 
@@ -19,18 +17,16 @@
 
 # ## Purpose
 # 
-# This Jupyter notebook explores methods towards characterizing noise and eventually predicting volcanic activity for [Ol Doinyo Lengai](http://tzvolcano.chordsrt.com)
-#  (an active volcano in Tanzania) with machine learning. Machine learning is a powerful tool that enables the automatization of complex mathematical and analytical models. In this Jupyter notebook, the components are time, height, latitude, and longitude. The predicted component values are the following heights. This project uses Global Navigation Satellite System (GNSS) data from the EarthCube CHORDS portal TZVOLCANO (Stamps et al. 2016; Daniels et al., 2016; Kerkez et al., 2016), which is the online interface for obtaining open-access real-time positioning data collected around Ol Doinyo Lengai(http://tzvolcano.chordsrt.com). The bulk of the project is the exploration of the data and later prediction of height points. The station that this project analyzes is OLO1 for days 12/16/2020 and 04/16/2021.  
+# This Jupyter notebook explores methods towards characterizing noise and eventually predicting volcanic activity for Ol Doinyo Lengai (an active volcano in Tanzania) with machine learning using the [TZVOLCANO CHORDS portal](http://tzvolcano.chordsrt.com). Machine learning is a powerful tool that enables the automatization of complex mathematical and analytical models. In this Jupyter notebook, the components are time, height, latitude, and longitude. The predicted component values are the following heights. This project uses Global Navigation Satellite System (GNSS) data from the EarthCube CHORDS portal TZVOLCANO (Stamps et al. 2016; Daniels et al., 2016; Kerkez et al., 2016), which is the online interface for obtaining open-access real-time positioning data collected around Ol Doinyo Lengai. The bulk of the project is the exploration of the data and later prediction of height points. The station that this project analyzes is OLO1 for days 12/16/2020 and 04/16/2021.  
 # 
 # ## Technical contributions
 # - The training of the models and analysis uses basic linear algebra and statistics 
 # - The main libraries used (NumPy and pandas) are both libraries for data manipulation and linear algebra 
-# - The CHORDS site linked above is the location of the data and the interface of [CHORDS](http://tzvolcano.chordsrt.com)
+# - The TZVOLCANO CHORDS portal linked above is the location of the data
 # - Implementation of Linear Regression for prediction on time-series data
 # 
 # ## Methodology
-# The desired data was imported and selected. Pre-processing and cleaning of the data occurred. The information was then visualized for better analysis along with statistical metrics running. Finally, linear regression models were built and analyzed for the data.
-# 
+# The desired data was imported and selected with a range of about five months. The user downloads data from the TZVOLCANO CHORDS portal as a geojson file (.JSON). Previously downloaded JSON's are converted to a Dataframe for easy manipulation further in the project. The information is then visualized for better analysis and statistical metrics running. Sample data size is increased for the project; A second JSON is introduced at the beginning of the data processing and analysis, which will later be used for OLO1 to predict height data from OLO1 on 4/16/2021 using 12/16/2020. We set up four series objects from the original data frame to be used for inputs for machine learning algorithms. The data set up for a linear regression shows the difference in target vs. predicted data in scatter plot form. Finally, nine predictions are displayed graphically with adjusting the test size data to demonstrate the different day prediction positions.  
 # 
 # ## Results
 # This notebook explored predicting height data from the TZVOLCANO CHORDS portal using Linear Regression from different days. It also evaluates how much test data is needed to best predict height data. We find that having 10% test data yields the best results for predictions with the Mean Squared Error of 8.325e-5% . For predictions from data inputted and predicted from a single day we find the 75% test data yields the best results with an average error of -1.074e-4 meters.
@@ -49,7 +45,7 @@
 # Mason, Myles, John Wenskovitch, D. Sarah Stamps, Joshua Robert Jones,  Mike Dye (2021), EC_01_Volcanic_activity_detection_and_noise_characterization_using_machine learning, EarthCube Annual Meeting.
 # 
 # ## Suggested next steps
-# The next step for this notebook will be increasing the inputs for the prediction model. More analysis of the noise will be crucial in the next step for further volcanic activity prediction. They are explicitly generating synthetic data that will mimic volcanic activity.
+# Noise activity in the data set is a topic that should be explored. Noise exploration is crucial to the development of this project because understanding the noise and being able to filter and characterize noise will allow any day to be analyzed efficiently and for more reliable predictions of hazardous volcanic deformation. Future next steps would include applying more classifying algorithms such as DBSCAN to characterize the noise.
 # ## Acknowledgements
 # - Virginia Tech Department of Geosciences 
 # - Alice and Luther Hamlet
@@ -83,17 +79,17 @@ from sklearn.metrics import mean_squared_error
 
 
 # # Parameter definitions
-# - 'tzDF': intial dataframe contains 12/06/2020 data 
-# - 'tz2DF': secondary dataframe contains 04/16/2021 data
-# - 'ONE_THROUGH_TWENTY': array of values in tzDF["measurements_height"] used for prediction
-# - 'TWO_THROUGH_TWENTY_ONE':array of values in tzDF["measurements_height"] used for prediction
-# - 'THREE_THROUGH_TWENTY_TWO': array of values in tzDF["measurements_height"] used for prediction
-# - 'FOUR_THROUGH_TWENTY_THREE': array of values in tzDF["measurements_height"] used for prediction
-# - 'DECEMBER_SERIES_X': inputted height for 12/16/2020 data for Linear Regression 
-# - 'DECEMBER_SERIES_Y': target height data for 12/16/2020
-# - 'APRIL_SERIES_X': inputted height data for 04/16/2021
-# - 'APRIL_SERIES_Y': target height data for 04/16/2021
-# - 'APRIL_PREDICTION': Predicted values from the two days
+# - `tzDF`: intial dataframe contains 12/06/2020 data 
+# - `tz2DF`: secondary dataframe contains 04/16/2021 data
+# - `ONE_THROUGH_TWENTY`: array of values in tzDF["measurements_height"] used for prediction
+# - `TWO_THROUGH_TWENTY_ONE`:array of values in tzDF["measurements_height"] used for prediction
+# - `THREE_THROUGH_TWENTY_TWO`: array of values in tzDF["measurements_height"] used for prediction
+# - `FOUR_THROUGH_TWENTY_THREE`: array of values in tzDF["measurements_height"] used for prediction
+# - `DECEMBER_SERIES_X`: inputted height for 12/16/2020 data for Linear Regression 
+# - `DECEMBER_SERIES_Y`: target height data for 12/16/2020
+# - `APRIL_SERIES_X`: inputted height data for 04/16/2021
+# - `APRIL_SERIES_Y`: target height data for 04/16/2021
+# - `APRIL_PREDICTION`': Predicted values from the two days
 # 
 
 # 
@@ -167,8 +163,8 @@ FOUR_THROUGH_TWENTY_FOUR = tzDF["measurements_height"].loc[4:24].values.reshape(
 lm = LinearRegression()
 lm.fit(ONE_THROUGH_TWENTY ,TWO_THROUGH_TWENTY_ONE)
 y_pred = lm.predict(ONE_THROUGH_TWENTY)
-plt.xlabel("actual height(meters)")
-plt.ylabel("predicted height(meters)")
+plt.xlabel("actual height(m)")
+plt.ylabel("predicted height(m)")
 plt.title("actual height vs predicted height")
 plt.scatter(ONE_THROUGH_TWENTY,TWO_THROUGH_TWENTY_ONE)
 plt.plot(ONE_THROUGH_TWENTY,y_pred,color="red")
@@ -226,9 +222,9 @@ print("The m value is",to_precision(lm.intercept_[0],4))
 print("The R^2 value is",to_precision(lm.score(ONE_THROUGH_TWENTY,TWO_THROUGH_TWENTY_ONE),4),)
 
 
-# From the above model using the first through the twentieth column and second, through the twenty-second column, we yield a Coefficient of Correlation (R^2) value of about 0.73, which shows a positive correlation between the two inputs. So about 37% of the variation is residing in the residual.
+# From the above model using the first through the twentieth column and second, through the twenty-second column, we yield a Coefficient of Correlation (R^2) value of about 0.74, which shows a positive correlation between the two inputs. So about 36% of the variation is residing in the residual.
 
-# ## TWO_THROUGH_TWENTY_ONE and THREE_THROUGH_TWENTY_TWO 
+# ## Initiate Linear Regression
 
 # In[6]:
 
@@ -239,8 +235,8 @@ lm.fit(TWO_THROUGH_TWENTY_ONE ,THREE_THROUGH_TWENTY_TWO)
 y_pred1 = lm.predict(TWO_THROUGH_TWENTY_ONE)
 plt.scatter(TWO_THROUGH_TWENTY_ONE,THREE_THROUGH_TWENTY_TWO)
 plt.plot(TWO_THROUGH_TWENTY_ONE,y_pred1,color="green")
-plt.xlabel("actual height(meters)")
-plt.ylabel("predicted height(meters)")
+plt.xlabel("actual height(m)")
+plt.ylabel("predicted height(m)")
 plt.title("actual height vs predicted height")
 plt.show()
 
@@ -258,7 +254,7 @@ print("This is the R^2",to_precision(lm.score(TWO_THROUGH_TWENTY_ONE,THREE_THROU
 # The following code chunk uses  Linear Regression (specifically with rows of height measurement) for  one_Through_Twenty,two_Through_Twenty_One, and 
 # three_Through_Twenty_Two. The data frame used for the model is tzDF, and we display the predicted values versus actual values.
 
-# In[27]:
+# In[7]:
 
 
 #Set up series object for partions in the dataframe
@@ -303,6 +299,7 @@ plt.show()
 #print("This is the m value",lm.intercept_)
 #print("This is the R^2",lm.score(x,y))
 print(y-y_pred1)
+type(FOUR_THROUGH_TWENTY_THREE)
 
 
 # From the above graph, all points are predicted as the values overlap graphically with a b value of 0.0194. The height difference is zero. We will now increase the sample size of the data.
@@ -373,7 +370,7 @@ def make_prediction(DataFrame,number):
 make_prediction(tzDF,0.35)
 
 
-# When y_test-y_prediciton, we get an average difference of -0.0003 from the model's actual and predicted values in the above cell. From the outliers in the plot, we can view the noise graphically.
+# When y_test-y_predicition, we get an average difference of -0.0003 from the model's actual and predicted values in the above cell. From the outliers in the plot, we can view the noise graphically.
 
 # ## 55% Test Data demonstration
 
@@ -384,7 +381,7 @@ make_prediction(tzDF,0.35)
 make_prediction(tzDF,0.55)
 
 
-# In the above cell, when y_test-y_prediciton, we get an average difference of -0.00030778063659289 from the model's actual and predicted values.
+# In the above cell, when y_test-y_predicition, we get an average difference of -0.00030778063659289 from the model's actual and predicted values.
 
 # ## 75% Test Data demonstration
 
@@ -395,7 +392,7 @@ make_prediction(tzDF,0.55)
 make_prediction(tzDF,0.75)
 
 
-# In the above cell when y_test-y_prediciton we get an average difference of -0.0001 from the model's actual and predicted values.
+# In the above cell when y_test-y_predicition we get an average difference of -0.0001 from the model's actual and predicted values.
 
 # ## Using one day's data to predict a different day's data
 
@@ -418,7 +415,7 @@ def different_Day_Prediction(DataFrame,number):
     model = lm.fit(X_train,y_train)
     model.intercept_
     model.coef_
-    #setting the prediciton variable 
+    #setting the predicition variable 
     APRIL_PREDICTION = model.predict(APRIL_SERIES_X)
     #50 bins were picked for all of the models below
     #Distrubution of Errors pred vs actual

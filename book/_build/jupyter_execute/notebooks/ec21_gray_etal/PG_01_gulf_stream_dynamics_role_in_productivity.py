@@ -51,7 +51,15 @@
 #             </span>
 #             <ul class="toc-item">
 #                 <li><span><a href="#Data-download" data-toc-modified-id="Data-download-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Data download</a></span></li>
-#                 <li><span><a href="#Data-import" data-toc-modified-id="Data-import-3.2"><span class="toc-item-num">3.2&nbsp;&nbsp;</span>Data import</a></span></li>
+#                 <li>
+#                     <span><a href="#Data-import" data-toc-modified-id="Data-import-3.2"><span class="toc-item-num">3.2&nbsp;&nbsp;</span>Data import</a></span>
+#                     <ul class="toc-item">
+#                         <li><span><a href="#Chlorophyll-a" data-toc-modified-id="Chlorophyll-a-3.2.1"><span class="toc-item-num">3.2.1&nbsp;&nbsp;</span>Chlorophyll-a</a></span></li>
+#                         <li><span><a href="#Sea-Surface-Height" data-toc-modified-id="Sea-Surface-Height-3.2.2"><span class="toc-item-num">3.2.2&nbsp;&nbsp;</span>Sea Surface Height</a></span></li>
+#                         <li><span><a href="#Sea-Surface-Temperature" data-toc-modified-id="Sea-Surface-Temperature-3.2.3"><span class="toc-item-num">3.2.3&nbsp;&nbsp;</span>Sea Surface Temperature</a></span></li>
+#                         <li><span><a href="#Sea-Wind-Speed" data-toc-modified-id="Sea-Wind-Speed-3.2.4"><span class="toc-item-num">3.2.4&nbsp;&nbsp;</span>Sea Wind Speed</a></span></li>
+#                     </ul>
+#                 </li>
 #                 <li><span><a href="#Gulf-Stream-front-location" data-toc-modified-id="Gulf-Stream-front-location-3.3"><span class="toc-item-num">3.3&nbsp;&nbsp;</span>Gulf Stream front location</a></span></li>
 #                 <li><span><a href="#Selecting-data-along-the-front" data-toc-modified-id="Selecting-data-along-the-front-3.4"><span class="toc-item-num">3.4&nbsp;&nbsp;</span>Selecting data along the front</a></span></li>
 #             </ul>
@@ -107,7 +115,7 @@
 # 
 # The SST data matches what one might expect, decreasing throughout the winter and increasing in summer with the Gulf Stream itself staying as the warmest water throughout all seasons. We can also see a few eddy footprints in SST and SSH even though this data is resampled to monthly time steps.
 # 
-# Overall the analysis generally agrees with the understanding of phytoplankton dynamics in the Atlantic ([Siegel et al 2002](https://doi.org/10.1126/science.1069174), [Fischer et al 2015](https://doi.org/10.5670/oceanog.2014.26)) but it doesn't follow exactly along with the commonly studied bloom in the North Atlantic. Fall production is more intense along the Gulf Stream compared to the North Atlantic, potentially supplied with nutrients by mesoscale upwelling ([Pascual et al 2014](https://doi.org/10.1002/2014GL062569)) and ageostrophic circuation at the front ([Levy et al 2018](https://doi.org/10.1038/s41467-018-07059-3)) along the front and supplied with seed populations from further south. This is more in agreement with ideas of winter biomass accumulation despite low light conditions (e.g. [Boss and Behrenfeld 2010](https://doi.org/10.1029/2010GL044174)). Wind patterns are noisy and don't lead to clear agreement or disagreement with the general assumptions that winter winds drive deeper mixing which inject nutrients supplying the bloom and stronger winds in the spring deepen mixed layers which delay the start of the subpolar spring ([Ueyama and Monger 2005](https://doi.org/10.4319/lo.2005.50.6.1820), [Henson et al 2009](https://doi.org/10.1029/2008JC005139)), but this is an avenue for further investigation with additional wind datasets.
+# Overall the analysis generally agrees with the understanding of phytoplankton dynamics in the Atlantic ([Siegel et al 2002](https://doi.org/10.1126/science.1069174), [Fischer et al 2015](https://doi.org/10.5670/oceanog.2014.26)) but it doesn't follow exactly along with the commonly studied bloom in the North Atlantic. Fall production is more intense along the Gulf Stream compared to the North Atlantic, potentially supplied with nutrients from mesoscale upwelling ([Pascual et al 2014](https://doi.org/10.1002/2014GL062569)) and ageostrophic circulation at the front ([Levy et al 2018](https://doi.org/10.1038/s41467-018-07059-3)) and supplied with seed populations from further south. This is more in agreement with ideas of winter biomass accumulation despite low light conditions (e.g. [Boss and Behrenfeld 2010](https://doi.org/10.1029/2010GL044174)). Wind patterns are noisy and don't lead to clear agreement or disagreement with the general assumptions that winter winds drive deeper mixing which inject nutrients supplying the bloom and stronger winds in the spring deepen mixed layers which delay the start of the subpolar spring ([Ueyama and Monger 2005](https://doi.org/10.4319/lo.2005.50.6.1820), [Henson et al 2009](https://doi.org/10.1029/2008JC005139)), but this is an avenue for further investigation with additional wind datasets.
 # 
 # ## Funding
 # 
@@ -122,8 +130,6 @@
 # ## Acknowledgements 
 # 
 # We acknowledge helpful conversations with many collaborators and mentors as well as the substantial effort of the open source community developing xarray, zarr, holoviz, geopandas, jupyter and the many other libraries we relied on for this analysis.
-# 
-# The template is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License.</a>
 
 # # Setup
 # 
@@ -180,16 +186,20 @@ from dea_spatial import subpixel_contours
 
 # Data is all stored as zarr and downloaded from Google Drive in the next code block. This is done to ensure speed of operation for this notebook. Current data providers are too slow for use in an ephemeral Binder environment and some require manual downloading. All data can be downloaded from the original repositories via the information below if needed. All data use the same bounds, the latitude range is from 44° North to 26° North and the longitude range is from 82° West to 66° West.
 # 
-# #### Altimetry data 
+# **Altimetry data**
+# 
 # is from AVISO distributed via Copernicus and uses multiple altimeters to generate a 0.25 degree daily SSH and (sea level anomaly) SLA product. The data can be downloaded [here](https://resources.marine.copernicus.eu/?option=com_csw&task=results). After navigating to that site the user must manually search for SEALEVEL_GLO_PHY_L4_NRT_OBSERVATIONS_008_046 and specify the bounds and time period (January 1st, 2010 through December 31st 2019).
 # 
-# #### Ocean Color data 
+# **Ocean Color data**
+# 
 # is from the Ocean Colour Climate Change Initiative's multi-sensor global satellite chlorophyll-a product we use the CCI_ALL-v5.0-8DAY product which can viewed [here](https://www.oceancolour.org/about) and our exact dataset can be downloaded with [this link](https://www.oceancolour.org/thredds/ncss/CCI_ALL-v5.0-5DAY?var=chlor_a&north=42&west=-80&east=-70&south=30&disableProjSubset=on&horizStride=1&time_start=2014-01-01T00%3A00%3A00Z&time_end=2020-12-31T00%3A00%3A00Z&timeStride=1).
 # 
-# #### Sea Surface Temperature 
+# **Sea Surface Temperature**
+# 
 # is the GHRSST Level 4 OSPO Global Nighttime Foundation Sea Surface Temperature Analysis product. More can be found on this product [here](https://podaac.jpl.nasa.gov/dataset/Geo_Polar_Blended_Night-OSPO-L4-GLOB-v1.0) and all data can be downloaded [here](https://thredds.jpl.nasa.gov/thredds/catalog_ghrsst_gds2.html?dataset=Geo_Polar_Blended_Night-OSPO-L4-GLOB-v1.0).
 # 
-# #### Wind speed data 
+# **Wind speed data**
+# 
 # is Metop-A ASCAT, 0.25°, Global, Near Real Time, 2009-present (8 Day) available for download [here](https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdQAwind8day.graph). And for this exact dataset [this link](https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdQAwind8day.nc?x_wind%5B(2010-04-01T00:00:00Z):1:(2020-01-01T00:00:00Z)%5D%5B(10.0):1:(10.0)%5D%5B(26):1:(44)%5D%5B(278):1:(294)%5D,y_wind%5B(2010-04-01T00:00:00Z):1:(2020-01-01T00:00:00Z)%5D%5B(10.0):1:(10.0)%5D%5B(26):1:(44)%5D%5B(278):1:(294)%5D) can be used.
 
 # ## Data download 
@@ -265,7 +275,7 @@ chla_ds.chlor_a.hvplot.quadmesh(
     frame_width=300, logz=True, clim=(0.01,20), rasterize=True)
 
 
-# ## Sea Surface Height 
+# ### Sea Surface Height 
 # via AVISO which uses multiple altimeters to generate a .25 degree daily SSH and SLA product.
 # 
 # Note that the data variable we're using in this `xarray` dataset is called adt which stands for absolute dynamic topography and is our SSH variable.
@@ -285,9 +295,17 @@ ssh_ds
 ssh_ds.adt
 
 
-# Visualize one time step of the absolute dynamic topography (ADT) variable in this dataset.
+# Let's add on the attribute these units are meters
 
 # In[10]:
+
+
+ssh_ds.adt.attrs["units"] = 'meters'
+
+
+# Visualize one time step of the absolute dynamic topography (ADT) variable in this dataset.
+
+# In[11]:
 
 
 fig, ax = plt.subplots(figsize=(12,9), subplot_kw=dict(projection=crs.PlateCarree()))
@@ -299,7 +317,7 @@ ax.set_xlim(-82,-66)
 
 # Now use hvplot to allow interactive visualization of this dataset
 
-# In[11]:
+# In[12]:
 
 
 proj = crs.Orthographic(-90, 30)
@@ -311,7 +329,7 @@ ssh_ds.adt.hvplot.quadmesh(
 
 # We'll be using contours below (aka isolines in the sea surface height) to determine the location of the Gulf Stream front so let's see what that looks like now
 
-# In[12]:
+# In[13]:
 
 
 fig, ax = plt.subplots(figsize=(12,9), subplot_kw=dict(projection=crs.PlateCarree()))
@@ -321,17 +339,17 @@ ax.set_ylim(26,44)
 ax.set_xlim(-82,-66)
 
 
-# ## Sea Surface Temperature
+# ### Sea Surface Temperature
 # via NOAA and the Group for High Resolution Sea Surface Temperature (GHRSST).
 
-# In[13]:
+# In[14]:
 
 
 sst_ds = xr.open_zarr('data/sst.zarr')
 sst_ds
 
 
-# In[14]:
+# In[15]:
 
 
 sst_ds.analysed_sst
@@ -339,14 +357,14 @@ sst_ds.analysed_sst
 
 # Let's take a quick look at a static and interactive plot of SST
 
-# In[15]:
+# In[16]:
 
 
 fig,ax = plt.subplots(figsize=(12,8))
 sst_ds.analysed_sst[0].plot(ax=ax, vmin=278, vmax=298, cmap='inferno')
 
 
-# In[16]:
+# In[17]:
 
 
 proj = crs.Orthographic(-90, 30)
@@ -359,7 +377,7 @@ sst_ds.analysed_sst.hvplot.quadmesh(
 
 # Now let's take the mean of a year of daily SST data just to clearly see the thermal footprint of the Gulf Stream
 
-# In[17]:
+# In[18]:
 
 
 fig,ax = plt.subplots(figsize=(12,8))
@@ -367,10 +385,10 @@ sst_ds.analysed_sst[0:365].mean(dim='time', skipna=True).plot(ax=ax, vmin=284, v
 ax.set_title('Mean SST of the Gulf Stream')
 
 
-# ## Sea Wind Speed
+# ### Sea Wind Speed
 # As our last dataset we'll pull in data from EUMETSAT's Metop-A satellite. ASCAT is a microwave scatterometer designed to measure surface winds over the global ocean and these are 8 day composites of wind speed.
 
-# In[18]:
+# In[19]:
 
 
 wind_ds = xr.open_zarr('data/winds.zarr')
@@ -379,7 +397,7 @@ wind_ds
 
 # Note above that the longitude goes from 0 to 360 as opposed to -180 through 180 as was the case with the other datasets. We'll process it here to match the others.
 
-# In[19]:
+# In[20]:
 
 
 wind_ds['longitude'] = wind_ds['longitude'] -360
@@ -387,15 +405,23 @@ wind_ds['longitude'] = wind_ds['longitude'] -360
 
 # This dataset comes with x and y wind speeds, let's combine them by adding the absolute value of each just to get an idea of total wind speed in a given location.
 
-# In[20]:
+# In[21]:
 
 
 wind_ds['wind_total'] = abs(wind_ds.y_wind) + abs(wind_ds.y_wind)
 
 
+# Finally let's add the attribute that this is in meters per second
+
+# In[22]:
+
+
+wind_ds.wind_total.attrs["units"] = 'm/s'
+
+
 # Let's take a look at the average wind speed across this region.
 
-# In[21]:
+# In[23]:
 
 
 fig, ax = plt.subplots(figsize=(12,9), subplot_kw=dict(projection=crs.PlateCarree()))
@@ -407,7 +433,7 @@ ax.set_xlim(-82,-66)
 
 # This data is relatively noisy and satellite tracks are somewhat visible, but we'll resample to monthly below so the noise isn't as much of an issue. As a test let's look at the average wind in each month for the entire dataset.
 
-# In[22]:
+# In[24]:
 
 
 wind_ds.groupby('time.month').median(dim='time').wind_total.hvplot.quadmesh(
@@ -427,10 +453,22 @@ wind_ds.groupby('time.month').median(dim='time').wind_total.hvplot.quadmesh(
 
 # First we'll resample our SSH data from daily to monthly time steps.
 
-# In[23]:
+# In[25]:
+
+
+ssh_ds
+
+
+# In[26]:
 
 
 ssh_ds_monthly = ssh_ds.resample(time="1M").mean()
+
+
+# In[27]:
+
+
+ssh_ds_monthly.adt.attrs["units"] = 'meters'
 
 
 # Then we'll run the subpixel_contours() function which takes in an xarray DataArray and related geospatial metadata and returns a geodataframe of the contours at each time step.
@@ -446,14 +484,14 @@ ssh_ds_monthly = ssh_ds.resample(time="1M").mean()
 
 # We define the CRS as 4326 which is WGS84 so it just uses lat and lon. Thus the width of a pixel is .25 degrees.
 
-# In[24]:
+# In[28]:
 
 
 ssh_affine = Affine(0.25, 0.0, -81.875-.25/2, 0.0, 0.25, 26.125-.25/2)
 ssh_affine
 
 
-# In[25]:
+# In[29]:
 
 
 # this function needs all the data in memory so load it in
@@ -462,7 +500,7 @@ ssh_ds_monthly.adt.load()
 gdf = subpixel_contours(ssh_ds_monthly.adt, [0.25], crs='EPSG:4326', min_vertices=50, affine=ssh_affine, verbose=True)
 
 
-# In[26]:
+# In[30]:
 
 
 gdf.plot()
@@ -473,7 +511,7 @@ plt.ylabel('latitude')
 
 # As can be seen above, this approach to finding the front does pick up a few anomalous frontal eddies in the South Atlantic Bight so we're going to require all lines pass south of 28 degrees latitude and east of -70 degrees longitude.
 
-# In[27]:
+# In[31]:
 
 
 print(len(gdf))
@@ -489,7 +527,7 @@ plt.ylabel('latitude')
 # 
 # And finally because the Gulf Stream is so close to the Florida coast around 26 degrees north, we'll clip it to 28 N and above and to west of -66.5 longitude so it isn't on the edge of our data.
 
-# In[28]:
+# In[32]:
 
 
 # Create a custom polygon to clip with
@@ -501,7 +539,7 @@ plt.xlabel('longitude')
 plt.ylabel('latitude')
 
 
-# In[29]:
+# In[33]:
 
 
 gdf = gpd.clip(gdf, polygon)
@@ -513,7 +551,7 @@ plt.ylabel('latitude')
 
 # That seems to nicely solve the issue
 
-# In[30]:
+# In[34]:
 
 
 gdf.hvplot.paths('Longitude', 'Latitude', geo=True, color='red', alpha=0.8,
@@ -523,7 +561,7 @@ gdf.hvplot.paths('Longitude', 'Latitude', geo=True, color='red', alpha=0.8,
 # Let's quickly check to see if our contour matches exactly with the contours from the xarray contour function.
 # 
 
-# In[31]:
+# In[35]:
 
 
 fig,ax= plt.subplots(1,2, figsize=(16,8))
@@ -538,7 +576,7 @@ ax[1].set_title('adding in our newly calculated contour')
 
 # Now let's turn our contour lines into points so that we can grab the xarray values at each point.
 
-# In[32]:
+# In[36]:
 
 
 lon,lat = gdf.iloc[0].geometry.coords.xy
@@ -548,7 +586,7 @@ points_gdf = gpd.GeoDataFrame(
     df, geometry=gpd.points_from_xy(df.lon, df.lat))
 
 
-# In[33]:
+# In[37]:
 
 
 points_gdf.hvplot.points(geo=True, color='red', alpha=0.8,
@@ -559,7 +597,7 @@ points_gdf.hvplot.points(geo=True, color='red', alpha=0.8,
 # 
 # We also want a coastal line and an open ocean line that run parallel to the front line but allow us to compare differences along the front and nearby waters. We'll offset lines ~20 km from our front line on either side.
 
-# In[34]:
+# In[38]:
 
 
 points_list = []
@@ -593,21 +631,21 @@ for i, line in gdf.iterrows():
 
 # Turn those points into a geodataframe
 
-# In[35]:
+# In[39]:
 
 
 points_gdf = gpd.GeoDataFrame(gdf['time'], geometry=points_list)
 points_gdf.head()
 
 
-# In[36]:
+# In[40]:
 
 
 coastal_points_gdf = gpd.GeoDataFrame(gdf['time'], geometry=points_list_coastal)
 coastal_points_gdf.head()
 
 
-# In[37]:
+# In[41]:
 
 
 sargasso_points_gdf = gpd.GeoDataFrame(gdf['time'], geometry=points_list_sargasso)
@@ -616,7 +654,7 @@ sargasso_points_gdf.head()
 
 # Display 10 frontal lines against the backdrop of SSH
 
-# In[38]:
+# In[42]:
 
 
 ssh_ds_monthly.adt[0].hvplot.quadmesh(
@@ -628,7 +666,7 @@ points_gdf.head(10).hvplot.points(geo=True, color='black', alpha=0.7)
 
 # Now let's check out the coastal, frontal, and sargasso lines together
 
-# In[39]:
+# In[43]:
 
 
 ssh_ds_monthly.adt[0].hvplot.quadmesh(
@@ -644,7 +682,7 @@ points_gdf.head(1).hvplot.points(geo=True, color='black', alpha=0.7, label='fron
 # 
 # Create an xarray DataArray each day and each frontal line
 
-# In[40]:
+# In[44]:
 
 
 # there could be a better way to do this than iterating through the gdf
@@ -661,7 +699,7 @@ x_list.shape, y_list.shape
 
 # Using those points and time steps let's create a few DataArrays that we'll used to select from the primary DataSets
 
-# In[41]:
+# In[45]:
 
 
 target_lon = xr.DataArray(x_list, dims=["time", "points"])
@@ -671,18 +709,23 @@ target_lat
 
 
 # Now let's resample all the datasets to monthly averages
+# 
+# We also need to specify the units since these operations may potentially change them and so theyr're removed by default.
 
-# In[42]:
+# In[46]:
 
 
 chla_ds_monthly = chla_ds.resample(time="1M").mean()
+chla_ds_monthly.chlor_a.attrs["units"] = 'mg m^-3'
 sst_ds_monthly = sst_ds.resample(time="1M").mean()
+sst_ds_monthly.analysed_sst.attrs["units"] = 'Kelvin'
 wind_ds_monthly = wind_ds.resample(time="1M").mean()
+wind_ds_monthly.wind_total.attrs["units"] = 'm/s'
 
 
 # And now run select the nearest neighbor in time and space to each point
 
-# In[43]:
+# In[47]:
 
 
 ssh_ds_frontal = ssh_ds_monthly.adt.sel(time=target_time, latitude=target_lat, longitude=target_lon, method="nearest")
@@ -693,7 +736,7 @@ wind_ds_frontal = wind_ds_monthly.wind_total.sel(time=target_time, latitude=targ
 
 # As a sanity check, let's take a look at the SSH along the points in this front line which was derived from the 0.25 contour line just to ensure that is is approximately 0.25 still.
 
-# In[44]:
+# In[48]:
 
 
 ssh_ds_frontal[0].plot()
@@ -702,13 +745,7 @@ plt.title('SSH at points processed from 0.25m contour line')
 
 # Note that this does introduce a little error since we've interpolated the contour and it isn't exactly on the .25m line
 
-# In[45]:
-
-
-chla_ds_frontal
-
-
-# In[46]:
+# In[49]:
 
 
 chla_ds_frontal[0].plot()
@@ -716,7 +753,7 @@ plt.title('chla along the front')
 plt.xlabel('points from up to downstream')
 
 
-# In[47]:
+# In[50]:
 
 
 sst_ds_frontal[0].plot()
@@ -724,7 +761,7 @@ plt.title('SST along the front')
 plt.xlabel('points from up to downstream')
 
 
-# In[48]:
+# In[51]:
 
 
 wind_ds_frontal[0].plot()
@@ -734,7 +771,7 @@ plt.xlabel('points from up to downstream')
 
 # And finally we want to do the exact same thing for the coastal and sargasso lines. We'll write a quick function for this and apply it to the coastal and sargasso lines.
 
-# In[49]:
+# In[52]:
 
 
 def frontal_dataset_generation(line_gdf, ssh_monthly, chla_monthly, sst_monthly, wind_monthly):
@@ -759,7 +796,7 @@ def frontal_dataset_generation(line_gdf, ssh_monthly, chla_monthly, sst_monthly,
     return(ssh_line,chla_line,sst_line,wind_line)
 
 
-# In[50]:
+# In[53]:
 
 
 ssh_ds_sargasso,chla_ds_sargasso,sst_ds_sargasso,wind_ds_sargasso = frontal_dataset_generation(sargasso_points_gdf, ssh_ds_monthly, chla_ds_monthly, sst_ds_monthly, wind_ds_monthly)
@@ -771,7 +808,7 @@ ssh_ds_coastal,chla_ds_coastal,sst_ds_coastal,wind_ds_coastal = frontal_dataset_
 # 
 # Let's just quickly look at a single time step from each dataset. We'll represent the coastal line with green, frontal line with black, and open ocean (sargasso sea) line with blue.
 
-# In[51]:
+# In[54]:
 
 
 fig, ax = plt.subplots()
@@ -786,7 +823,7 @@ plt.title('SST along the front')
 plt.xlabel('points from up to downstream')
 
 
-# In[52]:
+# In[55]:
 
 
 fig, ax = plt.subplots()
@@ -801,7 +838,7 @@ plt.title('Chla along the front')
 plt.xlabel('points from up to downstream')
 
 
-# In[53]:
+# In[56]:
 
 
 fig, ax = plt.subplots()
@@ -824,14 +861,14 @@ plt.xlabel('points from up to downstream')
 
 # First let's just examine the data quickly to ensure there isn't anything obviously erroneous and to see if we find any clear trends. These charts show chla, SST, and SSH with the front plotted over top of them for all of 2018.
 
-# In[54]:
+# In[57]:
 
 
 # add a datetime object to the front gdf so that we can select by time
 points_gdf['dt_time'] = pd.to_datetime(points_gdf['time'])
 
 
-# In[55]:
+# In[58]:
 
 
 for i in range(12,24):
@@ -862,7 +899,7 @@ for i in range(12,24):
 
 # Now let's look at the chla on the front itself over time. Make sure you use the scroll bar to explore the data over time.
 
-# In[56]:
+# In[ ]:
 
 
 chla_ds_frontal.hvplot.line(x='points', value_label='time', ylim=(0,1), color='black', label='frontal') * chla_ds_coastal.hvplot.line(x='points', value_label='time', ylim=(0,1), color='green', label='coastal') * chla_ds_sargasso.hvplot.line(x='points', value_label='time', ylim=(0,1), color='blue', label='sargasso', xlabel='points up to downstream')
@@ -874,7 +911,7 @@ chla_ds_frontal.hvplot.line(x='points', value_label='time', ylim=(0,1), color='b
 # 
 # Moving on here to SST:
 
-# In[57]:
+# In[ ]:
 
 
 sst_ds_frontal.hvplot.line(x='points', value_label='time', ylim=(290,304), color='black', label='frontal') * sst_ds_coastal.hvplot.line(x='points', value_label='time', ylim=(290,304), color='green', label='coastal') *sst_ds_sargasso.hvplot.line(x='points', value_label='time', ylim=(290,304), color='blue', label='sargasso', xlabel='points up to downstream')
@@ -884,7 +921,7 @@ sst_ds_frontal.hvplot.line(x='points', value_label='time', ylim=(290,304), color
 # 
 # Moving to wind now:
 
-# In[58]:
+# In[ ]:
 
 
 wind_ds_coastal.hvplot.line(x='points', value_label='time', ylim=(0,15), xlim=(1,90), color='green', label='coastal') * wind_ds_frontal.hvplot.line(x='points', value_label='time', ylim=(0,15), xlim=(1,90),  color='black', label='frontal') * wind_ds_sargasso.hvplot.line(x='points', value_label='time', ylim=(0,15), xlim=(1,90), color='blue', label='sargasso', xlabel='points up to downstream')
@@ -896,7 +933,7 @@ wind_ds_coastal.hvplot.line(x='points', value_label='time', ylim=(0,15), xlim=(1
 # 
 # In these plots Point 0 is the furthest point upstream around Florida and Point 90 is downstream in the North Atlantic.
 
-# In[59]:
+# In[ ]:
 
 
 fig, ax = plt.subplots(1,3,figsize=(20,8))
@@ -913,12 +950,14 @@ ax[1].set_xlabel('points up to downstream')
 ax[2].set_title('sargasso chla')
 ax[2].set_xlabel('points up to downstream')
 
+fig.tight_layout()
+
 plt.show()
 
 
 # Let's look one more time at chla over just a few years
 
-# In[60]:
+# In[ ]:
 
 
 fig, ax = plt.subplots(1,3,figsize=(20,8))
@@ -935,10 +974,12 @@ ax[1].set_xlabel('points up to downstream')
 ax[2].set_title('sargasso chla')
 ax[2].set_xlabel('points up to downstream')
 
+fig.tight_layout()
+
 plt.show()
 
 
-# In[61]:
+# In[ ]:
 
 
 fig, ax = plt.subplots(1,3,figsize=(20,5))
@@ -954,10 +995,12 @@ ax[1].set_xlabel('points up to downstream')
 ax[2].set_title('sargasso SST')
 ax[2].set_xlabel('points up to downstream')
 
+fig.tight_layout()
+
 plt.show()
 
 
-# In[62]:
+# In[ ]:
 
 
 fig, ax = plt.subplots(1,3,figsize=(20,8))
@@ -973,6 +1016,8 @@ ax[1].set_xlabel('points up to downstream')
 ax[2].set_title('sargasso wind')
 ax[2].set_xlabel('points up to downstream')
 
+fig.tight_layout()
+
 plt.show()
 
 
@@ -982,7 +1027,7 @@ plt.show()
 # 
 # **For reference point 20 is approx Charleston SC, point 40 is approx Cape Lookout NC, point 50 is Cape Hatteras NC, and point 60 and beyond are offshore.**
 
-# In[63]:
+# In[ ]:
 
 
 (chla_ds_coastal.std(dim='time')/chla_ds_frontal.mean(dim='time')).plot(xlim=(2,90), color='green',label='coastal',)
@@ -992,12 +1037,13 @@ plt.show()
 plt.title('coefficient of variation of chla at each point')
 plt.legend()
 plt.xlabel('points up to downstream')
+plt.ylabel('coefficient of variation of chlor_a')
 plt.ylim(0,3)
 
 
 # You can see that right around point 45 which is nearshore and near Cape Hatteras is where the physical structure of GS connects with an area that has major bursts of productivity.
 
-# In[64]:
+# In[ ]:
 
 
 (sst_ds_coastal.std(dim='time')/sst_ds_frontal.mean(dim='time')).plot(xlim=(2,90), color='green',label='coastal')
@@ -1007,6 +1053,7 @@ plt.ylim(0,3)
 plt.title('coefficient of variation of SST at each point')
 plt.legend()
 plt.xlabel('points up to downstream')
+plt.ylabel('coefficient of variation of SST')
 #plt.ylim(0,3)
 
 
@@ -1016,7 +1063,7 @@ plt.xlabel('points up to downstream')
 # 
 # Now let's look at the full time series of chla in the various segments. First we'll look at the offshore segment in the North Atlantic.
 
-# In[65]:
+# In[ ]:
 
 
 fig,ax = plt.subplots(figsize=(12,7))
@@ -1026,12 +1073,13 @@ chla_ds_sargasso[:,60:].median('points').plot(ax=ax,color='blue', label='sargass
 ax.set_ylim(0,1.2)
 
 ax.set_title('avg chla of offshore section over time')
+ax.set_ylabel('chlor_a [mg m^-3]')
 ax.legend()
 
 
 # And then the section around Cape Lookout and Cape Hatteras
 
-# In[66]:
+# In[ ]:
 
 
 fig,ax = plt.subplots(figsize=(12,7))
@@ -1041,10 +1089,11 @@ chla_ds_sargasso[:,40:50].median('points').plot(ax=ax,color='blue', label='sarga
 ax.set_ylim(0,1.2)
 
 ax.set_title('avg chla of Cape Hatteras section over time')
+ax.set_ylabel('chlor_a [mg m^-3]')
 ax.legend()
 
 
-# In[67]:
+# In[ ]:
 
 
 fig,ax = plt.subplots(figsize=(12,7))
@@ -1054,6 +1103,7 @@ chla_ds_sargasso[:,20:40].median('points').plot(ax=ax,color='blue', label='sarga
 ax.set_ylim(0,1.2)
 
 ax.set_title('avg chla of South Atlantic Bight section over time')
+ax.set_ylabel('chlor_a [mg m^-3]')
 ax.legend()
 
 
@@ -1061,7 +1111,7 @@ ax.legend()
 # 
 # The offshore region further downstream seems to have a major increase in the spring - the well studied spring bloom - and the region further south (upstream) around the South Atlantic Bight (SAB) has a relatively large increase throughout the whole winter starting mid fall and staying high until the spring. The region around Cape Hatteras falls in the middle of these two patterns but with generally higher chla, particularly on the coastal side, which makes sense given its proximity to the coast in this region and generally large outflows from Pamlico Sound and Chesapeake Bay injecting nutrients into the water. It is also worth noting that the more northerly section of the front does seem to have a more notable dip mid-winter, possibly when light begins to be limiting, and this is not as pronounced in the southerly section of the front. Though the light difference is not extreme, it is 9.5 hours on the winter solstice at 37 degrees N and 10.6 at 27 degrees N.
 
-# In[68]:
+# In[ ]:
 
 
 fig,ax = plt.subplots(figsize=(12,7))
@@ -1071,6 +1121,7 @@ chla_ds_sargasso.median('points').plot(ax=ax,color='blue', label='sargasso')
 ax.set_ylim(0,0.6)
 
 ax.set_title('avg chla of entire line over time')
+ax.set_ylabel('chlor_a [mg m^-3]')
 ax.legend()
 
 
@@ -1078,7 +1129,7 @@ ax.legend()
 
 # **Inspecting the SST data here in the same fashion to see if there are any surprising trends.**
 
-# In[69]:
+# In[ ]:
 
 
 fig,ax = plt.subplots(figsize=(12,7))
@@ -1088,10 +1139,11 @@ sst_ds_sargasso[:,60:].mean('points').plot(ax=ax,color='blue', label='sargasso')
 ax.set_ylim(290,303)
 
 ax.set_title('avg SST of offshore section over time')
+ax.set_ylabel('SST [Kelvin]')
 ax.legend()
 
 
-# In[70]:
+# In[ ]:
 
 
 fig,ax = plt.subplots(figsize=(12,7))
@@ -1100,11 +1152,12 @@ sst_ds_coastal[:,40:50].mean('points').plot(ax=ax,color='green', label='coastal'
 sst_ds_sargasso[:,40:50].mean('points').plot(ax=ax,color='blue', label='sargasso')
 ax.set_ylim(290,303)
 
+ax.set_ylabel('SST [Kelvin]')
 ax.set_title('avg SST of Cape Hatteras section over time')
 ax.legend()
 
 
-# In[71]:
+# In[ ]:
 
 
 fig,ax = plt.subplots(figsize=(12,7))
@@ -1114,12 +1167,13 @@ sst_ds_sargasso[:,20:40].mean('points').plot(ax=ax,color='blue', label='sargasso
 ax.set_ylim(290,303)
 
 ax.set_title('avg SST of South Atlantic Bight section over time')
+ax.set_ylabel('SST [Kelvin]')
 ax.legend()
 
 
 # **Finally let's see how the wind behaves in relation to chla along the front**
 
-# In[72]:
+# In[ ]:
 
 
 fig,ax = plt.subplots(figsize=(12,7))
@@ -1129,10 +1183,11 @@ wind_ds_sargasso[:,:,60:].median('points').plot(ax=ax,color='blue', label='sarga
 ax.set_ylim(0,10)
 
 ax.set_title('avg wind of offshore section over time')
+ax.set_ylabel('Wind Total [m/s]')
 ax.legend()
 
 
-# In[73]:
+# In[ ]:
 
 
 fig,ax = plt.subplots(figsize=(12,7))
@@ -1142,10 +1197,11 @@ wind_ds_sargasso[:,:,60:].median('points').groupby('time.month').median(dim='tim
 ax.set_ylim(0,10)
 
 ax.set_title('avg monthly wind of offshore section')
+ax.set_ylabel('Wind Total [m/s]')
 ax.legend()
 
 
-# In[74]:
+# In[ ]:
 
 
 fig,ax = plt.subplots(figsize=(12,7))
@@ -1155,10 +1211,11 @@ wind_ds_sargasso[:,:,40:50].median('points').groupby('time.month').median(dim='t
 ax.set_ylim(0,10)
 
 ax.set_title('avg monthly wind of Cape Hatteras section')
+ax.set_ylabel('Wind Total [m/s]')
 ax.legend()
 
 
-# In[75]:
+# In[ ]:
 
 
 fig,ax = plt.subplots(figsize=(12,7))
@@ -1168,6 +1225,7 @@ wind_ds_sargasso[:,:,20:40].median('points').groupby('time.month').median(dim='t
 ax.set_ylim(0,10)
 
 ax.set_title('avg monthly wind of South Atlantic Bight section')
+ax.set_ylabel('Wind Total [m/s]')
 ax.legend()
 
 

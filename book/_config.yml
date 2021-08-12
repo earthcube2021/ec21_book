@@ -1,19 +1,24 @@
 title : EarthCube 2021 Call for Notebooks
-author: EarthCube Office
+author: "EarthCube Office: Supported by NSF Award Number 1928208"
 logo: 'logo.webp'
+copyright : Supported by NSF Award Number 1928208  # Copyright year to be placed in the footer
+
 
 # Short description about the book
-description: >-
-  A unified collection of the EarthCube 2021 notebook submissions. 
+#description: EarthCube 2021 notebook submissions
 
 execute:
-  execute_notebooks           : off
+  execute_notebooks: off
 
 # HTML-specific settings
 html:
-  home_page_in_navbar         : false
+  home_page_in_navbar: true
   use_issues_button: true
   use_repository_button: true
+  # extra_footer:
+  #   <div>
+  #    Supported by NSF Award Number 1928208
+  #   </div>
   
 # Interact link settings
 # notebook_interface            : "notebook"
@@ -30,8 +35,9 @@ repository:
 # LaTeX settings
 bibtex_bibfiles:
    - _bibliography/references.bib
+
 latex:
-  latex_engine                : "xelatex"
+  latex_engine: "xelatex"
   latex_documents:
     targetname: book.tex
 
@@ -42,5 +48,6 @@ latex:
 
 sphinx:
   config:
+    html_show_copyright: false
     html_theme_options:
       show_navbar_depth: 1

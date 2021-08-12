@@ -1,4 +1,4 @@
-## Toward autonomous detection of anomalous GNSS data via applied unsupervised artificial intelligence 
+# Toward autonomous detection of anomalous GNSS data via applied unsupervised artificial intelligence 
 
 ## Authors
 Mike Dye, D. Sarah Stamps, Myles Mason
