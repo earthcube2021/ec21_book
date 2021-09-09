@@ -1602,7 +1602,7 @@ Name: 21, dtype: float64
     <span class="n">twenty_MSE</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">APRIL_SERIES_Y</span><span class="p">,</span><span class="n">APRIL_PREDICTION</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mean squared error for this model is&quot;</span><span class="p">,</span><span class="n">to_precision</span><span class="p">(</span><span class="n">twenty_MSE</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="s2">&quot;%.&quot;</span><span class="p">)</span>
 
-<span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="mf">.1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1619,7 +1619,7 @@ Name: 21, dtype: float64
 <p>In the cell below, december_Series_X and decemeber_Series_Y will be the data that is used to train the model. April_Series_X and april_Series_Y will be the different days and data that we predict it points from. We will display a histogram to view the error distribution between the actual and predicted data as well as</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="mf">.2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1637,7 +1637,7 @@ Name: 21, dtype: float64
 <p>In the cell below our we will be inputting in 30% test data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="mf">.3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1653,7 +1653,7 @@ Name: 21, dtype: float64
 <h2>Prediction from 40% test size data<a class="headerlink" href="#prediction-from-40-test-size-data" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="mf">.4</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1669,7 +1669,7 @@ Name: 21, dtype: float64
 <h2>Prediction from 50% test size data<a class="headerlink" href="#prediction-from-50-test-size-data" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="mf">.5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1685,7 +1685,7 @@ Name: 21, dtype: float64
 <h2>Prediction from 60% test size data<a class="headerlink" href="#prediction-from-60-test-size-data" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">6</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="mf">.6</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1701,7 +1701,7 @@ Name: 21, dtype: float64
 <h2>Prediction from 70% test size data<a class="headerlink" href="#prediction-from-70-test-size-data" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">7</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="mf">.7</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1717,7 +1717,7 @@ Name: 21, dtype: float64
 <h2>Prediction from 80% test size data<a class="headerlink" href="#prediction-from-80-test-size-data" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">8</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="mf">.8</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1733,7 +1733,7 @@ Name: 21, dtype: float64
 <h2>Prediction from 90% test size data<a class="headerlink" href="#prediction-from-90-test-size-data" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="o">.</span><span class="mi">9</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">different_Day_Prediction</span><span class="p">(</span><span class="n">tzDF</span><span class="p">,</span><span class="mf">.9</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

@@ -887,7 +887,7 @@
 </ul>
 <p><strong>4. <u>get_track_for_storm:</u></strong></p>
 <ul class="simple">
-<li><p>Function to load the track for the storm of interest as described by two strings, tc_name (lower case) and tc_year. E.g. tc_name=’maria’, and tc_year=’2017’.</p></li>
+<li><p>Function to load the track for the storm of interest as described by two strings, tc_name (lower case) and tc_year. E.g. tc_name=’maria’, and tc_year=‘2017’.</p></li>
 </ul>
 </div>
 <div class="section" id="sea-ice-data-functions">
@@ -940,7 +940,7 @@
 <ul class="simple">
 <li><p>This function plots Tropical Cyclone tracks (‘TCs_Dict’) that are output by get_TCs_byDate and get_TCs_byNameYear.</p></li>
 <li><p>df_ctag is a tag for the variable plotted in the colorbar: e.g. df_ctag=’wind’ plots maximum sustained winds for the TC at each position along the track.</p></li>
-<li><p>df_title is a tag for the figure title. If df_title=’’, the default title is used: ‘Tropical Cyclone tracks’.</p></li>
+<li><p>df_title is a tag for the figure title. If df_title=’‘, the default title is used: ‘Tropical Cyclone tracks’.</p></li>
 <li><p>tag_TC_or_SH_FILT = ‘TC’ to map TCs only.</p></li>
 <li><p>This function has the capability to map tracks for Southern Hemisphere storms using tag_TC_or_SH_FILT = ‘SH_FILT’. Nevertheless, the database for Southern Hemisphere storms is still in development. See Section 1.9.</p></li>
 </ul>
@@ -964,7 +964,7 @@
 <li><p>This function plots Argo float profiles.</p></li>
 <li><p>dataX is an array vector containing the profile variable. E.g. temperature (df[‘temp’])  or salinity (df[‘sal’]) at each pressure level from the output of parse_into_df_plev (‘df’).</p></li>
 <li><p>dataY is an array vector containing the profile pressure levels (df[‘pres’]) from the output of  parse_into_df_plev (‘df’).</p></li>
-<li><p>xlab, ylab are the labels for each axis (e.g. xlab = ‘Temperature, degC’ and ylab=’’Pressure, dbar’).</p></li>
+<li><p>xlab, ylab are the labels for each axis (e.g. xlab = ‘Temperature, degC’ and ylab=’‘Pressure, dbar’).</p></li>
 <li><p>xlim and ylim define the x and y axes limits. If xlim=[], the axis is adjusted automatically to fit the data range, otherwise specified as xlim=[min value, max value]. E.g. xlim=[22,30] for temperature.</p></li>
 <li><p>ylim =[presRange], where presRange=[min value, max_vale]. E.g. presRange=[0,100].</p></li>
 <li><p>label sets the label string for items in the plot legend (e.g. label=’before’ for before TC profiles).</p></li>
@@ -989,7 +989,7 @@
 <p><strong>4. <u>plot_argo_QC_location:</u></strong></p>
 <ul class="simple">
 <li><p>This function plots the location of a user specified Argo float color coded by the value of its QC flag at each position. The function uses parsed data(parse_into_df_plev) queried via get_profile_platform.</p></li>
-<li><p>platform_number: is the number of the selected platform/float to plot from the list printed by map_seaice_argo. E.g. platform_number = ‘’7900414’’</p></li>
+<li><p>platform_number: is the number of the selected platform/float to plot from the list printed by map_seaice_argo. E.g. platform_number = ‘‘7900414’‘</p></li>
 <li><p>lon: variable name for longitudes of each recorded position of the Argo float. E.g. platformDf_plev[‘lon’]</p></li>
 <li><p>lat: variable name for latitudes of each recorded position of the Argo float. E.g. platformDf_plev[‘lat’]</p></li>
 <li><p>qc: variable name for the QC flag value at each recorded position of the Argo float. E.g. platformDf_plev[‘position_qc’]</p></li>
@@ -1160,8 +1160,8 @@ ID: EP042017_HURDAT2; DORA 2017
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#User inputs:</span>
 <span class="c1">#max number of days before and after TC passage to get profile pairs:</span>
 <span class="n">delta_days</span> <span class="o">=</span> <span class="mi">7</span> 
-<span class="n">dx</span> <span class="o">=</span> <span class="o">.</span><span class="mi">75</span> <span class="c1">#degrees longitude</span>
-<span class="n">dy</span> <span class="o">=</span> <span class="o">.</span><span class="mi">75</span> <span class="c1">#degree latitude</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="mf">.75</span> <span class="c1">#degrees longitude</span>
+<span class="n">dy</span> <span class="o">=</span> <span class="mf">.75</span> <span class="c1">#degree latitude</span>
 <span class="n">presRange</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">]</span> <span class="c1">#decibar, [dbar] to plot profile. Larger range results in longer processing time</span>
 </pre></div>
 </div>
