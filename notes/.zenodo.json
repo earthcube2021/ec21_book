@@ -1,0 +1,30 @@
+{
+    "title": "Gleaner Architecture Orchestration Files for Docker Compose",
+    "description": "Docker compose file for starting the support containers for Gleaner indexing and data serving",
+    "creators": [
+        {
+            "orcid": "0000-0002-2257-9127",
+            "affiliation": "Consortium for Ocean Leadership",
+            "name": "Fils, Douglas"
+        },
+        {
+            "orcid": "0000-0003-4486-9448",
+            "affiliation": "Woods Hole Oceanographic Institution: Woods Hole, MA, US",
+            "name": "Shepherd, Adam"
+        }
+    ],
+    "keywords": [
+        "gleaner",
+        "docker"
+    ],
+    "communities": [
+        {
+            "identifier": "EarthCube"
+        }
+    ],
+    "grants": [
+        {
+            "id": "10.13039/100000001::1928208"
+        }
+    ]
+}
