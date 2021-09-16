@@ -5,6 +5,7 @@ parts:
     numbered: False   
     chapters:
     - file: docs/index.md
+    - file: docs/dois.md
   - caption: Notebook Submissions
     numbered: 1   
     chapters:
